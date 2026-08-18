@@ -11,35 +11,49 @@
 <meta property="og:description" content="SDカードのスペック表を見てV90・UHS-IIが何を意味するのかわからないまま選んで後悔した経験があるなら読んでほしい。映像編集の現場からスペックのどこを確認すべきかを整理した。楽天で買えるTranscend・Lexarの製品を比較する。">
 <style>
 :root{
-  --bg:#ffffff; --fg:#1a1a1a; --muted:#666; --line:#e5e5e5;
-  --accent:#bf0000; --card:#fafafa; --notice:#fff8e1; --notice-line:#f0d9a0;
+  --bg:#ffffff; --fg:#1a1a1a; --muted:#666; --line:#e8e8e8;
+  --accent:#c8102e; --accent-weak:#fdeef0; --accent-line:#f0c4cb;
+  --card:#fafafa; --notice:#fff8e1; --notice-line:#f0d9a0;
 }
 @media (prefers-color-scheme:dark){
   :root{ --bg:#141414; --fg:#e8e8e8; --muted:#9a9a9a; --line:#2e2e2e;
-         --accent:#ff5c5c; --card:#1d1d1d; --notice:#2a2417; --notice-line:#4a3f28; }
+         --accent:#ff6b7a; --accent-weak:#2a1a1d; --accent-line:#4d2b31;
+         --card:#1d1d1d; --notice:#2a2417; --notice-line:#4a3f28; }
 }
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--fg);
   font-family:system-ui,-apple-system,"Hiragino Sans","Noto Sans JP",sans-serif;
   line-height:1.85;font-size:16px;}
 .wrap{max-width:720px;margin:0 auto;padding:0 20px 80px}
-header{border-bottom:1px solid var(--line);margin-bottom:40px}
-header .wrap{padding-top:20px;padding-bottom:16px}
+header{border-bottom:1px solid var(--line);border-top:3px solid var(--accent);margin-bottom:40px}
+header .wrap{padding-top:18px;padding-bottom:16px}
 header a{color:var(--fg);text-decoration:none;font-weight:700;font-size:17px}
-h1{font-size:26px;line-height:1.45;margin:32px 0 8px}
-h2{font-size:21px;margin:48px 0 12px;padding-bottom:8px;border-bottom:2px solid var(--line)}
-h3{font-size:17px;margin:32px 0 8px}
+header a:hover{color:var(--accent)}
+h1{font-size:27px;line-height:1.45;margin:34px 0 10px;letter-spacing:.01em}
+h2{position:relative;font-size:21px;margin:56px 0 16px;padding:0 0 10px 15px;
+  border-bottom:1px solid var(--line)}
+h2::before{content:"";position:absolute;left:0;top:.2em;bottom:12px;width:4px;
+  border-radius:2px;background:var(--accent)}
+h3{font-size:17px;margin:36px 0 10px;padding-left:12px;
+  border-left:3px solid var(--accent-line)}
 p{margin:16px 0}
-a{color:var(--accent)}
-blockquote{margin:20px 0;padding:12px 16px;background:var(--notice);
-  border:1px solid var(--notice-line);border-radius:6px;font-size:14px;color:var(--fg)}
+a{color:var(--accent);text-underline-offset:3px;text-decoration-thickness:1px}
+strong{color:var(--accent);font-weight:700}
+blockquote{margin:22px 0;padding:13px 16px;background:var(--notice);
+  border:1px solid var(--notice-line);border-left:4px solid var(--notice-line);
+  border-radius:6px;font-size:14px;color:var(--fg)}
+blockquote strong{color:inherit}
 .meta{color:var(--muted);font-size:13px;margin:0 0 24px}
-ul,ol{padding-left:1.4em}
-li{margin:6px 0}
+ul,ol{padding-left:1.3em}
+li{margin:8px 0}
+ul li::marker{color:var(--accent)}
+ol li::marker{color:var(--accent);font-weight:700}
 hr{border:0;border-top:1px solid var(--line);margin:40px 0}
 code{background:var(--card);padding:2px 5px;border-radius:4px;font-size:.9em}
-.card{display:flex;gap:16px;margin:28px 0;padding:16px;background:var(--card);
-  border:1px solid var(--line);border-radius:10px}
+.card{display:flex;gap:16px;margin:30px 0;padding:18px;background:var(--card);
+  border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:10px;
+  transition:box-shadow .15s ease,transform .15s ease}
+.card:hover{box-shadow:0 4px 18px rgba(0,0,0,.09);transform:translateY(-1px)}
 .card-img{flex:0 0 120px}
 .card-img img{width:120px;height:120px;object-fit:contain;border-radius:6px;background:#fff}
 .card-body{flex:1;min-width:0}
@@ -51,14 +65,19 @@ code{background:var(--card);padding:2px 5px;border-radius:4px;font-size:.9em}
 .stars{color:#f0a000}
 .card-shop{margin:0 0 12px;font-size:12px;color:var(--muted)}
 .btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;
-  padding:11px 18px;border-radius:6px;font-weight:700;font-size:14px}
-.btn:hover{opacity:.88}
+  padding:12px 20px;border-radius:6px;font-weight:700;font-size:14px;
+  box-shadow:0 2px 8px rgba(200,16,46,.28)}
+.btn:hover{opacity:.9;transform:translateY(-1px)}
+.card-name strong,.card strong{color:inherit}
 .list{list-style:none;padding:0}
-.list li{border-bottom:1px solid var(--line);padding:20px 0;margin:0}
+.list li{border-bottom:1px solid var(--line);padding:22px 0 22px 16px;margin:0;
+  border-left:3px solid transparent;transition:border-color .15s ease,background .15s ease}
+.list li:hover{border-left-color:var(--accent);background:var(--accent-weak)}
 .list a{font-size:17px;font-weight:700;text-decoration:none;color:var(--fg);line-height:1.5}
 .list a:hover{color:var(--accent)}
 .list p{margin:6px 0 0;font-size:14px;color:var(--muted)}
-.list time{font-size:12px;color:var(--muted)}
+.list time{display:inline-block;margin-top:8px;font-size:12px;color:var(--muted)}
+.list li strong{color:inherit}
 footer{border-top:1px solid var(--line);margin-top:64px;padding:24px 0;
   font-size:13px;color:var(--muted)}
 footer a{color:var(--muted)}
