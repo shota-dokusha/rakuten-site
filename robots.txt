@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://shota-dokusha.github.io/rakuten-site/sitemap.xml
