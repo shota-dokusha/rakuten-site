@@ -9,6 +9,8 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="動画編集向け27インチ4Kモニター選び、スペックのどこを見るか｜映像編集の機材ノート">
 <meta property="og:description" content="色域・リフレッシュレート・接続端子など、27インチ4Kモニター選びで必ず出てくるスペックを映像編集者の目線で解説。27,000〜64,000円の6製品を比較しながら、現場で本当に重要なポイントをまとめた。">
+<meta property="og:image" content="https://shota-dokusha.github.io/rakuten-site/images/undefined">
+<meta name="twitter:card" content="summary_large_image">
 <style>
 :root{
   --bg:#ffffff; --fg:#1a1a1a; --muted:#666; --line:#e8e8e8;
@@ -43,13 +45,36 @@ blockquote{margin:22px 0;padding:13px 16px;background:var(--notice);
   border:1px solid var(--notice-line);border-left:4px solid var(--notice-line);
   border-radius:6px;font-size:14px;color:var(--fg)}
 blockquote strong{color:inherit}
-.meta{color:var(--muted);font-size:13px;margin:0 0 24px}
+.meta{color:var(--muted);font-size:13px;margin:0 0 20px}
+/* 広告表記（ステマ規制対応）。控えめだが読み取れる大きさを保つこと */
+.pr-note{margin:0 0 18px;font-size:12px;color:var(--muted);letter-spacing:.02em}
+.disclosure{margin:32px 0 0;padding:16px 18px;background:var(--card);
+  border:1px solid var(--line);border-radius:8px;font-size:13px;color:var(--muted)}
+.disclosure p{margin:0 0 10px;line-height:1.75}
+.disclosure p:last-child{margin-bottom:0}
+.disclosure strong{color:var(--fg)}
 ul,ol{padding-left:1.3em}
 li{margin:8px 0}
 ul li::marker{color:var(--accent)}
 ol li::marker{color:var(--accent);font-weight:700}
 hr{border:0;border-top:1px solid var(--line);margin:40px 0}
 code{background:var(--card);padding:2px 5px;border-radius:4px;font-size:.9em}
+.toplink{margin:-8px 0 28px;text-align:center;font-size:15px}
+.toplink a{display:inline-block;color:var(--accent);font-weight:700;text-decoration:none;
+  padding:10px 16px;border-radius:8px;background:var(--accent-weak);
+  border:1px solid var(--accent-line);line-height:1.5}
+.toplink a::before{content:"🔗 ";font-weight:400}
+.toplink a:hover{text-decoration:underline}
+.hero{margin:0 0 22px;padding:0}
+.hero img{width:100%;height:auto;aspect-ratio:1200/627;object-fit:cover;border-radius:10px;display:block}
+/* 楽天の商品画像は「切り取り禁止」なので、余白付きで全体を収める */
+.hero.product img{object-fit:contain;background:#fff;border:1px solid var(--line);padding:14px}
+.hero.product figcaption{text-align:right}
+.hero figcaption{margin-top:7px;font-size:11px;color:var(--muted);text-align:right}
+.hero figcaption a{color:var(--muted)}
+.thumb{flex:0 0 128px}
+.thumb img{width:128px;height:80px;object-fit:cover;border-radius:6px;display:block}
+.thumb.product img{object-fit:contain;background:#fff;border:1px solid var(--line)}
 .card{display:flex;gap:16px;margin:30px 0;padding:18px;background:var(--card);
   border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:10px;
   transition:box-shadow .15s ease,transform .15s ease}
@@ -70,8 +95,10 @@ code{background:var(--card);padding:2px 5px;border-radius:4px;font-size:.9em}
 .btn:hover{opacity:.9;transform:translateY(-1px)}
 .card-name strong,.card strong{color:inherit}
 .list{list-style:none;padding:0}
-.list li{border-bottom:1px solid var(--line);padding:22px 0 22px 16px;margin:0;
+.list li{display:flex;gap:16px;align-items:flex-start;
+  border-bottom:1px solid var(--line);padding:22px 0 22px 16px;margin:0;
   border-left:3px solid transparent;transition:border-color .15s ease,background .15s ease}
+.list .body{flex:1;min-width:0}
 .list li:hover{border-left-color:var(--accent);background:var(--accent-weak)}
 .list a{font-size:17px;font-weight:700;text-decoration:none;color:var(--fg);line-height:1.5}
 .list a:hover{color:var(--accent)}
@@ -84,6 +111,8 @@ footer a{color:var(--muted)}
 @media(max-width:560px){
   .card{flex-direction:column}
   .card-img,.card-img img{width:100%;flex:none;height:auto;max-height:220px}
+  .list li{flex-direction:column;gap:10px}
+  .thumb,.thumb img{width:100%;flex:none;height:auto;aspect-ratio:1200/627}
   h1{font-size:22px}
 }
 </style>
@@ -93,7 +122,16 @@ footer a{color:var(--muted)}
 <main class="wrap">
 <h1>動画編集向け27インチ4Kモニター選び、スペックのどこを見るか</h1>
 <p class="meta">更新: 2026-08-18　／　sho</p>
-<blockquote>この記事は楽天アフィリエイトのリンクを含みます。価格・在庫は2026-08-18時点のもので、変動します。</blockquote>
+<p class="pr-note">本ページはプロモーションを含みます</p>
+<figure class="hero product">
+  <img src="https://thumbnail.image.rakuten.co.jp/@0_mall/fpdvision/cabinet/11675626/11705629/1.jpg?_ex=400x400" alt="液晶ディスプレイ 27インチ QD-MiniLED 4K UHD 量子ドットゲーミングモニター デュアルモード技術 32" loading="lazy">
+  <figcaption>画像: 楽天市場（FPDVISION 楽天市場店）</figcaption>
+</figure>
+<p class="toplink">
+  <a href="https://hb.afl.rakuten.co.jp/hgc/g00uplqo.1jrvp4d6.g00uplqo.1jrvq204/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ffpdvision%2Fm27p6-jp%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Ffpdvision%2Fi%2F10000042%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">
+    楽天市場でいま一番売れている「動画編集向け4Kモニター」を見る
+  </a>
+</p>
 <p>4Kモニターを選ぼうとスペック表を開いたとき、「DCI-P3 98%」「QD-MiniLED」「320Hz」といった文字が並んで、どれがどう違うのかわからなくなる。映像編集でモニターに求めるものと、ゲーミング用途で求めるものはかなり違う。そこを混同したまま選ぶと、スペック的には豪華でも編集の用途にはあまり意味のない機能にお金を出すことになる。今回は動画編集の現場目線で、スペックのどこを見ればいいかを整理しながら6製品の違いを書く。</p>
 <h2>迷ってるならこれ</h2>
 <p>動画編集メインで1台選ぶなら、今回の6製品の中ではkksmartのS-4K27Cが一番バランスがいいと思う。</p>
@@ -212,10 +250,15 @@ footer a{color:var(--muted)}
 <h2>まとめ</h2>
 <p>動画編集用に27インチ4Kを選ぶなら、DCI-P3のカバレッジが明記されているかと接続端子の確認が出発点になる。価格帯は今回の6製品で27,000〜64,000円の幅があり、用途と予算に応じて選べる。バランス重視ならkksmartのS-4K27C、予算を抑えつつ4Kが欲しいならKTC H27P27かcocoparが候補だ。リフレッシュレートの高さは編集作業には直接関係しないことが多いので、そこに価格差が乗っている製品は用途を整理してから選んだ方がいい。</p>
 <hr>
-<p class="meta">価格・レビュー件数は楽天市場から 2026-08-18 に取得したものです。実際の価格は変動しますので、購入前に商品ページでご確認ください。</p>
+<div class="disclosure">
+<p><strong>広告について</strong></p>
+<p>当サイトは楽天アフィリエイトのリンクを掲載しており、当サイト経由で商品が購入された場合、運営者に紹介料が支払われることがあります。紹介料の有無は、掲載する商品の選定や記載内容に影響していません。</p>
+<p>掲載している価格・レビュー件数・評価は、楽天ウェブサービスを通じて 2026-08-18 に取得した時点のものです。実際の価格・在庫・ポイント倍率は変動しますので、購入前に必ず各商品ページでご確認ください。</p>
+</div>
 </main>
 <footer><div class="wrap">
 <p>当サイトは楽天アフィリエイトによる広告を掲載しています。掲載している価格・在庫・ポイント倍率は取得時点のもので、変動します。最新の情報は各商品ページでご確認ください。</p>
+<p>商品情報・画像は<a href="https://webservice.rakuten.co.jp/" target="_blank" rel="nofollow noopener">楽天ウェブサービス</a>より取得しています（Supported by Rakuten Developers）。</p>
 <p>映像編集の機材ノート ／ sho　<a href="https://shota-dokusha.github.io/rakuten-site/privacy.html">運営者情報・免責事項</a></p>
 </div></footer>
 </body>

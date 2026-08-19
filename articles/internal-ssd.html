@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>内蔵SSD増設するとき、M.2 NVMeのスペックをどう読むか｜映像編集の機材ノート</title>
+<meta name="description" content="編集中に内蔵ストレージが枯渇して書き出しが止まる前に、M.2 NVMe SSDの増設を検討している人向け。Gen3とGen4の違い、読み書き速度の読み方、容量と保証年数の判断基準を実務目線でまとめた。">
+<link rel="canonical" href="https://shota-dokusha.github.io/rakuten-site/articles/internal-ssd.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="内蔵SSD増設するとき、M.2 NVMeのスペックをどう読むか｜映像編集の機材ノート">
+<meta property="og:description" content="編集中に内蔵ストレージが枯渇して書き出しが止まる前に、M.2 NVMe SSDの増設を検討している人向け。Gen3とGen4の違い、読み書き速度の読み方、容量と保証年数の判断基準を実務目線でまとめた。">
+<meta property="og:image" content="https://shota-dokusha.github.io/rakuten-site/images/undefined">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{
+  --bg:#ffffff; --fg:#1a1a1a; --muted:#666; --line:#e8e8e8;
+  --accent:#c8102e; --accent-weak:#fdeef0; --accent-line:#f0c4cb;
+  --card:#fafafa; --notice:#fff8e1; --notice-line:#f0d9a0;
+}
+@media (prefers-color-scheme:dark){
+  :root{ --bg:#141414; --fg:#e8e8e8; --muted:#9a9a9a; --line:#2e2e2e;
+         --accent:#ff6b7a; --accent-weak:#2a1a1d; --accent-line:#4d2b31;
+         --card:#1d1d1d; --notice:#2a2417; --notice-line:#4a3f28; }
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);
+  font-family:system-ui,-apple-system,"Hiragino Sans","Noto Sans JP",sans-serif;
+  line-height:1.85;font-size:16px;}
+.wrap{max-width:720px;margin:0 auto;padding:0 20px 80px}
+header{border-bottom:1px solid var(--line);border-top:3px solid var(--accent);margin-bottom:40px}
+header .wrap{padding-top:18px;padding-bottom:16px}
+header a{color:var(--fg);text-decoration:none;font-weight:700;font-size:17px}
+header a:hover{color:var(--accent)}
+h1{font-size:27px;line-height:1.45;margin:34px 0 10px;letter-spacing:.01em}
+h2{position:relative;font-size:21px;margin:56px 0 16px;padding:0 0 10px 15px;
+  border-bottom:1px solid var(--line)}
+h2::before{content:"";position:absolute;left:0;top:.2em;bottom:12px;width:4px;
+  border-radius:2px;background:var(--accent)}
+h3{font-size:17px;margin:36px 0 10px;padding-left:12px;
+  border-left:3px solid var(--accent-line)}
+p{margin:16px 0}
+a{color:var(--accent);text-underline-offset:3px;text-decoration-thickness:1px}
+strong{color:var(--accent);font-weight:700}
+blockquote{margin:22px 0;padding:13px 16px;background:var(--notice);
+  border:1px solid var(--notice-line);border-left:4px solid var(--notice-line);
+  border-radius:6px;font-size:14px;color:var(--fg)}
+blockquote strong{color:inherit}
+.meta{color:var(--muted);font-size:13px;margin:0 0 20px}
+/* 広告表記（ステマ規制対応）。控えめだが読み取れる大きさを保つこと */
+.pr-note{margin:0 0 18px;font-size:12px;color:var(--muted);letter-spacing:.02em}
+.disclosure{margin:32px 0 0;padding:16px 18px;background:var(--card);
+  border:1px solid var(--line);border-radius:8px;font-size:13px;color:var(--muted)}
+.disclosure p{margin:0 0 10px;line-height:1.75}
+.disclosure p:last-child{margin-bottom:0}
+.disclosure strong{color:var(--fg)}
+ul,ol{padding-left:1.3em}
+li{margin:8px 0}
+ul li::marker{color:var(--accent)}
+ol li::marker{color:var(--accent);font-weight:700}
+hr{border:0;border-top:1px solid var(--line);margin:40px 0}
+code{background:var(--card);padding:2px 5px;border-radius:4px;font-size:.9em}
+.toplink{margin:-8px 0 28px;text-align:center;font-size:15px}
+.toplink a{display:inline-block;color:var(--accent);font-weight:700;text-decoration:none;
+  padding:10px 16px;border-radius:8px;background:var(--accent-weak);
+  border:1px solid var(--accent-line);line-height:1.5}
+.toplink a::before{content:"🔗 ";font-weight:400}
+.toplink a:hover{text-decoration:underline}
+.hero{margin:0 0 22px;padding:0}
+.hero img{width:100%;height:auto;aspect-ratio:1200/627;object-fit:cover;border-radius:10px;display:block}
+/* 楽天の商品画像は「切り取り禁止」なので、余白付きで全体を収める */
+.hero.product img{object-fit:contain;background:#fff;border:1px solid var(--line);padding:14px}
+.hero.product figcaption{text-align:right}
+.hero figcaption{margin-top:7px;font-size:11px;color:var(--muted);text-align:right}
+.hero figcaption a{color:var(--muted)}
+.thumb{flex:0 0 128px}
+.thumb img{width:128px;height:80px;object-fit:cover;border-radius:6px;display:block}
+.thumb.product img{object-fit:contain;background:#fff;border:1px solid var(--line)}
+.card{display:flex;gap:16px;margin:30px 0;padding:18px;background:var(--card);
+  border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:10px;
+  transition:box-shadow .15s ease,transform .15s ease}
+.card:hover{box-shadow:0 4px 18px rgba(0,0,0,.09);transform:translateY(-1px)}
+.card-img{flex:0 0 120px}
+.card-img img{width:120px;height:120px;object-fit:contain;border-radius:6px;background:#fff}
+.card-body{flex:1;min-width:0}
+.card-name{margin:0 0 8px;font-weight:700;font-size:15px;line-height:1.5}
+.card-meta{margin:0 0 4px}
+.price{color:var(--accent);font-weight:700;font-size:19px}
+.asof{color:var(--muted);font-size:12px}
+.card-review{margin:0 0 2px;font-size:13px;color:var(--muted)}
+.stars{color:#f0a000}
+.card-shop{margin:0 0 12px;font-size:12px;color:var(--muted)}
+.btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;
+  padding:12px 20px;border-radius:6px;font-weight:700;font-size:14px;
+  box-shadow:0 2px 8px rgba(200,16,46,.28)}
+.btn:hover{opacity:.9;transform:translateY(-1px)}
+.card-name strong,.card strong{color:inherit}
+.list{list-style:none;padding:0}
+.list li{display:flex;gap:16px;align-items:flex-start;
+  border-bottom:1px solid var(--line);padding:22px 0 22px 16px;margin:0;
+  border-left:3px solid transparent;transition:border-color .15s ease,background .15s ease}
+.list .body{flex:1;min-width:0}
+.list li:hover{border-left-color:var(--accent);background:var(--accent-weak)}
+.list a{font-size:17px;font-weight:700;text-decoration:none;color:var(--fg);line-height:1.5}
+.list a:hover{color:var(--accent)}
+.list p{margin:6px 0 0;font-size:14px;color:var(--muted)}
+.list time{display:inline-block;margin-top:8px;font-size:12px;color:var(--muted)}
+.list li strong{color:inherit}
+footer{border-top:1px solid var(--line);margin-top:64px;padding:24px 0;
+  font-size:13px;color:var(--muted)}
+footer a{color:var(--muted)}
+@media(max-width:560px){
+  .card{flex-direction:column}
+  .card-img,.card-img img{width:100%;flex:none;height:auto;max-height:220px}
+  .list li{flex-direction:column;gap:10px}
+  .thumb,.thumb img{width:100%;flex:none;height:auto;aspect-ratio:1200/627}
+  h1{font-size:22px}
+}
+</style>
+</head>
+<body>
+<header><div class="wrap"><a href="https://shota-dokusha.github.io/rakuten-site/">映像編集の機材ノート</a></div></header>
+<main class="wrap">
+<h1>内蔵SSD増設するとき、M.2 NVMeのスペックをどう読むか</h1>
+<p class="meta">更新: 2026-08-19　／　sho</p>
+<p class="pr-note">本ページはプロモーションを含みます</p>
+<figure class="hero product">
+  <img src="https://thumbnail.image.rakuten.co.jp/@0_mall/fanxiang-official/cabinet/11282427/imgrc0089793670.jpg?_ex=400x400" alt="Fanxiang M.2 内蔵SSD PS5対応・5年保証 R:7200MB/s W:6100MB/s SSD 500G" loading="lazy">
+  <figcaption>画像: 楽天市場（Fanxiang Japan楽天市場店）</figcaption>
+</figure>
+<p class="toplink">
+  <a href="https://hb.afl.rakuten.co.jp/hgc/g00unvyo.1jrvp051.g00unvyo.1jrvqf89/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ffanxiang-official%2Fs880e%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Ffanxiang-official%2Fi%2F10000004%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">
+    楽天市場でいま一番売れている「編集PCの内蔵SSD増設」を見る
+  </a>
+</p>
+<p>素材管理が甘かったせいで、納品前日に内蔵ストレージが残り数GBになったことがある。4K素材をそのままタイムラインに乗せて編集していると、あっという間に埋まる。外付けに逃がしながら作業するのも手だが、書き出しのタイミングで速度が引っかかると焦る。結局そのとき素材を一時的に別のドライブへ退避させて乗り切ったけど、「最初からもう少し内蔵SSDを足しておけばよかった」と素直に思った。</p>
+<p>M.2 NVMeのSSDは選択肢が多く、価格帯もバラバラで、何を基準に選べばいいか迷う。Gen3とGen4の違い、速度の数字の読み方、保証年数——この記事ではそのあたりを整理しておく。</p>
+<h2>迷ってるならこれ</h2>
+<p>映像編集の用途で内蔵SSDを増設するなら、まずGen4世代を選んでおくのが無難だと思っている。Gen4はGen3より最大転送速度が大幅に上で、4K以上の素材を扱う場面では速度の差が出やすい。</p>
+<p>このFanxiangのGen4モデルは、読み込み7200MB/s・書き込み6100MB/sというスペックで、価格は13,980円。Gen4のSSDとしてはコストを抑えた選択肢になる。レビューが102件・平均4.55という数字は、ある程度の使用実績が積み上がっている目安になる。SLCキャッシュ搭載・5年保証・グラフェン素材対応と書いてある。PC側がGen4スロットに対応しているなら、真っ先に候補に入れていい。</p>
+<div class="card">
+  <a class="card-img" href="https://hb.afl.rakuten.co.jp/hgc/g00unvyo.1jrvp051.g00unvyo.1jrvqf89/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ffanxiang-official%2Fs880e%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Ffanxiang-official%2Fi%2F10000004%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">
+    <img src="https://thumbnail.image.rakuten.co.jp/@0_mall/fanxiang-official/cabinet/11282427/imgrc0089793670.jpg?_ex=400x400" alt="Fanxiang M.2 内蔵SSD PS5対応・5年保証 R:7200MB/s W:6100MB/s SSD 500G" loading="lazy" width="160" height="160">
+  </a>
+  <div class="card-body">
+    <p class="card-name">Fanxiang M.2 内蔵SSD PS5対応・5年保証 R:7200MB/s W:6100MB/s SSD 500GB/1TB/2TB NVMe 2280 PCIe Gen4.</p>
+    <p class="card-meta">
+      <span class="price">13,980円</span>
+      <span class="asof">（2026-08-19時点・変動します）</span>
+    </p>
+    <p class="card-review"><span class="stars">★★★★★</span> 4.55 ／ レビュー102件</p>
+    <p class="card-shop">Fanxiang Japan楽天市場店</p>
+    <a class="btn" href="https://hb.afl.rakuten.co.jp/hgc/g00unvyo.1jrvp051.g00unvyo.1jrvqf89/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ffanxiang-official%2Fs880e%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Ffanxiang-official%2Fi%2F10000004%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">楽天市場で最新価格・レビューを見る</a>
+  </div>
+</div>
+<h2>それぞれどう違うか</h2>
+<h3>Fanxiang Gen4（7200MB/s）</h3>
+<p>上の「迷ってるならこれ」で挙げたモデル。映像編集で速度を重視するならGen4から選ぶのが理にかなっている。ひとつ注意点を挙げると、マザーボード側がGen4に対応していなければ速度はGen3の上限に落ちる。購入前にPC側の対応世代を確認するのが先になる。</p>
+<h3>Fanxiang Gen3（3600MB/s・11,999円）</h3>
+<p>Gen3で読み込み最大3600MB/s。HMB（Host Memory Buffer）採用・SLCバッファ技術・AES暗号化機能が搭載されていて、5年保証付き。価格はGen4モデルより約2,000円安い。レビューは81件で平均4.72と、この6製品の中でも高い評価を維持している。</p>
+<p>PC側がGen3までの対応で、コストを抑えたい場合の現実的な選択肢になる。Gen3だから映像編集に使えないというわけではないが、4K以上の素材を大量に扱う作業フローでは、書き込み速度の上限がボトルネックになる場面はある。</p>
+<div class="card">
+  <a class="card-img" href="https://hb.afl.rakuten.co.jp/hgc/g00unvyo.1jrvp051.g00unvyo.1jrvqf89/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ffanxiang-official%2Fs501q%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Ffanxiang-official%2Fi%2F10000017%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">
+    <img src="https://thumbnail.image.rakuten.co.jp/@0_mall/fanxiang-official/cabinet/11282427/s501q-0.jpg?_ex=400x400" alt="fanxiang SSD 512GB 1TB 2TB 4TBPCIe Gen3.0×4 M.2 Type2280 NVM" loading="lazy" width="160" height="160">
+  </a>
+  <div class="card-body">
+    <p class="card-name">fanxiang SSD 512GB 1TB 2TB 4TBPCIe Gen3.0×4 M.2 Type2280 NVMe 1.4 内蔵 最大読込3,600MB/s 32Gbps </p>
+    <p class="card-meta">
+      <span class="price">11,999円</span>
+      <span class="asof">（2026-08-19時点・変動します）</span>
+    </p>
+    <p class="card-review"><span class="stars">★★★★★</span> 4.72 ／ レビュー81件</p>
+    <p class="card-shop">Fanxiang Japan楽天市場店</p>
+    <a class="btn" href="https://hb.afl.rakuten.co.jp/hgc/g00unvyo.1jrvp051.g00unvyo.1jrvqf89/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ffanxiang-official%2Fs501q%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Ffanxiang-official%2Fi%2F10000017%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">楽天市場で最新価格・レビューを見る</a>
+  </div>
+</div>
+<h3>Crucial P1（500GB・16,880円）</h3>
+<p>Crucialは長くSSD市場にいるブランドで、名前の安心感がある。翌日配達対応なので、急ぎのタイミングには助かる。ただ500GBで16,880円という価格帯は、他のGen3モデルと比べると割高感がある。商品説明に速度スペックの詳細な記載が少ないため、他と直接比較しにくい点は注意。レビューは66件で平均4.73と高評価。ブランドの実績を優先したい人向けの選択肢として挙げておく。</p>
+<div class="card">
+  <a class="card-img" href="https://hb.afl.rakuten.co.jp/hgc/g00sal7o.1jrvp5bd.g00sal7o.1jrvqe6a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fspd-shop%2Fmcssd500gb-p1%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fspd-shop%2Fi%2F10002629%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">
+    <img src="https://thumbnail.image.rakuten.co.jp/@0_mall/spd-shop/cabinet/pc-part/imgrc0089420516.jpg?_ex=400x400" alt="Crucial P1 500GB 3D NAND NVMe PCIe M.2 SSD CT500P1SSD8【翌日配達送" loading="lazy" width="160" height="160">
+  </a>
+  <div class="card-body">
+    <p class="card-name">Crucial P1 500GB 3D NAND NVMe PCIe M.2 SSD CT500P1SSD8【翌日配達送料無料】パッケージ品 MCSSD500G-P1</p>
+    <p class="card-meta">
+      <span class="price">16,880円</span>
+      <span class="asof">（2026-08-19時点・変動します）</span>
+    </p>
+    <p class="card-review"><span class="stars">★★★★★</span> 4.73 ／ レビュー66件</p>
+    <p class="card-shop">SPD楽天市場店</p>
+    <a class="btn" href="https://hb.afl.rakuten.co.jp/hgc/g00sal7o.1jrvp5bd.g00sal7o.1jrvqe6a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fspd-shop%2Fmcssd500gb-p1%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fspd-shop%2Fi%2F10002629%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">楽天市場で最新価格・レビューを見る</a>
+  </div>
+</div>
+<h3>WINTEN 512GB（2000MB/s・14,980円）</h3>
+<p>転送速度の最大が2000MB/sと、Gen3の中でも控えめな数字。日本語パッケージ・5年保証・片面実装という点が特徴として書いてある。容量が512GBなので、映像素材を直接保存しながら作業する用途だと心もとない場面が出てくる可能性がある。レビューは55件で平均4.64。速度よりも片面実装や日本語サポートを優先したい用途向きのイメージ。</p>
+<div class="card">
+  <a class="card-img" href="https://hb.afl.rakuten.co.jp/hgc/g00ql29o.1jrvp28a.g00ql29o.1jrvq875/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fwin10%2F6088%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fwin10%2Fi%2F10009831%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">
+    <img src="https://thumbnail.image.rakuten.co.jp/@0_mall/win10/cabinet/ssd/pcie_512sam.jpg?_ex=400x400" alt="WINTEN SSD M.2 512GB【5年保証 送料無料】NVMe PCIe Gen3x4 M.2 2280 3D " loading="lazy" width="160" height="160">
+  </a>
+  <div class="card-body">
+    <p class="card-name">WINTEN SSD M.2 512GB【5年保証 送料無料】NVMe PCIe Gen3x4 M.2 2280 3D NANDフラッシュ搭載 最大転送速度2000MB/s 片面実</p>
+    <p class="card-meta">
+      <span class="price">14,980円</span>
+      <span class="asof">（2026-08-19時点・変動します）</span>
+    </p>
+    <p class="card-review"><span class="stars">★★★★★</span> 4.64 ／ レビュー55件</p>
+    <p class="card-shop">WINTEN 楽天市場店</p>
+    <a class="btn" href="https://hb.afl.rakuten.co.jp/hgc/g00ql29o.1jrvp28a.g00ql29o.1jrvq875/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fwin10%2F6088%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fwin10%2Fi%2F10009831%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">楽天市場で最新価格・レビューを見る</a>
+  </div>
+</div>
+<h3>ロジテック PS5向けGen4（6100MB/s・62,480円）</h3>
+<p>2TB・ヒートシンク付きで、PS5/PS5 Pro対応が明記されているモデル。読み込み約6100MB/sというGen4スペックを持っているが、価格が62,480円と他と比べてかなり離れている。ヒートシンクが最初から付属している点は放熱面で安心だが、PCへの増設が主目的なら価格帯が過剰になりやすい。PS5とPCの両方に使い回す前提があれば候補に入る。レビューは51件で平均4.65。</p>
+<div class="card">
+  <a class="card-img" href="https://hb.afl.rakuten.co.jp/hgc/g00pz6jo.1jrvp1de.g00pz6jo.1jrvq9ea/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Flogitec%2Flmd-ps5m200%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Flogitec%2Fi%2F10012085%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">
+    <img src="https://thumbnail.image.rakuten.co.jp/@0_mall/logitec/cabinet/ssd/lmdps5m/lmd-ps5m200.jpg?_ex=400x400" alt="SSD PS5 対応 特化設計ヒートシンク付き 搭載 内蔵 m.2 ssd 2TB PS5 Pro 簡単 増設 Gen4" loading="lazy" width="160" height="160">
+  </a>
+  <div class="card-body">
+    <p class="card-name">SSD PS5 対応 特化設計ヒートシンク付き 搭載 内蔵 m.2 ssd 2TB PS5 Pro 簡単 増設 Gen4x4対応 NVMe PS5拡張ストレージLMD-PS5M20</p>
+    <p class="card-meta">
+      <span class="price">62,480円</span>
+      <span class="asof">（2026-08-19時点・変動します）</span>
+    </p>
+    <p class="card-review"><span class="stars">★★★★★</span> 4.65 ／ レビュー51件</p>
+    <p class="card-shop">ロジテックダイレクト@楽天市場店</p>
+    <a class="btn" href="https://hb.afl.rakuten.co.jp/hgc/g00pz6jo.1jrvp1de.g00pz6jo.1jrvq9ea/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Flogitec%2Flmd-ps5m200%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Flogitec%2Fi%2F10012085%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">楽天市場で最新価格・レビューを見る</a>
+  </div>
+</div>
+<h3>シリコンパワー Gen3（2200MB/s・15,980円）</h3>
+<p>読み込み最大2200MB/s・書き込み最大1600MB/sで、512GBモデル。シリコンパワーも長く市場にいるメーカーで5年保証付き。同じGen3帯のWINTENより速度スペックは高く、数字が明記されているので他と比較しやすい。価格は15,980円。レビューは50件で平均4.66。コストを抑えながら、ある程度名の通ったメーカーを選びたい人の候補になる。</p>
+<div class="card">
+  <a class="card-img" href="https://hb.afl.rakuten.co.jp/hgc/g00uieuo.1jrvp8db.g00uieuo.1jrvqbdd/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsilicon-power-direct%2Fsp512gbp34a60m28%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fsilicon-power-direct%2Fi%2F10000107%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">
+    <img src="https://thumbnail.image.rakuten.co.jp/@0_mall/silicon-power-direct/cabinet/10107004/10107026/imgrc0100929269.jpg?_ex=400x400" alt="シリコンパワー SSD 内蔵SSD 512GB ストレージ NVME PCIe Gen3 m.2 ssd 2280 ゲー" loading="lazy" width="160" height="160">
+  </a>
+  <div class="card-body">
+    <p class="card-name">シリコンパワー SSD 内蔵SSD 512GB ストレージ NVME PCIe Gen3 m.2 ssd 2280 ゲーム 内蔵型 超高速 ゲーミングSSD パソコン ゲーミング </p>
+    <p class="card-meta">
+      <span class="price">15,980円</span>
+      <span class="asof">（2026-08-19時点・変動します）</span>
+    </p>
+    <p class="card-review"><span class="stars">★★★★★</span> 4.66 ／ レビュー50件</p>
+    <p class="card-shop">シリコンパワーダイレクト</p>
+    <a class="btn" href="https://hb.afl.rakuten.co.jp/hgc/g00uieuo.1jrvp8db.g00uieuo.1jrvqbdd/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsilicon-power-direct%2Fsp512gbp34a60m28%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fsilicon-power-direct%2Fi%2F10000107%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">楽天市場で最新価格・レビューを見る</a>
+  </div>
+</div>
+<h2>選ぶときに実際どこを見るか</h2>
+<p>まず確認するのは「PCのM.2スロットがGen3対応かGen4対応か」。Gen4のSSDを買っても、スロット側がGen3までしか対応していなければ速度はGen3の上限に落ちる。マザーボードの仕様ページかBIOS画面で確認できる。</p>
+<p>次に速度スペックの「書き込み側の数字」を見る。製品ページは読み込みの数字が大きく書いてあることが多いが、映像編集では書き出し先に使うドライブの書き込み速度も同じくらい効いてくる。</p>
+<p>容量は、後から「足りなかった」になるのが一番きつい。素材を保存しながら作業するなら、最低でも1TBは持っておきたい。500GBは最初から選択肢として狭い。</p>
+<p>保証年数は3年か5年かで差がある。内蔵SSDはデータが詰まっているぶん、保証が長い方が精神的に楽になる。</p>
+<h2>実際どう使ってるか</h2>
+<p>僕は編集作業中の素材保存と書き出し先を別のドライブで分けている。タイムラインに乗っている素材と書き出し先のファイルが同じドライブに集まると、同時アクセスが発生して速度が落ちやすい。M.2スロットが2本以上あるPCなら、素材用と書き出し用で別々に挿す構成が一番ストレスが少ない。</p>
+<p>SSDを増やす前に「今何がボトルネックになっているか」を見ておく方が無駄は減る。書き出しが遅い原因がストレージにあるとは限らないので、CPU使用率やエンコード設定も一緒に確認した方がいい。</p>
+<h2>まとめ</h2>
+<p>映像編集でM.2 NVMe SSDを増設するとき、まず確認するのはPC側の対応世代と書き込み速度。Gen4に対応しているPCなら、Gen4世代のモデルを選んでおく方が後々の後悔が少ない。</p>
+<p>容量は多めに見積もっておくこと、保証年数はデータが入るストレージなら長い方を選ぶこと、この2点がシンプルな判断軸になる。</p>
+<hr>
+<div class="disclosure">
+<p><strong>広告について</strong></p>
+<p>当サイトは楽天アフィリエイトのリンクを掲載しており、当サイト経由で商品が購入された場合、運営者に紹介料が支払われることがあります。紹介料の有無は、掲載する商品の選定や記載内容に影響していません。</p>
+<p>掲載している価格・レビュー件数・評価は、楽天ウェブサービスを通じて 2026-08-19 に取得した時点のものです。実際の価格・在庫・ポイント倍率は変動しますので、購入前に必ず各商品ページでご確認ください。</p>
+</div>
+</main>
+<footer><div class="wrap">
+<p>当サイトは楽天アフィリエイトによる広告を掲載しています。掲載している価格・在庫・ポイント倍率は取得時点のもので、変動します。最新の情報は各商品ページでご確認ください。</p>
+<p>商品情報・画像は<a href="https://webservice.rakuten.co.jp/" target="_blank" rel="nofollow noopener">楽天ウェブサービス</a>より取得しています（Supported by Rakuten Developers）。</p>
+<p>映像編集の機材ノート ／ sho　<a href="https://shota-dokusha.github.io/rakuten-site/privacy.html">運営者情報・免責事項</a></p>
+</div></footer>
+</body>
+</html>

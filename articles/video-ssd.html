@@ -3,12 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>動画編集向け外付けSSD 1TB｜売れている定番6本を比較した｜映像編集の機材ノート</title>
-<meta name="description" content="映像編集の現場で実際に売れているポータブルSSD（1TB）はどれか。楽天市場のレビュー数と評価をもとに6本を比較した。速度・価格・ブランドの違いと、選ぶときに実際どこを見るかの判断基準も書いている。">
+<title>動画編集の外付けSSD、1TBで足りるのか足りないのか｜映像編集の機材ノート</title>
+<meta name="description" content="書き出しの途中で容量が足りなくなる前に、外付けを一本足しておきたい。ポータブルSSDの1TBという容量が実際の編集作業でどこまで持つのか、速度や価格の違いとあわせて、現場の使い方から整理しました。">
 <link rel="canonical" href="https://shota-dokusha.github.io/rakuten-site/articles/video-ssd.html">
 <meta property="og:type" content="article">
-<meta property="og:title" content="動画編集向け外付けSSD 1TB｜売れている定番6本を比較した｜映像編集の機材ノート">
-<meta property="og:description" content="映像編集の現場で実際に売れているポータブルSSD（1TB）はどれか。楽天市場のレビュー数と評価をもとに6本を比較した。速度・価格・ブランドの違いと、選ぶときに実際どこを見るかの判断基準も書いている。">
+<meta property="og:title" content="動画編集の外付けSSD、1TBで足りるのか足りないのか｜映像編集の機材ノート">
+<meta property="og:description" content="書き出しの途中で容量が足りなくなる前に、外付けを一本足しておきたい。ポータブルSSDの1TBという容量が実際の編集作業でどこまで持つのか、速度や価格の違いとあわせて、現場の使い方から整理しました。">
+<meta property="og:image" content="https://shota-dokusha.github.io/rakuten-site/images/undefined">
+<meta name="twitter:card" content="summary_large_image">
 <style>
 :root{
   --bg:#ffffff; --fg:#1a1a1a; --muted:#666; --line:#e8e8e8;
@@ -43,13 +45,36 @@ blockquote{margin:22px 0;padding:13px 16px;background:var(--notice);
   border:1px solid var(--notice-line);border-left:4px solid var(--notice-line);
   border-radius:6px;font-size:14px;color:var(--fg)}
 blockquote strong{color:inherit}
-.meta{color:var(--muted);font-size:13px;margin:0 0 24px}
+.meta{color:var(--muted);font-size:13px;margin:0 0 20px}
+/* 広告表記（ステマ規制対応）。控えめだが読み取れる大きさを保つこと */
+.pr-note{margin:0 0 18px;font-size:12px;color:var(--muted);letter-spacing:.02em}
+.disclosure{margin:32px 0 0;padding:16px 18px;background:var(--card);
+  border:1px solid var(--line);border-radius:8px;font-size:13px;color:var(--muted)}
+.disclosure p{margin:0 0 10px;line-height:1.75}
+.disclosure p:last-child{margin-bottom:0}
+.disclosure strong{color:var(--fg)}
 ul,ol{padding-left:1.3em}
 li{margin:8px 0}
 ul li::marker{color:var(--accent)}
 ol li::marker{color:var(--accent);font-weight:700}
 hr{border:0;border-top:1px solid var(--line);margin:40px 0}
 code{background:var(--card);padding:2px 5px;border-radius:4px;font-size:.9em}
+.toplink{margin:-8px 0 28px;text-align:center;font-size:15px}
+.toplink a{display:inline-block;color:var(--accent);font-weight:700;text-decoration:none;
+  padding:10px 16px;border-radius:8px;background:var(--accent-weak);
+  border:1px solid var(--accent-line);line-height:1.5}
+.toplink a::before{content:"🔗 ";font-weight:400}
+.toplink a:hover{text-decoration:underline}
+.hero{margin:0 0 22px;padding:0}
+.hero img{width:100%;height:auto;aspect-ratio:1200/627;object-fit:cover;border-radius:10px;display:block}
+/* 楽天の商品画像は「切り取り禁止」なので、余白付きで全体を収める */
+.hero.product img{object-fit:contain;background:#fff;border:1px solid var(--line);padding:14px}
+.hero.product figcaption{text-align:right}
+.hero figcaption{margin-top:7px;font-size:11px;color:var(--muted);text-align:right}
+.hero figcaption a{color:var(--muted)}
+.thumb{flex:0 0 128px}
+.thumb img{width:128px;height:80px;object-fit:cover;border-radius:6px;display:block}
+.thumb.product img{object-fit:contain;background:#fff;border:1px solid var(--line)}
 .card{display:flex;gap:16px;margin:30px 0;padding:18px;background:var(--card);
   border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:10px;
   transition:box-shadow .15s ease,transform .15s ease}
@@ -70,8 +95,10 @@ code{background:var(--card);padding:2px 5px;border-radius:4px;font-size:.9em}
 .btn:hover{opacity:.9;transform:translateY(-1px)}
 .card-name strong,.card strong{color:inherit}
 .list{list-style:none;padding:0}
-.list li{border-bottom:1px solid var(--line);padding:22px 0 22px 16px;margin:0;
+.list li{display:flex;gap:16px;align-items:flex-start;
+  border-bottom:1px solid var(--line);padding:22px 0 22px 16px;margin:0;
   border-left:3px solid transparent;transition:border-color .15s ease,background .15s ease}
+.list .body{flex:1;min-width:0}
 .list li:hover{border-left-color:var(--accent);background:var(--accent-weak)}
 .list a{font-size:17px;font-weight:700;text-decoration:none;color:var(--fg);line-height:1.5}
 .list a:hover{color:var(--accent)}
@@ -84,6 +111,8 @@ footer a{color:var(--muted)}
 @media(max-width:560px){
   .card{flex-direction:column}
   .card-img,.card-img img{width:100%;flex:none;height:auto;max-height:220px}
+  .list li{flex-direction:column;gap:10px}
+  .thumb,.thumb img{width:100%;flex:none;height:auto;aspect-ratio:1200/627}
   h1{font-size:22px}
 }
 </style>
@@ -91,9 +120,18 @@ footer a{color:var(--muted)}
 <body>
 <header><div class="wrap"><a href="https://shota-dokusha.github.io/rakuten-site/">映像編集の機材ノート</a></div></header>
 <main class="wrap">
-<h1>動画編集向け外付けSSD 1TB｜売れている定番6本を比較した</h1>
+<h1>動画編集の外付けSSD、1TBで足りるのか足りないのか</h1>
 <p class="meta">更新: 2026-08-18　／　sho</p>
-<blockquote>この記事は楽天アフィリエイトのリンクを含みます。価格・在庫は2026-08-18時点のもので、変動します。</blockquote>
+<p class="pr-note">本ページはプロモーションを含みます</p>
+<figure class="hero product">
+  <img src="https://thumbnail.image.rakuten.co.jp/@0_mall/kazamidori/cabinet/products9/0619659182557.jpg?_ex=400x400" alt="SSD 1TB 外付SSD ポータブルSSD USB3.2 Gen2 SanDisk サンディスク Extreme R:" loading="lazy">
+  <figcaption>画像: 楽天市場（風見鶏）</figcaption>
+</figure>
+<p class="toplink">
+  <a href="https://hb.afl.rakuten.co.jp/hgc/g00q2hto.1jrvpc3c.g00q2hto.1jrvqd68/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fkazamidori%2F0619659182557%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fkazamidori%2Fi%2F10015007%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">
+    楽天市場でいま一番売れている「動画編集用の外付けSSD」を見る
+  </a>
+</p>
 <p>外付けSSDを買い替えようと思って検索したら、似たような製品が大量に出てきて結局どれにすればいいかわからなくなった人は多いと思う。僕自身、去年の納品2時間前に書き出し用ドライブの空きが枯渇して、コンビニのUSBメモリを買いに走ったことがある。それ以来、外部ストレージは複数持つようにしているし、新しく買うときはまずレビュー数と評価の両方を確認するようにしている。今回は楽天市場でレビュー件数と平均評価をもとに、実際に売れているポータブルSSD（1TB）を6本並べた。</p>
 <h2>迷ってるならこれ</h2>
 <p>レビュー132件・平均4.57は今回まとめた中で群を抜いている。SanDiskというブランド自体への信頼もあるし、USB-AとUSB-Cの両方に対応しているのでPC側の環境を選ばない。読み書き速度もデータに明記されていて、31,450円という価格はこのリストでは高めだが、「買って後悔しにくい選択肢」として選ばれ続けているのがレビュー数に出ている。</p>
@@ -210,10 +248,15 @@ footer a{color:var(--muted)}
 <h2>まとめ</h2>
 <p>ブランド実績で選ぶならSanDisk、価格と速度のバランスで選ぶならFanxiang、国内メーカーの安心感を優先するならBUFFALOが選びやすい。評価の高さだけでなくレビュー件数も合わせて見ることで、実際の普及度がある程度つかめる。自分の接続環境と用途を先に整理してから選ぶほうが、後から買い直す手間が減る。</p>
 <hr>
-<p class="meta">価格・レビュー件数は楽天市場から 2026-08-18 に取得したものです。実際の価格は変動しますので、購入前に商品ページでご確認ください。</p>
+<div class="disclosure">
+<p><strong>広告について</strong></p>
+<p>当サイトは楽天アフィリエイトのリンクを掲載しており、当サイト経由で商品が購入された場合、運営者に紹介料が支払われることがあります。紹介料の有無は、掲載する商品の選定や記載内容に影響していません。</p>
+<p>掲載している価格・レビュー件数・評価は、楽天ウェブサービスを通じて 2026-08-18 に取得した時点のものです。実際の価格・在庫・ポイント倍率は変動しますので、購入前に必ず各商品ページでご確認ください。</p>
+</div>
 </main>
 <footer><div class="wrap">
 <p>当サイトは楽天アフィリエイトによる広告を掲載しています。掲載している価格・在庫・ポイント倍率は取得時点のもので、変動します。最新の情報は各商品ページでご確認ください。</p>
+<p>商品情報・画像は<a href="https://webservice.rakuten.co.jp/" target="_blank" rel="nofollow noopener">楽天ウェブサービス</a>より取得しています（Supported by Rakuten Developers）。</p>
 <p>映像編集の機材ノート ／ sho　<a href="https://shota-dokusha.github.io/rakuten-site/privacy.html">運営者情報・免責事項</a></p>
 </div></footer>
 </body>

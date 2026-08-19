@@ -3,12 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>モニターヘッドホン密閉型、売れてる順に全部比較した【2026年】｜映像編集の機材ノート</title>
-<meta name="description" content="楽天市場でレビュー数が多い順に密閉型モニターヘッドホン6製品を比較。OneOdio・ソニーMDR-CD900ST・オーディオテクニカATH-M20Xなど定番を映像編集者の視点で整理した。選び方の判断基準も。">
+<title>編集用の密閉型モニターヘッドホン、定番は何が違うのか｜映像編集の機材ノート</title>
+<meta name="description" content="MDR-CD900ST、ATH-M20X、OneOdio。名前はよく見るけれど、実際どこが違って何に向いているのか。編集作業で音を確認するという用途に絞って、それぞれの性格と、選ぶときに見るべき部分を整理しました。">
 <link rel="canonical" href="https://shota-dokusha.github.io/rakuten-site/articles/video-headphone.html">
 <meta property="og:type" content="article">
-<meta property="og:title" content="モニターヘッドホン密閉型、売れてる順に全部比較した【2026年】｜映像編集の機材ノート">
-<meta property="og:description" content="楽天市場でレビュー数が多い順に密閉型モニターヘッドホン6製品を比較。OneOdio・ソニーMDR-CD900ST・オーディオテクニカATH-M20Xなど定番を映像編集者の視点で整理した。選び方の判断基準も。">
+<meta property="og:title" content="編集用の密閉型モニターヘッドホン、定番は何が違うのか｜映像編集の機材ノート">
+<meta property="og:description" content="MDR-CD900ST、ATH-M20X、OneOdio。名前はよく見るけれど、実際どこが違って何に向いているのか。編集作業で音を確認するという用途に絞って、それぞれの性格と、選ぶときに見るべき部分を整理しました。">
+<meta property="og:image" content="https://shota-dokusha.github.io/rakuten-site/images/undefined">
+<meta name="twitter:card" content="summary_large_image">
 <style>
 :root{
   --bg:#ffffff; --fg:#1a1a1a; --muted:#666; --line:#e8e8e8;
@@ -43,13 +45,36 @@ blockquote{margin:22px 0;padding:13px 16px;background:var(--notice);
   border:1px solid var(--notice-line);border-left:4px solid var(--notice-line);
   border-radius:6px;font-size:14px;color:var(--fg)}
 blockquote strong{color:inherit}
-.meta{color:var(--muted);font-size:13px;margin:0 0 24px}
+.meta{color:var(--muted);font-size:13px;margin:0 0 20px}
+/* 広告表記（ステマ規制対応）。控えめだが読み取れる大きさを保つこと */
+.pr-note{margin:0 0 18px;font-size:12px;color:var(--muted);letter-spacing:.02em}
+.disclosure{margin:32px 0 0;padding:16px 18px;background:var(--card);
+  border:1px solid var(--line);border-radius:8px;font-size:13px;color:var(--muted)}
+.disclosure p{margin:0 0 10px;line-height:1.75}
+.disclosure p:last-child{margin-bottom:0}
+.disclosure strong{color:var(--fg)}
 ul,ol{padding-left:1.3em}
 li{margin:8px 0}
 ul li::marker{color:var(--accent)}
 ol li::marker{color:var(--accent);font-weight:700}
 hr{border:0;border-top:1px solid var(--line);margin:40px 0}
 code{background:var(--card);padding:2px 5px;border-radius:4px;font-size:.9em}
+.toplink{margin:-8px 0 28px;text-align:center;font-size:15px}
+.toplink a{display:inline-block;color:var(--accent);font-weight:700;text-decoration:none;
+  padding:10px 16px;border-radius:8px;background:var(--accent-weak);
+  border:1px solid var(--accent-line);line-height:1.5}
+.toplink a::before{content:"🔗 ";font-weight:400}
+.toplink a:hover{text-decoration:underline}
+.hero{margin:0 0 22px;padding:0}
+.hero img{width:100%;height:auto;aspect-ratio:1200/627;object-fit:cover;border-radius:10px;display:block}
+/* 楽天の商品画像は「切り取り禁止」なので、余白付きで全体を収める */
+.hero.product img{object-fit:contain;background:#fff;border:1px solid var(--line);padding:14px}
+.hero.product figcaption{text-align:right}
+.hero figcaption{margin-top:7px;font-size:11px;color:var(--muted);text-align:right}
+.hero figcaption a{color:var(--muted)}
+.thumb{flex:0 0 128px}
+.thumb img{width:128px;height:80px;object-fit:cover;border-radius:6px;display:block}
+.thumb.product img{object-fit:contain;background:#fff;border:1px solid var(--line)}
 .card{display:flex;gap:16px;margin:30px 0;padding:18px;background:var(--card);
   border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:10px;
   transition:box-shadow .15s ease,transform .15s ease}
@@ -70,8 +95,10 @@ code{background:var(--card);padding:2px 5px;border-radius:4px;font-size:.9em}
 .btn:hover{opacity:.9;transform:translateY(-1px)}
 .card-name strong,.card strong{color:inherit}
 .list{list-style:none;padding:0}
-.list li{border-bottom:1px solid var(--line);padding:22px 0 22px 16px;margin:0;
+.list li{display:flex;gap:16px;align-items:flex-start;
+  border-bottom:1px solid var(--line);padding:22px 0 22px 16px;margin:0;
   border-left:3px solid transparent;transition:border-color .15s ease,background .15s ease}
+.list .body{flex:1;min-width:0}
 .list li:hover{border-left-color:var(--accent);background:var(--accent-weak)}
 .list a{font-size:17px;font-weight:700;text-decoration:none;color:var(--fg);line-height:1.5}
 .list a:hover{color:var(--accent)}
@@ -84,6 +111,8 @@ footer a{color:var(--muted)}
 @media(max-width:560px){
   .card{flex-direction:column}
   .card-img,.card-img img{width:100%;flex:none;height:auto;max-height:220px}
+  .list li{flex-direction:column;gap:10px}
+  .thumb,.thumb img{width:100%;flex:none;height:auto;aspect-ratio:1200/627}
   h1{font-size:22px}
 }
 </style>
@@ -91,9 +120,18 @@ footer a{color:var(--muted)}
 <body>
 <header><div class="wrap"><a href="https://shota-dokusha.github.io/rakuten-site/">映像編集の機材ノート</a></div></header>
 <main class="wrap">
-<h1>モニターヘッドホン密閉型、売れてる順に全部比較した【2026年】</h1>
+<h1>編集用の密閉型モニターヘッドホン、定番は何が違うのか</h1>
 <p class="meta">更新: 2026-08-18　／　sho</p>
-<blockquote>この記事は楽天アフィリエイトのリンクを含みます。価格・在庫は2026-08-18時点のもので、変動します。</blockquote>
+<p class="pr-note">本ページはプロモーションを含みます</p>
+<figure class="hero product">
+  <img src="https://thumbnail.image.rakuten.co.jp/@0_mall/oneodio/cabinet/07979627/imgrc0095065752.jpg?_ex=400x400" alt="OneOdio Pro50 有線 ヘッドホン 高解像度 ハイレゾ マイク付き モニターヘッドホン 高音質 ヘッドセット " loading="lazy">
+  <figcaption>画像: 楽天市場（OneOdio Japan）</figcaption>
+</figure>
+<p class="toplink">
+  <a href="https://hb.afl.rakuten.co.jp/hgc/g00tym0o.1jrvp69a.g00tym0o.1jrvq9d0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Foneodio%2Fpro50%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Foneodio%2Fi%2F10000001%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">
+    楽天市場でいま一番売れている「編集用モニターヘッドホン」を見る
+  </a>
+</p>
 <p>モニターヘッドホンを探していると、価格帯も用途もバラバラで何を選べばいいのか分からなくなる。「とりあえずソニーのCD900STでいいか」と思いかけてから「でも6,000円台のOneOdioにレビューが山ほどついてるし…」と堂々巡りになった経験がある人は多いはずだ。今回は楽天市場でレビュー数が多い順に密閉型モニターヘッドホンを6製品並べて、どれが何に向いているかを整理した。</p>
 <h2>迷ってるならこれ</h2>
 <p>最初の一本を選ぶなら、OneOdio Pro50がわかりやすい。レビュー794件・平均4.74というのはこの価格帯では飛び抜けた実績で、6,099円でハイレゾ対応・マイク付きというスペックでこれだけの評価数がついている。失敗したくない、まず試したいという人が選ぶ理由が数字から見えてくる。</p>
@@ -208,10 +246,15 @@ footer a{color:var(--muted)}
 <h2>まとめ</h2>
 <p>レビュー数が多い順に並べると、OneOdio Pro50の794件が群を抜いている。価格・評価数・汎用性のバランスから、最初の一本として選ばれやすい理由がある。スタジオ用途に絞るならMDR-CD900STかATH-M20X、電子ピアノ専用ならRoland RH-5という選び分け方になる。用途と予算を先に絞ってから候補を当てはめると迷いにくくなる。</p>
 <hr>
-<p class="meta">価格・レビュー件数は楽天市場から 2026-08-18 に取得したものです。実際の価格は変動しますので、購入前に商品ページでご確認ください。</p>
+<div class="disclosure">
+<p><strong>広告について</strong></p>
+<p>当サイトは楽天アフィリエイトのリンクを掲載しており、当サイト経由で商品が購入された場合、運営者に紹介料が支払われることがあります。紹介料の有無は、掲載する商品の選定や記載内容に影響していません。</p>
+<p>掲載している価格・レビュー件数・評価は、楽天ウェブサービスを通じて 2026-08-18 に取得した時点のものです。実際の価格・在庫・ポイント倍率は変動しますので、購入前に必ず各商品ページでご確認ください。</p>
+</div>
 </main>
 <footer><div class="wrap">
 <p>当サイトは楽天アフィリエイトによる広告を掲載しています。掲載している価格・在庫・ポイント倍率は取得時点のもので、変動します。最新の情報は各商品ページでご確認ください。</p>
+<p>商品情報・画像は<a href="https://webservice.rakuten.co.jp/" target="_blank" rel="nofollow noopener">楽天ウェブサービス</a>より取得しています（Supported by Rakuten Developers）。</p>
 <p>映像編集の機材ノート ／ sho　<a href="https://shota-dokusha.github.io/rakuten-site/privacy.html">運営者情報・免責事項</a></p>
 </div></footer>
 </body>
