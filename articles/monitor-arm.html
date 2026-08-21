@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ガススプリングのモニターアームを選ぶとき、スペックの読み方｜映像編集の機材ノート</title>
+<meta name="description" content="モニターアームを買おうと思ったとき、ガス式とネジ式の違いから始まって、耐荷重・対応インチ・デュアルかシングルかと選択肢が一気に増える。映像編集をしている僕が、実際に編集机で使うことを前提に、スペック表のどこを見るかを整理した。">
+<link rel="canonical" href="https://shota-dokusha.github.io/rakuten-site/articles/monitor-arm.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ガススプリングのモニターアームを選ぶとき、スペックの読み方｜映像編集の機材ノート">
+<meta property="og:description" content="モニターアームを買おうと思ったとき、ガス式とネジ式の違いから始まって、耐荷重・対応インチ・デュアルかシングルかと選択肢が一気に増える。映像編集をしている僕が、実際に編集机で使うことを前提に、スペック表のどこを見るかを整理した。">
+<meta property="og:image" content="https://shota-dokusha.github.io/rakuten-site/images/undefined">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{
+  --bg:#ffffff; --fg:#1a1a1a; --muted:#666; --line:#e8e8e8;
+  --accent:#c8102e; --accent-weak:#fdeef0; --accent-line:#f0c4cb;
+  --card:#fafafa; --notice:#fff8e1; --notice-line:#f0d9a0;
+}
+@media (prefers-color-scheme:dark){
+  :root{ --bg:#141414; --fg:#e8e8e8; --muted:#9a9a9a; --line:#2e2e2e;
+         --accent:#ff6b7a; --accent-weak:#2a1a1d; --accent-line:#4d2b31;
+         --card:#1d1d1d; --notice:#2a2417; --notice-line:#4a3f28; }
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);
+  font-family:system-ui,-apple-system,"Hiragino Sans","Noto Sans JP",sans-serif;
+  line-height:1.85;font-size:16px;}
+.wrap{max-width:720px;margin:0 auto;padding:0 20px 80px}
+header{border-bottom:1px solid var(--line);border-top:3px solid var(--accent);margin-bottom:40px}
+header .wrap{padding-top:18px;padding-bottom:16px}
+header a{color:var(--fg);text-decoration:none;font-weight:700;font-size:17px}
+header a:hover{color:var(--accent)}
+h1{font-size:27px;line-height:1.45;margin:34px 0 10px;letter-spacing:.01em}
+h2{position:relative;font-size:21px;margin:56px 0 16px;padding:0 0 10px 15px;
+  border-bottom:1px solid var(--line)}
+h2::before{content:"";position:absolute;left:0;top:.2em;bottom:12px;width:4px;
+  border-radius:2px;background:var(--accent)}
+h3{font-size:17px;margin:36px 0 10px;padding-left:12px;
+  border-left:3px solid var(--accent-line)}
+p{margin:16px 0}
+a{color:var(--accent);text-underline-offset:3px;text-decoration-thickness:1px}
+strong{color:var(--accent);font-weight:700}
+blockquote{margin:22px 0;padding:13px 16px;background:var(--notice);
+  border:1px solid var(--notice-line);border-left:4px solid var(--notice-line);
+  border-radius:6px;font-size:14px;color:var(--fg)}
+blockquote strong{color:inherit}
+.meta{color:var(--muted);font-size:13px;margin:0 0 20px}
+/* 広告表記（ステマ規制対応）。控えめだが読み取れる大きさを保つこと */
+.pr-note{margin:0 0 18px;font-size:12px;color:var(--muted);letter-spacing:.02em}
+.disclosure{margin:32px 0 0;padding:16px 18px;background:var(--card);
+  border:1px solid var(--line);border-radius:8px;font-size:13px;color:var(--muted)}
+.disclosure p{margin:0 0 10px;line-height:1.75}
+.disclosure p:last-child{margin-bottom:0}
+.disclosure strong{color:var(--fg)}
+ul,ol{padding-left:1.3em}
+li{margin:8px 0}
+ul li::marker{color:var(--accent)}
+ol li::marker{color:var(--accent);font-weight:700}
+hr{border:0;border-top:1px solid var(--line);margin:40px 0}
+code{background:var(--card);padding:2px 5px;border-radius:4px;font-size:.9em}
+.toplink{margin:-8px 0 28px;text-align:center;font-size:15px}
+.toplink a{display:inline-block;color:var(--accent);font-weight:700;text-decoration:none;
+  padding:10px 16px;border-radius:8px;background:var(--accent-weak);
+  border:1px solid var(--accent-line);line-height:1.5}
+.toplink a::before{content:"🔗 ";font-weight:400}
+.toplink a:hover{text-decoration:underline}
+.hero{margin:0 0 22px;padding:0}
+.hero img{width:100%;height:auto;aspect-ratio:1200/627;object-fit:cover;border-radius:10px;display:block}
+/* 楽天の商品画像は「切り取り禁止」なので、余白付きで全体を収める */
+.hero.product img{object-fit:contain;background:#fff;border:1px solid var(--line);padding:14px}
+.hero.product figcaption{text-align:right}
+.hero figcaption{margin-top:7px;font-size:11px;color:var(--muted);text-align:right}
+.hero figcaption a{color:var(--muted)}
+.thumb{flex:0 0 128px}
+.thumb img{width:128px;height:80px;object-fit:cover;border-radius:6px;display:block}
+.thumb.product img{object-fit:contain;background:#fff;border:1px solid var(--line)}
+.card{display:flex;gap:16px;margin:30px 0;padding:18px;background:var(--card);
+  border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:10px;
+  transition:box-shadow .15s ease,transform .15s ease}
+.card:hover{box-shadow:0 4px 18px rgba(0,0,0,.09);transform:translateY(-1px)}
+.card-img{flex:0 0 120px}
+.card-img img{width:120px;height:120px;object-fit:contain;border-radius:6px;background:#fff}
+.card-body{flex:1;min-width:0}
+.card-name{margin:0 0 8px;font-weight:700;font-size:15px;line-height:1.5}
+.card-meta{margin:0 0 4px}
+.price{color:var(--accent);font-weight:700;font-size:19px}
+.asof{color:var(--muted);font-size:12px}
+.card-review{margin:0 0 2px;font-size:13px;color:var(--muted)}
+.stars{color:#f0a000}
+.card-shop{margin:0 0 12px;font-size:12px;color:var(--muted)}
+.btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;
+  padding:12px 20px;border-radius:6px;font-weight:700;font-size:14px;
+  box-shadow:0 2px 8px rgba(200,16,46,.28)}
+.btn:hover{opacity:.9;transform:translateY(-1px)}
+.card-name strong,.card strong{color:inherit}
+.list{list-style:none;padding:0}
+.list li{display:flex;gap:16px;align-items:flex-start;
+  border-bottom:1px solid var(--line);padding:22px 0 22px 16px;margin:0;
+  border-left:3px solid transparent;transition:border-color .15s ease,background .15s ease}
+.list .body{flex:1;min-width:0}
+.list li:hover{border-left-color:var(--accent);background:var(--accent-weak)}
+.list a{font-size:17px;font-weight:700;text-decoration:none;color:var(--fg);line-height:1.5}
+.list a:hover{color:var(--accent)}
+.list p{margin:6px 0 0;font-size:14px;color:var(--muted)}
+.list time{display:inline-block;margin-top:8px;font-size:12px;color:var(--muted)}
+.list li strong{color:inherit}
+footer{border-top:1px solid var(--line);margin-top:64px;padding:24px 0;
+  font-size:13px;color:var(--muted)}
+footer a{color:var(--muted)}
+@media(max-width:560px){
+  .card{flex-direction:column}
+  .card-img,.card-img img{width:100%;flex:none;height:auto;max-height:220px}
+  .list li{flex-direction:column;gap:10px}
+  .thumb,.thumb img{width:100%;flex:none;height:auto;aspect-ratio:1200/627}
+  h1{font-size:22px}
+}
+</style>
+</head>
+<body>
+<header><div class="wrap"><a href="https://shota-dokusha.github.io/rakuten-site/">映像編集の機材ノート</a></div></header>
+<main class="wrap">
+<h1>ガススプリングのモニターアームを選ぶとき、スペックの読み方</h1>
+<p class="meta">更新: 2026-08-21　／　sho</p>
+<p class="pr-note">本ページはプロモーションを含みます</p>
+<figure class="hero product">
+  <img src="https://thumbnail.image.rakuten.co.jp/@0_mall/pixiogaming/cabinet/psw1s/psw1s.jpg?_ex=400x400" alt="Pixio モニターアーム シングル ホワイト PS1S Wave ピンク ブルー 17インチ 〜 32インチ 対応 モ" loading="lazy">
+  <figcaption>画像: 楽天市場（Pixio公式ストア）</figcaption>
+</figure>
+<p class="toplink">
+  <a href="https://hb.afl.rakuten.co.jp/hgc/g00u8lto.1jrvp2e9.g00u8lto.1jrvq60d/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fpixiogaming%2Fpsw1s%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fpixiogaming%2Fi%2F10000126%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">
+    楽天市場でいま一番売れている「編集机のモニターアーム」を見る
+  </a>
+</p>
+<p>編集机にモニターアームを入れると、スタンドが占領していた奥行きが空いて、机の使い勝手がだいぶ変わる。ただ、いざ選ぼうとすると「ガス式かネジ式か」から始まり、耐荷重・対応インチ・シングルかデュアルかと、決めることが思ったより多い。映像編集を仕事にしている目線で、どこを見て選べばいいかを整理する。</p>
+<h2>迷ってるならこれ</h2>
+<p>シングル・27〜32インチ前後・ガス式、という一番ありふれた組み合わせで探しているなら、PixioのPS1Sから考え始めるのが現実的だと思う。楽天でのレビューが224件で平均4.54。このカテゴリとしてはレビューの数が多い方で、参照できる声が多い分、選びやすい。価格は8,980円。17〜32インチ対応、耐荷重9kg。Pixio公式ストアからの販売で最大5年保証がついている。</p>
+<div class="card">
+  <a class="card-img" href="https://hb.afl.rakuten.co.jp/hgc/g00u8lto.1jrvp2e9.g00u8lto.1jrvq60d/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fpixiogaming%2Fpsw1s%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fpixiogaming%2Fi%2F10000126%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">
+    <img src="https://thumbnail.image.rakuten.co.jp/@0_mall/pixiogaming/cabinet/psw1s/psw1s.jpg?_ex=400x400" alt="Pixio モニターアーム シングル ホワイト PS1S Wave ピンク ブルー 17インチ 〜 32インチ 対応 モ" loading="lazy" width="160" height="160">
+  </a>
+  <div class="card-body">
+    <p class="card-name">Pixio モニターアーム シングル ホワイト PS1S Wave ピンク ブルー 17インチ 〜 32インチ 対応 モニタースタンド ディスプレイアーム 白 水色 ピンク ガスス</p>
+    <p class="card-meta">
+      <span class="price">8,980円</span>
+      <span class="asof">（2026-08-21時点・変動します）</span>
+    </p>
+    <p class="card-review"><span class="stars">★★★★★</span> 4.54 ／ レビュー224件</p>
+    <p class="card-shop">Pixio公式ストア</p>
+    <a class="btn" href="https://hb.afl.rakuten.co.jp/hgc/g00u8lto.1jrvp2e9.g00u8lto.1jrvq60d/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fpixiogaming%2Fpsw1s%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fpixiogaming%2Fi%2F10000126%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">楽天市場で最新価格・レビューを見る</a>
+  </div>
+</div>
+<h2>それぞれどう違うか</h2>
+<h3>Pixio PS1S（シングル、〜32インチ）</h3>
+<p>「迷ってるならこれ」で挙げたアーム。このリストの中でレビュー数が一番多い（224件、平均4.54）。レビューが多いのは試した人が多いということなので、評価の信頼性という意味では手がかりになりやすい。カラーバリエーションがある（ホワイト・ピンク・ブルー）のは珍しいが、編集机に置くなら色より設置精度を優先したい。弱点としては対応が32インチまでなので、ウルトラワイドや34インチ超のモニターには使えない。</p>
+<h3>Pixio PS2S（シングル、〜49インチ）</h3>
+<p>PS1Sの上位にあたるアーム。大きく違うのは対応インチ（49インチまで）と耐荷重（18kg）の2点。ウルトラワイドや34インチ超のモニターを使っている人はこちら。価格は11,980円。レビューは95件で平均4.43。PS1Sよりレビューが少ないのは、49インチ対応が必要な人自体が限られているためで、件数の少なさが品質の問題というわけではない。</p>
+<div class="card">
+  <a class="card-img" href="https://hb.afl.rakuten.co.jp/hgc/g00u8lto.1jrvp2e9.g00u8lto.1jrvq60d/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fpixiogaming%2Fps2s%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fpixiogaming%2Fi%2F10000089%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">
+    <img src="https://thumbnail.image.rakuten.co.jp/@0_mall/pixiogaming/cabinet/ps2s/ps2s_top.jpg?_ex=400x400" alt="モニターアーム シングル ホワイト 17〜49インチ対応 モニタースタンド ディスプレイアーム 白 ガススプリング 液晶" loading="lazy" width="160" height="160">
+  </a>
+  <div class="card-body">
+    <p class="card-name">モニターアーム シングル ホワイト 17〜49インチ対応 モニタースタンド ディスプレイアーム 白 ガススプリング 液晶モニターアーム ゲーミングモニター ブラケット 薄型 VES</p>
+    <p class="card-meta">
+      <span class="price">11,980円</span>
+      <span class="asof">（2026-08-21時点・変動します）</span>
+    </p>
+    <p class="card-review"><span class="stars">★★★★☆</span> 4.43 ／ レビュー95件</p>
+    <p class="card-shop">Pixio公式ストア</p>
+    <a class="btn" href="https://hb.afl.rakuten.co.jp/hgc/g00u8lto.1jrvp2e9.g00u8lto.1jrvq60d/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fpixiogaming%2Fps2s%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fpixiogaming%2Fi%2F10000089%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">楽天市場で最新価格・レビューを見る</a>
+  </div>
+</div>
+<h3>LOE LOZ1S（ノートPC向けアーム）</h3>
+<p>このリストで唯一のノートPC向けアーム。ノートPCの画面をアームで浮かせて使う目的で設計されていて、VESAマウント（75mm/100mm）にも対応している。編集の現場でサブ機のノートを横に置いているなら、机上のスペースを確保する手段になる。レビューは66件で平均4.52、価格は11,810円。ただしメインのデスクトップ向けモニターアームとは役割が違うので、用途をはっきりさせてから選ぶ必要がある。</p>
+<div class="card">
+  <a class="card-img" href="https://hb.afl.rakuten.co.jp/hgc/g00t1wlo.1jrvpcde.g00t1wlo.1jrvq2e2/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fraloe%2Fra0328%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fraloe%2Fi%2F10000361%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">
+    <img src="https://thumbnail.image.rakuten.co.jp/@0_mall/raloe/cabinet/product/ra0328/ra0328-sp102.jpg?_ex=400x400" alt="LOE(ロエ) ノートパソコン アーム ガススプリング式 アームスタンド ノートPC 13インチ対応 モニターアーム L" loading="lazy" width="160" height="160">
+  </a>
+  <div class="card-body">
+    <p class="card-name">LOE(ロエ) ノートパソコン アーム ガススプリング式 アームスタンド ノートPC 13インチ対応 モニターアーム LOZ1S ( シルバーx白 / グレー )</p>
+    <p class="card-meta">
+      <span class="price">11,810円</span>
+      <span class="asof">（2026-08-21時点・変動します）</span>
+    </p>
+    <p class="card-review"><span class="stars">★★★★★</span> 4.52 ／ レビュー66件</p>
+    <p class="card-shop">ノートパソコンPC周辺雑貨のLOE</p>
+    <a class="btn" href="https://hb.afl.rakuten.co.jp/hgc/g00t1wlo.1jrvpcde.g00t1wlo.1jrvq2e2/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fraloe%2Fra0328%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fraloe%2Fi%2F10000361%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">楽天市場で最新価格・レビューを見る</a>
+  </div>
+</div>
+<h3>PCラボ デュアルアーム（2画面、〜27インチ×2）</h3>
+<p>2画面にしたいがコストを抑えたいときの選択肢。このリストで一番安く4,980円。13〜27インチの2画面に対応、耐荷重12kg。レビューは53件で平均4.57。ケーブル収納がついている。ただし、この価格帯のデュアルアームは可動域や組み立て精度に個体差が出やすい傾向があるため、購入前にレビューを細かく読んでおいた方がいい。1画面あたり27インチまでという上限にも注意。</p>
+<div class="card">
+  <a class="card-img" href="https://hb.afl.rakuten.co.jp/hgc/g00tt8so.1jrvpf52.g00tt8so.1jrvq1c0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fpremiumgift%2Fzjs%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fpremiumgift%2Fi%2F10000047%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">
+    <img src="https://thumbnail.image.rakuten.co.jp/@0_mall/premiumgift/cabinet/11260053/imgrc0091451844.jpg?_ex=400x400" alt="モニターアーム デュアル 2画面 ガス式 vasa100 モニタースタンド ディスプレイアーム ケーブル収納 ガススプリ" loading="lazy" width="160" height="160">
+  </a>
+  <div class="card-body">
+    <p class="card-name">モニターアーム デュアル 2画面 ガス式 vasa100 モニタースタンド ディスプレイアーム ケーブル収納 ガススプリング内蔵 27インチ まで 耐荷重12kg クランプ式 上下</p>
+    <p class="card-meta">
+      <span class="price">4,980円</span>
+      <span class="asof">（2026-08-21時点・変動します）</span>
+    </p>
+    <p class="card-review"><span class="stars">★★★★★</span> 4.57 ／ レビュー53件</p>
+    <p class="card-shop">PCラボ プレミアムギフト</p>
+    <a class="btn" href="https://hb.afl.rakuten.co.jp/hgc/g00tt8so.1jrvpf52.g00tt8so.1jrvq1c0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fpremiumgift%2Fzjs%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fpremiumgift%2Fi%2F10000047%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">楽天市場で最新価格・レビューを見る</a>
+  </div>
+</div>
+<h3>SHOPPINGALL ノートPC＋デュアルアーム</h3>
+<p>ノートPCと外部モニターを同じアームでまとめたいという用途向け。32インチ対応、耐荷重8kg×2。日本語説明書・動画付きという記載がある。価格は16,980円。レビューは30件で平均4.7と評価は高いが、まだ件数が少ない段階の数字なので、評価の安定性はもう少しレビューが集まってから判断した方が安心かもしれない。</p>
+<div class="card">
+  <a class="card-img" href="https://hb.afl.rakuten.co.jp/hgc/g00u20zo.1jrvpf7f.g00u20zo.1jrvqb72/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fglobal-skysea%2Fsa-lh08_japan%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fglobal-skysea%2Fi%2F10000003%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">
+    <img src="https://thumbnail.image.rakuten.co.jp/@0_mall/global-skysea/cabinet/08428043/imgrc0114621146.jpg?_ex=400x400" alt="SHOPPINGALL 【画面を好きな位置に置ける】【他社より画面が見やすい】 モニターアーム ノートパソコン アーム " loading="lazy" width="160" height="160">
+  </a>
+  <div class="card-body">
+    <p class="card-name">SHOPPINGALL 【画面を好きな位置に置ける】【他社より画面が見やすい】 モニターアーム ノートパソコン アーム 2画面 ディスプレイアーム デュアル ガス スプリング 32</p>
+    <p class="card-meta">
+      <span class="price">16,980円</span>
+      <span class="asof">（2026-08-21時点・変動します）</span>
+    </p>
+    <p class="card-review"><span class="stars">★★★★★</span> 4.7 ／ レビュー30件</p>
+    <p class="card-shop">スカイシーインターナショナル</p>
+    <a class="btn" href="https://hb.afl.rakuten.co.jp/hgc/g00u20zo.1jrvpf7f.g00u20zo.1jrvqb72/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fglobal-skysea%2Fsa-lh08_japan%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fglobal-skysea%2Fi%2F10000003%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">楽天市場で最新価格・レビューを見る</a>
+  </div>
+</div>
+<h3>Pixio PS1D Wave（デュアル、〜32インチ×2）</h3>
+<p>PixioのデュアルモデルがPS1D。17〜32インチを2枚、耐荷重9kg。カラーバリエーションがホワイト・ブラック・ベージュ・各パステルカラーと多い。価格は17,980円。レビューは26件で平均4.46。Pixioブランドのシングル（PS1S）に実績がある分、メーカーへの信頼を持ちやすい。注意点はデュアルアーム全般に言えることで、2本のアームが同一のポール・クランプから伸びる構造のため、設置部分に荷重が集中する。天板の厚みと素材は事前に確認しておく。</p>
+<div class="card">
+  <a class="card-img" href="https://hb.afl.rakuten.co.jp/hgc/g00u8lto.1jrvp2e9.g00u8lto.1jrvq60d/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fpixiogaming%2Fpsw1d%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fpixiogaming%2Fi%2F10000161%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">
+    <img src="https://thumbnail.image.rakuten.co.jp/@0_mall/pixiogaming/cabinet/psw1d/psw1d.jpg?_ex=400x400" alt="Pixio PS1D Wave モニターアーム デュアル 2画面 ホワイト 白 17インチ 〜 32インチ 対応 ガスス" loading="lazy" width="160" height="160">
+  </a>
+  <div class="card-body">
+    <p class="card-name">Pixio PS1D Wave モニターアーム デュアル 2画面 ホワイト 白 17インチ 〜 32インチ 対応 ガススプリング ブラック 黒 ベージュ パステルピンク パステルブ</p>
+    <p class="card-meta">
+      <span class="price">17,980円</span>
+      <span class="asof">（2026-08-21時点・変動します）</span>
+    </p>
+    <p class="card-review"><span class="stars">★★★★☆</span> 4.46 ／ レビュー26件</p>
+    <p class="card-shop">Pixio公式ストア</p>
+    <a class="btn" href="https://hb.afl.rakuten.co.jp/hgc/g00u8lto.1jrvp2e9.g00u8lto.1jrvq60d/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fpixiogaming%2Fpsw1d%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fpixiogaming%2Fi%2F10000161%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">楽天市場で最新価格・レビューを見る</a>
+  </div>
+</div>
+<h2>選ぶときに実際どこを見るか</h2>
+<p><strong>耐荷重はモニターの重量を先に調べる。</strong></p>
+<p>アームを探す前に、手元のモニター（またはこれから買う予定のもの）のスペック表で重量を確認する。「重量: ○kg（スタンドなし）」という数字があるので、その数字よりアームの耐荷重が上回っていれば条件を満たす。余裕はあった方がいい。耐荷重ギリギリのところで使うと、上下の動きが重くなることがある。</p>
+<p><strong>対応インチは上限だけでなく下限も見る。</strong></p>
+<p>「〜32インチ対応」の表記でも下限がある。今使っているモニターのインチが上限・下限の両方に収まっているか確認する。デュアルの場合は2枚とも合っているかチェックが必要。</p>
+<p><strong>シングルかデュアルかは最初に決める。</strong></p>
+<p>編集作業でタイムラインとプレビューを別画面に出したい、参考動画を横に常時表示させたい、という使い方があるなら最初からデュアルを前提にする方がいい。後から変えようとすると買い直しになる。</p>
+<p><strong>VESAマウントの対応を確認する。</strong></p>
+<p>一般的な液晶モニターにはVESA規格（主に75mm×75mmか100mm×100mm）の取り付け穴がある。ただし一部の薄型モニターや一体型はVESA非対応のことがある。スペック表で「VESA」の記載を確認してから選ぶ。</p>
+<h2>実際どう使ってるか</h2>
+<p>僕の編集机は2枚モニターで、タイムライン用とプレビュー＋ブラウザ用として使い分けている。アームにする前はスタンド2本が机の奥行きをかなり食っていて、外付けSSDをどこに置くかで毎回悩んでいた。アームにしてからはその問題がほぼ解消した。</p>
+<p>設置して気づいたのは、机の天板の種類と厚みが思ったより重要だということ。クランプ式のアームは天板の端に挟み込む形になるが、薄い天板や中が空洞のものだと締め付けが効きにくい。グロメット式（天板に穴を開けて固定する）という方法もあるが、穴を開けていい机かどうかという話になる。商品の説明だけでなく、自分の机との相性を先に確認するのが順番として正しいと思っている。</p>
+<h2>まとめ</h2>
+<p>ガス式のモニターアームは、耐荷重・対応インチ・シングルかデュアルかという3点を手元のモニタースペックと照合してから選ぶ。全部の条件が揃ったうえで迷うなら、レビュー数の多いPixio PS1Sから考え始めるのが現実的だと思う。デュアルにしたいがコストを抑えたい場合はPCラボの4,980円、大型画面が前提ならPixio PS2Sと、用途に合わせて絞っていけばいい。</p>
+<hr>
+<div class="disclosure">
+<p><strong>広告について</strong></p>
+<p>当サイトは楽天アフィリエイトのリンクを掲載しており、当サイト経由で商品が購入された場合、運営者に紹介料が支払われることがあります。紹介料の有無は、掲載する商品の選定や記載内容に影響していません。</p>
+<p>掲載している価格・レビュー件数・評価は、楽天ウェブサービスを通じて 2026-08-21 に取得した時点のものです。実際の価格・在庫・ポイント倍率は変動しますので、購入前に必ず各商品ページでご確認ください。</p>
+</div>
+</main>
+<footer><div class="wrap">
+<p>当サイトは楽天アフィリエイトによる広告を掲載しています。掲載している価格・在庫・ポイント倍率は取得時点のもので、変動します。最新の情報は各商品ページでご確認ください。</p>
+<p>商品情報・画像は<a href="https://webservice.rakuten.co.jp/" target="_blank" rel="nofollow noopener">楽天ウェブサービス</a>より取得しています（Supported by Rakuten Developers）。</p>
+<p>映像編集の機材ノート ／ sho　<a href="https://shota-dokusha.github.io/rakuten-site/privacy.html">運営者情報・免責事項</a></p>
+</div></footer>
+</body>
+</html>
