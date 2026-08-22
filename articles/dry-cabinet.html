@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>カメラ防湿庫の容量、どれを選べば後で困らないか考えてみた｜映像編集の機材ノート</title>
+<meta name="description" content="防湿庫を探してスペック表を見ると、容量（L）の数字と価格しかわからなくて困る、というのがよくある。デジタル湿度計の精度、保証年数、除湿のしくみをどう読むか、機材を毎日使っている視点でポイントを整理した。">
+<link rel="canonical" href="https://shota-dokusha.github.io/rakuten-site/articles/dry-cabinet.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="カメラ防湿庫の容量、どれを選べば後で困らないか考えてみた｜映像編集の機材ノート">
+<meta property="og:description" content="防湿庫を探してスペック表を見ると、容量（L）の数字と価格しかわからなくて困る、というのがよくある。デジタル湿度計の精度、保証年数、除湿のしくみをどう読むか、機材を毎日使っている視点でポイントを整理した。">
+<meta property="og:image" content="https://shota-dokusha.github.io/rakuten-site/images/undefined">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{
+  --bg:#ffffff; --fg:#1a1a1a; --muted:#666; --line:#e8e8e8;
+  --accent:#c8102e; --accent-weak:#fdeef0; --accent-line:#f0c4cb;
+  --card:#fafafa; --notice:#fff8e1; --notice-line:#f0d9a0;
+}
+@media (prefers-color-scheme:dark){
+  :root{ --bg:#141414; --fg:#e8e8e8; --muted:#9a9a9a; --line:#2e2e2e;
+         --accent:#ff6b7a; --accent-weak:#2a1a1d; --accent-line:#4d2b31;
+         --card:#1d1d1d; --notice:#2a2417; --notice-line:#4a3f28; }
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);
+  font-family:system-ui,-apple-system,"Hiragino Sans","Noto Sans JP",sans-serif;
+  line-height:1.85;font-size:16px;}
+.wrap{max-width:720px;margin:0 auto;padding:0 20px 80px}
+header{border-bottom:1px solid var(--line);border-top:3px solid var(--accent);margin-bottom:40px}
+header .wrap{padding-top:18px;padding-bottom:16px}
+header a{color:var(--fg);text-decoration:none;font-weight:700;font-size:17px}
+header a:hover{color:var(--accent)}
+h1{font-size:27px;line-height:1.45;margin:34px 0 10px;letter-spacing:.01em}
+h2{position:relative;font-size:21px;margin:56px 0 16px;padding:0 0 10px 15px;
+  border-bottom:1px solid var(--line)}
+h2::before{content:"";position:absolute;left:0;top:.2em;bottom:12px;width:4px;
+  border-radius:2px;background:var(--accent)}
+h3{font-size:17px;margin:36px 0 10px;padding-left:12px;
+  border-left:3px solid var(--accent-line)}
+p{margin:16px 0}
+a{color:var(--accent);text-underline-offset:3px;text-decoration-thickness:1px}
+strong{color:var(--accent);font-weight:700}
+blockquote{margin:22px 0;padding:13px 16px;background:var(--notice);
+  border:1px solid var(--notice-line);border-left:4px solid var(--notice-line);
+  border-radius:6px;font-size:14px;color:var(--fg)}
+blockquote strong{color:inherit}
+.meta{color:var(--muted);font-size:13px;margin:0 0 20px}
+/* 広告表記（ステマ規制対応）。控えめだが読み取れる大きさを保つこと */
+.pr-note{margin:0 0 18px;font-size:12px;color:var(--muted);letter-spacing:.02em}
+.disclosure{margin:32px 0 0;padding:16px 18px;background:var(--card);
+  border:1px solid var(--line);border-radius:8px;font-size:13px;color:var(--muted)}
+.disclosure p{margin:0 0 10px;line-height:1.75}
+.disclosure p:last-child{margin-bottom:0}
+.disclosure strong{color:var(--fg)}
+ul,ol{padding-left:1.3em}
+li{margin:8px 0}
+ul li::marker{color:var(--accent)}
+ol li::marker{color:var(--accent);font-weight:700}
+hr{border:0;border-top:1px solid var(--line);margin:40px 0}
+code{background:var(--card);padding:2px 5px;border-radius:4px;font-size:.9em}
+.toplink{margin:-8px 0 28px;text-align:center;font-size:15px}
+.toplink a{display:inline-block;color:var(--accent);font-weight:700;text-decoration:none;
+  padding:10px 16px;border-radius:8px;background:var(--accent-weak);
+  border:1px solid var(--accent-line);line-height:1.5}
+.toplink a::before{content:"🔗 ";font-weight:400}
+.toplink a:hover{text-decoration:underline}
+.hero{margin:0 0 22px;padding:0}
+.hero img{width:100%;height:auto;aspect-ratio:1200/627;object-fit:cover;border-radius:10px;display:block}
+/* 楽天の商品画像は「切り取り禁止」なので、余白付きで全体を収める */
+.hero.product img{object-fit:contain;background:#fff;border:1px solid var(--line);padding:14px}
+.hero.product figcaption{text-align:right}
+.hero figcaption{margin-top:7px;font-size:11px;color:var(--muted);text-align:right}
+.hero figcaption a{color:var(--muted)}
+.thumb{flex:0 0 128px}
+.thumb img{width:128px;height:80px;object-fit:cover;border-radius:6px;display:block}
+.thumb.product img{object-fit:contain;background:#fff;border:1px solid var(--line)}
+.card{display:flex;gap:16px;margin:30px 0;padding:18px;background:var(--card);
+  border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:10px;
+  transition:box-shadow .15s ease,transform .15s ease}
+.card:hover{box-shadow:0 4px 18px rgba(0,0,0,.09);transform:translateY(-1px)}
+.card-img{flex:0 0 120px}
+.card-img img{width:120px;height:120px;object-fit:contain;border-radius:6px;background:#fff}
+.card-body{flex:1;min-width:0}
+.card-name{margin:0 0 8px;font-weight:700;font-size:15px;line-height:1.5}
+.card-meta{margin:0 0 4px}
+.price{color:var(--accent);font-weight:700;font-size:19px}
+.asof{color:var(--muted);font-size:12px}
+.card-review{margin:0 0 2px;font-size:13px;color:var(--muted)}
+.stars{color:#f0a000}
+.card-shop{margin:0 0 12px;font-size:12px;color:var(--muted)}
+.btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;
+  padding:12px 20px;border-radius:6px;font-weight:700;font-size:14px;
+  box-shadow:0 2px 8px rgba(200,16,46,.28)}
+.btn:hover{opacity:.9;transform:translateY(-1px)}
+.card-name strong,.card strong{color:inherit}
+.list{list-style:none;padding:0}
+.list li{display:flex;gap:16px;align-items:flex-start;
+  border-bottom:1px solid var(--line);padding:22px 0 22px 16px;margin:0;
+  border-left:3px solid transparent;transition:border-color .15s ease,background .15s ease}
+.list .body{flex:1;min-width:0}
+.list li:hover{border-left-color:var(--accent);background:var(--accent-weak)}
+.list a{font-size:17px;font-weight:700;text-decoration:none;color:var(--fg);line-height:1.5}
+.list a:hover{color:var(--accent)}
+.list p{margin:6px 0 0;font-size:14px;color:var(--muted)}
+.list time{display:inline-block;margin-top:8px;font-size:12px;color:var(--muted)}
+.list li strong{color:inherit}
+footer{border-top:1px solid var(--line);margin-top:64px;padding:24px 0;
+  font-size:13px;color:var(--muted)}
+footer a{color:var(--muted)}
+@media(max-width:560px){
+  .card{flex-direction:column}
+  .card-img,.card-img img{width:100%;flex:none;height:auto;max-height:220px}
+  .list li{flex-direction:column;gap:10px}
+  .thumb,.thumb img{width:100%;flex:none;height:auto;aspect-ratio:1200/627}
+  h1{font-size:22px}
+}
+</style>
+</head>
+<body>
+<header><div class="wrap"><a href="https://shota-dokusha.github.io/rakuten-site/">映像編集の機材ノート</a></div></header>
+<main class="wrap">
+<h1>カメラ防湿庫の容量、どれを選べば後で困らないか考えてみた</h1>
+<p class="meta">更新: 2026-08-22　／　sho</p>
+<p class="pr-note">本ページはプロモーションを含みます</p>
+<figure class="hero product">
+  <img src="https://thumbnail.image.rakuten.co.jp/@0_mall/otonakukan/cabinet/product/th/c004p0002_1000.jpg?_ex=400x400" alt="＼限定クーポンで10,800円／ シリーズ累計160万台突破！ 防湿庫 Re:CLEAN リクリーン 30L 日本品質 " loading="lazy">
+  <figcaption>画像: 楽天市場（インニュートラル）</figcaption>
+</figure>
+<p class="toplink">
+  <a href="https://hb.afl.rakuten.co.jp/hgc/g00s21so.1jrvp263.g00s21so.1jrvq0e1/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fotonakukan%2Fc004p0002%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fotonakukan%2Fi%2F10000357%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">
+    楽天市場でいま一番売れている「カメラ機材向け防湿庫の選び方」を見る
+  </a>
+</p>
+<p>防湿庫って、必要だとは思っているけど何を基準に選べばいいかよくわからない、という人が多いと思う。スペック表を開いても容量（L）と価格しか目に入ってこないし、その容量が自分の機材に対して多いのか少ないのかも判断できない。カビって、レンズの内部に生えると気づいたときにはもう遅い。撮影現場でカビたレンズを見たことがあるけど、修理に出すか諦めるかという話になっていた。防湿庫はそうなる前の話。</p>
+<h2>迷ってるならこれ</h2>
+<p>Re:CLEANのRC-30Aにしておくのが無難。30Lという容量はミラーレス1台＋レンズ数本から、ボディ複数台の構成まで対応できる範囲で、多くの人がここで事足りる。レビューは682件・平均4.65と数も評価も信頼できる水準。5年保証つきというのも長く使うことを考えると安心感がある。Re:CLEANはシリーズ累計160万台突破のブランドで、楽天でも複数年連続1位のショップが取り扱っている。</p>
+<div class="card">
+  <a class="card-img" href="https://hb.afl.rakuten.co.jp/hgc/g00s21so.1jrvp263.g00s21so.1jrvq0e1/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fotonakukan%2Fc004p0002%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fotonakukan%2Fi%2F10000357%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">
+    <img src="https://thumbnail.image.rakuten.co.jp/@0_mall/otonakukan/cabinet/product/th/c004p0002_1000.jpg?_ex=400x400" alt="＼限定クーポンで10,800円／ シリーズ累計160万台突破！ 防湿庫 Re:CLEAN リクリーン 30L 日本品質 " loading="lazy" width="160" height="160">
+  </a>
+  <div class="card-body">
+    <p class="card-name">＼限定クーポンで10,800円／ シリーズ累計160万台突破！ 防湿庫 Re:CLEAN リクリーン 30L 日本品質 5年保証 超高精度 デジタル湿度計 カメラ カビ対策 レンズ</p>
+    <p class="card-meta">
+      <span class="price">11,800円</span>
+      <span class="asof">（2026-08-22時点・変動します）</span>
+    </p>
+    <p class="card-review"><span class="stars">★★★★★</span> 4.65 ／ レビュー682件</p>
+    <p class="card-shop">インニュートラル</p>
+    <a class="btn" href="https://hb.afl.rakuten.co.jp/hgc/g00s21so.1jrvp263.g00s21so.1jrvq0e1/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fotonakukan%2Fc004p0002%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fotonakukan%2Fi%2F10000357%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">楽天市場で最新価格・レビューを見る</a>
+  </div>
+</div>
+<h2>それぞれどう違うか</h2>
+<h3>Re:CLEAN 21L（RCL-21D）</h3>
+<p>ミラーレス1台とレンズ2〜3本程度で機材がまとまっている人向け。価格は8,980円（クーポン使用で7,980円）で、このジャンルの入門ライン。レビューは609件・平均4.65と十分な実績がある。弱点はやはり容量の少なさで、機材が増え始めると早々に限界が来る。サブ機や望遠レンズを追加したタイミングで「もっと大きいサイズにしておけばよかった」という声が出やすい商品でもある。機材の構成が完全に固定されていると言い切れる人向け。</p>
+<div class="card">
+  <a class="card-img" href="https://hb.afl.rakuten.co.jp/hgc/g00s21so.1jrvp263.g00s21so.1jrvq0e1/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fotonakukan%2Fc004p0001%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fotonakukan%2Fi%2F10000358%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">
+    <img src="https://thumbnail.image.rakuten.co.jp/@0_mall/otonakukan/cabinet/product/th/c004p0001_1000.jpg?_ex=400x400" alt="＼限定クーポンで7,980円／ シリーズ累計160万台突破！ 防湿庫 Re:CLEAN リクリーン 21L 日本品質 1" loading="lazy" width="160" height="160">
+  </a>
+  <div class="card-body">
+    <p class="card-name">＼限定クーポンで7,980円／ シリーズ累計160万台突破！ 防湿庫 Re:CLEAN リクリーン 21L 日本品質 1年保証 超高精度 デジタル湿度計 カメラ カビ対策 レンズ </p>
+    <p class="card-meta">
+      <span class="price">8,980円</span>
+      <span class="asof">（2026-08-22時点・変動します）</span>
+    </p>
+    <p class="card-review"><span class="stars">★★★★★</span> 4.65 ／ レビュー609件</p>
+    <p class="card-shop">インニュートラル</p>
+    <a class="btn" href="https://hb.afl.rakuten.co.jp/hgc/g00s21so.1jrvp263.g00s21so.1jrvq0e1/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fotonakukan%2Fc004p0001%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fotonakukan%2Fi%2F10000358%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">楽天市場で最新価格・レビューを見る</a>
+  </div>
+</div>
+<h3>Re:CLEAN 25L ホワイト（RC25L-WH）</h3>
+<p>25Lというサイズ自体は及第点の容量だが、このモデルの特徴はホワイトカラーにある。デスク周りに置いていても見た目がうるさくならない、という理由で選ぶ人がいる。価格は12,800円（クーポン使用で11,800円）で、30LのRC-30Aより容量は小さいのに価格は同程度かやや高い。レビューは367件・平均4.58。選ぶ理由は基本的に「白が欲しい」という一点になる。それ以外の観点だと30Lモデルの方が割がいい。</p>
+<div class="card">
+  <a class="card-img" href="https://hb.afl.rakuten.co.jp/hgc/g00s21so.1jrvp263.g00s21so.1jrvq0e1/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fotonakukan%2Fc004p0009%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fotonakukan%2Fi%2F10000640%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">
+    <img src="https://thumbnail.image.rakuten.co.jp/@0_mall/otonakukan/cabinet/product/th/c004p0009_1000.jpg?_ex=400x400" alt="＼限定クーポンで11,800円／ シリーズ累計160万台突破！ 防湿庫 カメラ Re:CLEAN リクリーン 25L ホ" loading="lazy" width="160" height="160">
+  </a>
+  <div class="card-body">
+    <p class="card-name">＼限定クーポンで11,800円／ シリーズ累計160万台突破！ 防湿庫 カメラ Re:CLEAN リクリーン 25L ホワイト 白 小型 デジタル湿度計 カビ対策 レンズ 保管 自</p>
+    <p class="card-meta">
+      <span class="price">12,800円</span>
+      <span class="asof">（2026-08-22時点・変動します）</span>
+    </p>
+    <p class="card-review"><span class="stars">★★★★★</span> 4.58 ／ レビュー367件</p>
+    <p class="card-shop">インニュートラル</p>
+    <a class="btn" href="https://hb.afl.rakuten.co.jp/hgc/g00s21so.1jrvp263.g00s21so.1jrvq0e1/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fotonakukan%2Fc004p0009%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fotonakukan%2Fi%2F10000640%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">楽天市場で最新価格・レビューを見る</a>
+  </div>
+</div>
+<h3>アポロテク 30L</h3>
+<p>Re:CLEANの30Lより2,000円近く安く、9,880円。容量は同じ30Lで、自動除湿・オートクリーンという機能の構成も近い。レビューは235件・平均4.54。価格を重視するなら選択肢に入る。気になる点は、Re:CLEANほど保証条件が明確でないこと。長期間使う保管庫という性格上、万が一のときのサポートがどこまで期待できるかは確認しておきたい。ブランドの知名度が低い分、ある程度の割り切りが必要になる。</p>
+<div class="card">
+  <a class="card-img" href="https://hb.afl.rakuten.co.jp/hgc/g00u074o.1jrvpb2a.g00u074o.1jrvq4ee/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fapollotech%2Fddb-1%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fapollotech%2Fi%2F10000009%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">
+    <img src="https://thumbnail.image.rakuten.co.jp/@0_mall/apollotech/cabinet/biiino/item/main-image/20250507160146_1.jpg?_ex=400x400" alt="【新品特価】 防湿庫 カメラ 30L 小型 超高精度 カメラ防湿庫 自動除湿 オートクリーン ドライキャビネット カメラ" loading="lazy" width="160" height="160">
+  </a>
+  <div class="card-body">
+    <p class="card-name">【新品特価】 防湿庫 カメラ 30L 小型 超高精度 カメラ防湿庫 自動除湿 オートクリーン ドライキャビネット カメラ好き メーカー保証</p>
+    <p class="card-meta">
+      <span class="price">9,880円</span>
+      <span class="asof">（2026-08-22時点・変動します）</span>
+    </p>
+    <p class="card-review"><span class="stars">★★★★★</span> 4.54 ／ レビュー235件</p>
+    <p class="card-shop">アポロテク翌日配達</p>
+    <a class="btn" href="https://hb.afl.rakuten.co.jp/hgc/g00u074o.1jrvpb2a.g00u074o.1jrvq4ee/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fapollotech%2Fddb-1%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fapollotech%2Fi%2F10000009%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">楽天市場で最新価格・レビューを見る</a>
+  </div>
+</div>
+<h3>Re:CLEAN 50L（RC-50A）</h3>
+<p>本数が多い人、フルサイズ機を複数台持っている人、あるいは今後機材を増やす予定がある人向け。17,400円（クーポン使用で16,400円）で、30Lモデルと比べて6,000円ほど高い。レビューは228件・平均4.64。容量に余裕があると機材を取り出すときに重ね置きしなくて済むし、撮影前の準備も楽になる。ただし設置面積は大きくなるので、置く場所の確保が先決。狭い部屋に無理に押し込むのは、防湿の効果より前に邪魔になる。</p>
+<div class="card">
+  <a class="card-img" href="https://hb.afl.rakuten.co.jp/hgc/g00s21so.1jrvp263.g00s21so.1jrvq0e1/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fotonakukan%2Fc004p0004%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fotonakukan%2Fi%2F10000378%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">
+    <img src="https://thumbnail.image.rakuten.co.jp/@0_mall/otonakukan/cabinet/product/th/c004p0004_1000.jpg?_ex=400x400" alt="＼限定クーポンで16,400円／ シリーズ累計160万台突破！ 防湿庫 Re:CLEAN リクリーン 50L 日本品質 " loading="lazy" width="160" height="160">
+  </a>
+  <div class="card-body">
+    <p class="card-name">＼限定クーポンで16,400円／ シリーズ累計160万台突破！ 防湿庫 Re:CLEAN リクリーン 50L 日本品質 5年保証 超高精度 デジタル湿度計 カメラ カビ対策 レンズ</p>
+    <p class="card-meta">
+      <span class="price">17,400円</span>
+      <span class="asof">（2026-08-22時点・変動します）</span>
+    </p>
+    <p class="card-review"><span class="stars">★★★★★</span> 4.64 ／ レビュー228件</p>
+    <p class="card-shop">インニュートラル</p>
+    <a class="btn" href="https://hb.afl.rakuten.co.jp/hgc/g00s21so.1jrvp263.g00s21so.1jrvq0e1/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fotonakukan%2Fc004p0004%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fotonakukan%2Fi%2F10000378%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">楽天市場で最新価格・レビューを見る</a>
+  </div>
+</div>
+<h3>HOKUTO HSシリーズ 25L</h3>
+<p>Re:CLEANとは別ブランドの25L。9,998円で5年保証・送料無料という条件は整っている。ただしレビューは83件と少なく、他の商品と比べると実績の判断がしにくい。スタイリッシュなデザインをウリにしているが、写真で見る限り特別個性的なわけでもない。インニュートラル以外から買いたい、あるいはRe:CLEAN以外を試したい、という人の選択肢になる。ただし同価格帯でRe:CLEANの30Lという選択肢がある以上、積極的に選ぶ理由は見えにくい。</p>
+<div class="card">
+  <a class="card-img" href="https://hb.afl.rakuten.co.jp/hgc/g00tak2o.1jrvpae2.g00tak2o.1jrvq5f0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Farvex%2Fhs25l%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Farvex%2Fi%2F10000000%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">
+    <img src="https://thumbnail.image.rakuten.co.jp/@0_mall/arvex/cabinet/cabinet/11674083/imgrc0124624276.jpg?_ex=400x400" alt="HOKUTO｜防湿庫 ・ドライボックス・HS-25Lキャビネット・防湿ケース・保管庫｜HSシリーズ25L　5年保証　カメ" loading="lazy" width="160" height="160">
+  </a>
+  <div class="card-body">
+    <p class="card-name">HOKUTO｜防湿庫 ・ドライボックス・HS-25Lキャビネット・防湿ケース・保管庫｜HSシリーズ25L　5年保証　カメラ防湿庫　防湿庫カメラ　父の日|母の日|プレゼント　トレード</p>
+    <p class="card-meta">
+      <span class="price">9,998円</span>
+      <span class="asof">（2026-08-22時点・変動します）</span>
+    </p>
+    <p class="card-review"><span class="stars">★★★★★</span> 4.6 ／ レビュー83件</p>
+    <p class="card-shop">アルベックスストア</p>
+    <a class="btn" href="https://hb.afl.rakuten.co.jp/hgc/g00tak2o.1jrvpae2.g00tak2o.1jrvq5f0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Farvex%2Fhs25l%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Farvex%2Fi%2F10000000%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">楽天市場で最新価格・レビューを見る</a>
+  </div>
+</div>
+<h2>選ぶときに実際どこを見るか</h2>
+<p>容量（L）は内寸の体積なので、棚の実際のサイズも確認する。一眼レフはボディが大きいので、ミラーレス前提のサイズ感で選ぶと入りきらないことがある。スペック表に棚板の寸法が載っている商品はそちらも見ておく。</p>
+<p>湿度センサーの精度も重要で、デジタル湿度計がついていると表示が見やすい。カメラやレンズのカビ防止には40〜50%前後の湿度を維持するのが一般的とされている。設定できる下限値も確認しておくといい。低すぎる湿度はゴムパーツへの影響が出る場合があるので、上下どちらにも調整できるかどうかは見ておく。</p>
+<p>保証年数は5年と1年で差が大きい。防湿庫は構造がシンプルなので滅多に壊れないが、ヒーターや電子部品が内部に入っている以上、長く使うなら保証が厚い方が安心。</p>
+<h2>実際どう使ってるか</h2>
+<p>撮影現場から帰ってきたあと、機材をそのままバッグに入れっぱなしにするのが一番よくない。現場によっては雨の中だったり、湿度の高い環境だったりするし、バッグの中は密閉されがちなので蒸れる。帰ったらすぐバッグから出して防湿庫に入れる、という習慣をつくるだけでかなり違う。</p>
+<p>機材が増えてから防湿庫を買おうとすると、選べる容量が限られてくる。最初から余裕のあるサイズにしておいた方が、後で後悔しにくい。特にレンズは気づいたら増えていることが多いので、「現状ちょうど入る」サイズを選ぶと割とすぐ窮屈になる。</p>
+<h2>まとめ</h2>
+<p>迷ったら30L前後を買っておくのが無難で、後で機材が増えてもしばらく対応できる。レビュー数・評価・保証のバランスが取れているRe:CLEANのRC-30Aが選びやすい。機材がすでに多い人は最初から50Lを選ぶ方がいい。防湿庫は設置してしまえば管理の手間もほとんどないので、迷う時間が長くなるほど機材にとってよくない。</p>
+<hr>
+<div class="disclosure">
+<p><strong>広告について</strong></p>
+<p>当サイトは楽天アフィリエイトのリンクを掲載しており、当サイト経由で商品が購入された場合、運営者に紹介料が支払われることがあります。紹介料の有無は、掲載する商品の選定や記載内容に影響していません。</p>
+<p>掲載している価格・レビュー件数・評価は、楽天ウェブサービスを通じて 2026-08-22 に取得した時点のものです。実際の価格・在庫・ポイント倍率は変動しますので、購入前に必ず各商品ページでご確認ください。</p>
+</div>
+</main>
+<footer><div class="wrap">
+<p>当サイトは楽天アフィリエイトによる広告を掲載しています。掲載している価格・在庫・ポイント倍率は取得時点のもので、変動します。最新の情報は各商品ページでご確認ください。</p>
+<p>商品情報・画像は<a href="https://webservice.rakuten.co.jp/" target="_blank" rel="nofollow noopener">楽天ウェブサービス</a>より取得しています（Supported by Rakuten Developers）。</p>
+<p>映像編集の機材ノート ／ sho　<a href="https://shota-dokusha.github.io/rakuten-site/privacy.html">運営者情報・免責事項</a></p>
+</div></footer>
+</body>
+</html>

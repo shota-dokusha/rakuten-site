@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HDMIビデオキャプチャーの選び方、価格帯で何が変わるか｜映像編集の機材ノート</title>
+<meta name="description" content="HDMIのビデオキャプチャーを探すと、3,000円台から6,000円台まで似たような仕様が並んでいて選びにくい。価格差がどこに出るのか、Switch配信や映像取り込みなど用途別に整理した。初めて買うときに見てほしい。">
+<link rel="canonical" href="https://shota-dokusha.github.io/rakuten-site/articles/capture-card-hdmi.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HDMIビデオキャプチャーの選び方、価格帯で何が変わるか｜映像編集の機材ノート">
+<meta property="og:description" content="HDMIのビデオキャプチャーを探すと、3,000円台から6,000円台まで似たような仕様が並んでいて選びにくい。価格差がどこに出るのか、Switch配信や映像取り込みなど用途別に整理した。初めて買うときに見てほしい。">
+<meta property="og:image" content="https://shota-dokusha.github.io/rakuten-site/images/undefined">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{
+  --bg:#ffffff; --fg:#1a1a1a; --muted:#666; --line:#e8e8e8;
+  --accent:#c8102e; --accent-weak:#fdeef0; --accent-line:#f0c4cb;
+  --card:#fafafa; --notice:#fff8e1; --notice-line:#f0d9a0;
+}
+@media (prefers-color-scheme:dark){
+  :root{ --bg:#141414; --fg:#e8e8e8; --muted:#9a9a9a; --line:#2e2e2e;
+         --accent:#ff6b7a; --accent-weak:#2a1a1d; --accent-line:#4d2b31;
+         --card:#1d1d1d; --notice:#2a2417; --notice-line:#4a3f28; }
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);
+  font-family:system-ui,-apple-system,"Hiragino Sans","Noto Sans JP",sans-serif;
+  line-height:1.85;font-size:16px;}
+.wrap{max-width:720px;margin:0 auto;padding:0 20px 80px}
+header{border-bottom:1px solid var(--line);border-top:3px solid var(--accent);margin-bottom:40px}
+header .wrap{padding-top:18px;padding-bottom:16px}
+header a{color:var(--fg);text-decoration:none;font-weight:700;font-size:17px}
+header a:hover{color:var(--accent)}
+h1{font-size:27px;line-height:1.45;margin:34px 0 10px;letter-spacing:.01em}
+h2{position:relative;font-size:21px;margin:56px 0 16px;padding:0 0 10px 15px;
+  border-bottom:1px solid var(--line)}
+h2::before{content:"";position:absolute;left:0;top:.2em;bottom:12px;width:4px;
+  border-radius:2px;background:var(--accent)}
+h3{font-size:17px;margin:36px 0 10px;padding-left:12px;
+  border-left:3px solid var(--accent-line)}
+p{margin:16px 0}
+a{color:var(--accent);text-underline-offset:3px;text-decoration-thickness:1px}
+strong{color:var(--accent);font-weight:700}
+blockquote{margin:22px 0;padding:13px 16px;background:var(--notice);
+  border:1px solid var(--notice-line);border-left:4px solid var(--notice-line);
+  border-radius:6px;font-size:14px;color:var(--fg)}
+blockquote strong{color:inherit}
+.meta{color:var(--muted);font-size:13px;margin:0 0 20px}
+/* 広告表記（ステマ規制対応）。控えめだが読み取れる大きさを保つこと */
+.pr-note{margin:0 0 18px;font-size:12px;color:var(--muted);letter-spacing:.02em}
+.disclosure{margin:32px 0 0;padding:16px 18px;background:var(--card);
+  border:1px solid var(--line);border-radius:8px;font-size:13px;color:var(--muted)}
+.disclosure p{margin:0 0 10px;line-height:1.75}
+.disclosure p:last-child{margin-bottom:0}
+.disclosure strong{color:var(--fg)}
+ul,ol{padding-left:1.3em}
+li{margin:8px 0}
+ul li::marker{color:var(--accent)}
+ol li::marker{color:var(--accent);font-weight:700}
+hr{border:0;border-top:1px solid var(--line);margin:40px 0}
+code{background:var(--card);padding:2px 5px;border-radius:4px;font-size:.9em}
+.toplink{margin:-8px 0 28px;text-align:center;font-size:15px}
+.toplink a{display:inline-block;color:var(--accent);font-weight:700;text-decoration:none;
+  padding:10px 16px;border-radius:8px;background:var(--accent-weak);
+  border:1px solid var(--accent-line);line-height:1.5}
+.toplink a::before{content:"🔗 ";font-weight:400}
+.toplink a:hover{text-decoration:underline}
+.hero{margin:0 0 22px;padding:0}
+.hero img{width:100%;height:auto;aspect-ratio:1200/627;object-fit:cover;border-radius:10px;display:block}
+/* 楽天の商品画像は「切り取り禁止」なので、余白付きで全体を収める */
+.hero.product img{object-fit:contain;background:#fff;border:1px solid var(--line);padding:14px}
+.hero.product figcaption{text-align:right}
+.hero figcaption{margin-top:7px;font-size:11px;color:var(--muted);text-align:right}
+.hero figcaption a{color:var(--muted)}
+.thumb{flex:0 0 128px}
+.thumb img{width:128px;height:80px;object-fit:cover;border-radius:6px;display:block}
+.thumb.product img{object-fit:contain;background:#fff;border:1px solid var(--line)}
+.card{display:flex;gap:16px;margin:30px 0;padding:18px;background:var(--card);
+  border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:10px;
+  transition:box-shadow .15s ease,transform .15s ease}
+.card:hover{box-shadow:0 4px 18px rgba(0,0,0,.09);transform:translateY(-1px)}
+.card-img{flex:0 0 120px}
+.card-img img{width:120px;height:120px;object-fit:contain;border-radius:6px;background:#fff}
+.card-body{flex:1;min-width:0}
+.card-name{margin:0 0 8px;font-weight:700;font-size:15px;line-height:1.5}
+.card-meta{margin:0 0 4px}
+.price{color:var(--accent);font-weight:700;font-size:19px}
+.asof{color:var(--muted);font-size:12px}
+.card-review{margin:0 0 2px;font-size:13px;color:var(--muted)}
+.stars{color:#f0a000}
+.card-shop{margin:0 0 12px;font-size:12px;color:var(--muted)}
+.btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;
+  padding:12px 20px;border-radius:6px;font-weight:700;font-size:14px;
+  box-shadow:0 2px 8px rgba(200,16,46,.28)}
+.btn:hover{opacity:.9;transform:translateY(-1px)}
+.card-name strong,.card strong{color:inherit}
+.list{list-style:none;padding:0}
+.list li{display:flex;gap:16px;align-items:flex-start;
+  border-bottom:1px solid var(--line);padding:22px 0 22px 16px;margin:0;
+  border-left:3px solid transparent;transition:border-color .15s ease,background .15s ease}
+.list .body{flex:1;min-width:0}
+.list li:hover{border-left-color:var(--accent);background:var(--accent-weak)}
+.list a{font-size:17px;font-weight:700;text-decoration:none;color:var(--fg);line-height:1.5}
+.list a:hover{color:var(--accent)}
+.list p{margin:6px 0 0;font-size:14px;color:var(--muted)}
+.list time{display:inline-block;margin-top:8px;font-size:12px;color:var(--muted)}
+.list li strong{color:inherit}
+footer{border-top:1px solid var(--line);margin-top:64px;padding:24px 0;
+  font-size:13px;color:var(--muted)}
+footer a{color:var(--muted)}
+@media(max-width:560px){
+  .card{flex-direction:column}
+  .card-img,.card-img img{width:100%;flex:none;height:auto;max-height:220px}
+  .list li{flex-direction:column;gap:10px}
+  .thumb,.thumb img{width:100%;flex:none;height:auto;aspect-ratio:1200/627}
+  h1{font-size:22px}
+}
+</style>
+</head>
+<body>
+<header><div class="wrap"><a href="https://shota-dokusha.github.io/rakuten-site/">映像編集の機材ノート</a></div></header>
+<main class="wrap">
+<h1>HDMIビデオキャプチャーの選び方、価格帯で何が変わるか</h1>
+<p class="meta">更新: 2026-08-22　／　sho</p>
+<p class="pr-note">本ページはプロモーションを含みます</p>
+<figure class="hero product">
+  <img src="https://thumbnail.image.rakuten.co.jp/@0_mall/maxushop/cabinet/1700/100706-01.jpg?_ex=400x400" alt="【楽天3位】ゲームキャプチャー ビデオキャプチャー HDMIキャプチャーボード USB2.0 HD1080P 60FPS" loading="lazy">
+  <figcaption>画像: 楽天市場（maxu）</figcaption>
+</figure>
+<p class="toplink">
+  <a href="https://hb.afl.rakuten.co.jp/hgc/g00tiy8o.1jrvp477.g00tiy8o.1jrvq8ff/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmaxushop%2F100706%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fmaxushop%2Fi%2F10000623%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">
+    楽天市場でいま一番売れている「HDMIキャプチャーボード比較」を見る
+  </a>
+</p>
+<p>Switch配信をやろうとHDMIキャプチャーボードを調べ始めると、似たようなスペックで3,000円台から6,000円台まで並んでいて、何が違うのかがさっぱりわからない。ページを開くたびに「1080P 60FPS・HDMIパススルー対応」と書いてあって、価格差がどこに出るのかが見えてこない。</p>
+<p>映像編集を仕事にしていると、キャプチャーボードを使う場面は思ったよりある。クライアントから受け取った映像の確認や、機材の出力をPCに取り込むときなど。そういう経験から言うと、価格が高いから質が良い、というわけでもなく、用途に合っていれば安いものでも問題ない。何を基準に選ぶかを整理しておく。</p>
+<h2>迷ってるならこれ</h2>
+<p>今回紹介する6製品の中でレビュー件数が最も多く、かつ評価も高い。122件のレビューで平均4.56という数字は、この価格帯では信頼できる実績だと思う。多くの人が使って評価が維持されているということは、極端な不具合や使いにくさが出ていないということでもある。1080P 60FPS対応で、HDMIパススルー出力もあるのでゲームをプレイしながら録画できる。何を選べばいいかわからない状況なら、まずこれを基準に考えていい。</p>
+<div class="card">
+  <a class="card-img" href="https://hb.afl.rakuten.co.jp/hgc/g00tiy8o.1jrvp477.g00tiy8o.1jrvq8ff/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmaxushop%2F100706%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fmaxushop%2Fi%2F10000623%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">
+    <img src="https://thumbnail.image.rakuten.co.jp/@0_mall/maxushop/cabinet/1700/100706-01.jpg?_ex=400x400" alt="【楽天3位】ゲームキャプチャー ビデオキャプチャー HDMIキャプチャーボード USB2.0 HD1080P 60FPS" loading="lazy" width="160" height="160">
+  </a>
+  <div class="card-body">
+    <p class="card-name">【楽天3位】ゲームキャプチャー ビデオキャプチャー HDMIキャプチャーボード USB2.0 HD1080P 60FPS PC Switch PS4 Xbox PS3 ゲーム機 W</p>
+    <p class="card-meta">
+      <span class="price">4,288円</span>
+      <span class="asof">（2026-08-22時点・変動します）</span>
+    </p>
+    <p class="card-review"><span class="stars">★★★★★</span> 4.56 ／ レビュー122件</p>
+    <p class="card-shop">maxu</p>
+    <a class="btn" href="https://hb.afl.rakuten.co.jp/hgc/g00tiy8o.1jrvp477.g00tiy8o.1jrvq8ff/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmaxushop%2F100706%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fmaxushop%2Fi%2F10000623%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">楽天市場で最新価格・レビューを見る</a>
+  </div>
+</div>
+<h2>それぞれどう違うか</h2>
+<h3>レビュー実績が積み上がったコンパクト型</h3>
+<p>上で紹介したもの。1080P 60FPS・HDMIパススルー対応で、Switch・PS4・Xbox・PS3など主要なゲーム機に接続できる。OBSやPotplayerでの使用を想定した設計で、ゲーム録画・配信の基本的な用途はカバーできる。弱点を挙げると、ブランドの知名度が低い分、トラブルが起きたときに情報が出てきにくい可能性がある。初期不良があった場合の対応はショップによって差があるので、購入前にショップのレビューも確認しておくといい。</p>
+<h3>4K表示しながら録画したいなら</h3>
+<p>4KのHDMIパススルーに対応しているのが特徴。パススルーとは、PCに録画しながら同時に外部のモニターやテレビにも映像を出力できる機能で、4K対応であれば4KテレビでゲームをプレイしながらそのままPCで録画できる。レビューは105件・平均4.49で実績はある。価格は4,580円と上の入門機より高い。4Kテレビでのゲームプレイにこだわりがないなら、その差額を払うメリットは薄い。</p>
+<div class="card">
+  <a class="card-img" href="https://hb.afl.rakuten.co.jp/hgc/g00u5dno.1jrvp6e4.g00u5dno.1jrvq890/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fharezoratbp%2Fpf8%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fharezoratbp%2Fi%2F10000067%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">
+    <img src="https://thumbnail.image.rakuten.co.jp/@0_mall/harezoratbp/cabinet/09304170/09474909/imgrc0082542535.jpg?_ex=400x400" alt="★＼魅せる配信はここから／★ キャプチャーボード switch 対応 ＼楽天1位受賞／ 【ハレゾラTBP公式店】 4K " loading="lazy" width="160" height="160">
+  </a>
+  <div class="card-body">
+    <p class="card-name">★＼魅せる配信はここから／★ キャプチャーボード switch 対応 ＼楽天1位受賞／ 【ハレゾラTBP公式店】 4K HDMI パススルー 外付け キャプチャカード ビデオキャプ</p>
+    <p class="card-meta">
+      <span class="price">4,580円</span>
+      <span class="asof">（2026-08-22時点・変動します）</span>
+    </p>
+    <p class="card-review"><span class="stars">★★★★☆</span> 4.49 ／ レビュー105件</p>
+    <p class="card-shop">ヒトメボレコーデ</p>
+    <a class="btn" href="https://hb.afl.rakuten.co.jp/hgc/g00u5dno.1jrvp6e4.g00u5dno.1jrvq890/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fharezoratbp%2Fpf8%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fharezoratbp%2Fi%2F10000067%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">楽天市場で最新価格・レビューを見る</a>
+  </div>
+</div>
+<h3>価格はほぼ同じ入門スペック</h3>
+<p>スペックは1080P 60FPS・HDMIパススルー対応と入門機と同等で、価格も4,292円とほぼ変わらない。ただしレビューの平均が4.19と、このラインナップの中では低め。91件のレビューがあってこの数字なので、何かしら気になった点を書いた人が一定数いると読める。価格差がほとんどないので、あえてこちらを選ぶ積極的な理由は見えにくい。</p>
+<div class="card">
+  <a class="card-img" href="https://hb.afl.rakuten.co.jp/hgc/g00sjiqo.1jrvpfe4.g00sjiqo.1jrvqc25/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2F11shop%2F100596%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2F11shop%2Fi%2F10000840%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">
+    <img src="https://thumbnail.image.rakuten.co.jp/@0_mall/11shop/cabinet/0700/100706-01.jpg?_ex=400x400" alt="HDMIキャプチャーボード ゲームキャプチャー ビデオキャプチャー USB2.0 HD1080P 60FPS PC Sw" loading="lazy" width="160" height="160">
+  </a>
+  <div class="card-body">
+    <p class="card-name">HDMIキャプチャーボード ゲームキャプチャー ビデオキャプチャー USB2.0 HD1080P 60FPS PC Switch PS4 Xbox PS3 ゲーム機 Windows</p>
+    <p class="card-meta">
+      <span class="price">4,292円</span>
+      <span class="asof">（2026-08-22時点・変動します）</span>
+    </p>
+    <p class="card-review"><span class="stars">★★★★☆</span> 4.19 ／ レビュー91件</p>
+    <p class="card-shop">11SHOP</p>
+    <a class="btn" href="https://hb.afl.rakuten.co.jp/hgc/g00sjiqo.1jrvpfe4.g00sjiqo.1jrvqc25/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2F11shop%2F100596%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2F11shop%2Fi%2F10000840%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">楽天市場で最新価格・レビューを見る</a>
+  </div>
+</div>
+<h3>初めてでOBSの設定に不安があるなら</h3>
+<p>3,480円と他と比べて価格が低く、かつOBSの設定ガイドが同梱されているのが特徴。初めてキャプチャーボードを使う人が最初に詰まりがちなのがOBSの設定で、そこにガイドがついているのは地味に実用的だと思う。Nintendo Switch 2への対応も謳っており、Switch 2を持っている人にも使える。レビューは79件・平均4.41で悪くはない。ただし他と比べてレビュー数が少ないので、評価のサンプルがまだ積み上がっていない段階ではある。</p>
+<div class="card">
+  <a class="card-img" href="https://hb.afl.rakuten.co.jp/hgc/g00tph4o.1jrvpad6.g00tph4o.1jrvq15f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fpeaceecology%2F20250428%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fpeaceecology%2Fi%2F10000971%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">
+    <img src="https://thumbnail.image.rakuten.co.jp/@0_mall/peaceecology/cabinet/biiino/item/main-image/20260317185940_1.jpg?_ex=400x400" alt="【OBS設定ガイド付き】 簡単！挿すだけで使える！ キャプチャーボード switch2対応 switch対応 PS5 対" loading="lazy" width="160" height="160">
+  </a>
+  <div class="card-body">
+    <p class="card-name">【OBS設定ガイド付き】 簡単！挿すだけで使える！ キャプチャーボード switch2対応 switch対応 PS5 対応 パススルー HDMI キャプボ ゲームキャプチャー ビデ</p>
+    <p class="card-meta">
+      <span class="price">3,480円</span>
+      <span class="asof">（2026-08-22時点・変動します）</span>
+    </p>
+    <p class="card-review"><span class="stars">★★★★☆</span> 4.41 ／ レビュー79件</p>
+    <p class="card-shop">MADクリエイト</p>
+    <a class="btn" href="https://hb.afl.rakuten.co.jp/hgc/g00tph4o.1jrvpad6.g00tph4o.1jrvq15f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fpeaceecology%2F20250428%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fpeaceecology%2Fi%2F10000971%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">楽天市場で最新価格・レビューを見る</a>
+  </div>
+</div>
+<h3>USB Type-Cで接続したいなら</h3>
+<p>USBとType-Cの両方に対応しているのがこれ。MacBookなどType-Cのみのポート構成の機種では、変換アダプターなしで直接刺せる。価格は3,580円。ただしこの製品だけ1080P 30FPS対応で、他が対応している60FPSには非対応。30FPSでも会議録画や動きの少ない映像なら気にならないが、ゲームや動きの速いコンテンツを録画・配信したいなら60FPS対応のものを選んだほうがいい。レビューは74件・平均4.5。</p>
+<div class="card">
+  <a class="card-img" href="https://hb.afl.rakuten.co.jp/hgc/g00tmqno.1jrvpebf.g00tmqno.1jrvq720/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fjetaku%2Fjetaku-capture-05%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fjetaku%2Fi%2F10000213%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">
+    <img src="https://thumbnail.image.rakuten.co.jp/@0_mall/jetaku/cabinet/07645766/13242690/1.jpg?_ex=400x400" alt="【30%OFFクーポン配布中】放熱 HDMI キャプチャーボード Switch USB&amp;Type C 1080P 30F" loading="lazy" width="160" height="160">
+  </a>
+  <div class="card-body">
+    <p class="card-name">【30%OFFクーポン配布中】放熱 HDMI キャプチャーボード Switch USB&amp;Type C 1080P 30FPS ビデオキャプチャー フルHD ゲームキャプチャー ゲー</p>
+    <p class="card-meta">
+      <span class="price">3,580円</span>
+      <span class="asof">（2026-08-22時点・変動します）</span>
+    </p>
+    <p class="card-review"><span class="stars">★★★★★</span> 4.5 ／ レビュー74件</p>
+    <p class="card-shop">JETAKU生活館</p>
+    <a class="btn" href="https://hb.afl.rakuten.co.jp/hgc/g00tmqno.1jrvpebf.g00tmqno.1jrvq720/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fjetaku%2Fjetaku-capture-05%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fjetaku%2Fi%2F10000213%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">楽天市場で最新価格・レビューを見る</a>
+  </div>
+</div>
+<h3>ブランドと保証を重視するなら</h3>
+<p>UGREENはHDMIケーブルや映像まわりのアクセサリーで知名度のあるメーカーで、他の無名ブランドとは信頼性という面での立ち位置が違う。4K@60HzのHDMIパススルーに対応し、2年保証もついている。6,199円と今回の中では価格が高く、その差額はブランドの信頼性と保証に払う分と考えると整理しやすい。レビュー件数は32件とまだ少ないが、平均4.66という評価は高い。長期間使うつもりがあるか、何かあったときにメーカーに問い合わせできる安心感が欲しい人向け。</p>
+<div class="card">
+  <a class="card-img" href="https://hb.afl.rakuten.co.jp/hgc/g00u0fbo.1jrvpccc.g00u0fbo.1jrvq0d9/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fugreen-gear%2F15390a%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fugreen-gear%2Fi%2F10000639%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">
+    <img src="https://thumbnail.image.rakuten.co.jp/@0_mall/ugreen-gear/cabinet/10122288/15390a.jpg?_ex=400x400" alt="UGREEN 4K HDMI キャプチャーボード パススルー 4K@60Hz /1080P 60Hz 低遅延 ゲーム実況" loading="lazy" width="160" height="160">
+  </a>
+  <div class="card-body">
+    <p class="card-name">UGREEN 4K HDMI キャプチャーボード パススルー 4K@60Hz /1080P 60Hz 低遅延 ゲーム実況生配信 ライブ配信 画面共有 Switch PS5 Xbox</p>
+    <p class="card-meta">
+      <span class="price">6,199円</span>
+      <span class="asof">（2026-08-22時点・変動します）</span>
+    </p>
+    <p class="card-review"><span class="stars">★★★★★</span> 4.66 ／ レビュー32件</p>
+    <p class="card-shop">UGREEN公式楽天市場店</p>
+    <a class="btn" href="https://hb.afl.rakuten.co.jp/hgc/g00u0fbo.1jrvpccc.g00u0fbo.1jrvq0d9/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fugreen-gear%2F15390a%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fugreen-gear%2Fi%2F10000639%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">楽天市場で最新価格・レビューを見る</a>
+  </div>
+</div>
+<h2>選ぶときに実際どこを見るか</h2>
+<p>最初に確認するのは、パススルー出力の有無とフレームレートの仕様。</p>
+<p>パススルー出力がないと、キャプチャーボードを通すと画面に映像が映らなくなったり、取り込み処理による遅延が出てゲームを操作できない状態になったりする。ゲームプレイしながら録画する使い方なら必須の機能で、今回紹介した商品はすべてパススルー対応なのでその点は問題ない。</p>
+<p>フレームレートは60FPSと30FPSで体感の差がある。ゲームや動きの速いコンテンツを録画・配信するなら60FPS対応を選ぶほうがいい。今回紹介した中でType-C対応のものだけが30FPS表記なので、用途によっては選択から外れる。</p>
+<p>接続端子については、MacBookなどType-Cポートしかない環境ならType-C対応かどうかも確認しておく。変換アダプターで代用できることもあるが、余計なものが増えるよりシンプルに使えるほうが現場では楽だ。</p>
+<h2>実際どう使ってるか</h2>
+<p>映像編集の仕事でキャプチャーボードが必要になるのは、主に別の機材の出力をPCに取り込む場面。外部のスイッチャーや業務用カメラの映像をPCに入れるとか、特定の画面に映っている映像をそのまま録画したいとき。そういう用途では高価なものを使う必要はなく、映像が安定して入力できれば十分で、コンパクトなもののほうが現場では扱いやすい。</p>
+<p>ゲーム配信向けの使い方とは目的が違うが、仕組みは同じ。HDMIの信号をUSBに変換してPCに入力する。選ぶときは「自分は何を録画したいのか、どんな環境で使うか」から考えると、スペック表のどこを見ればいいかが自然に決まってくる。</p>
+<h2>まとめ</h2>
+<p>価格差が大きく影響するのはブランドと保証の部分で、録画の基本品質は同価格帯でそこまで変わらない。</p>
+<p>用途から先に絞る。4Kテレビで映しながら録画したいなら4Kパススルー対応が必要で、Type-Cポートしかないなら接続端子を確認する。OBSの設定に不安があるならガイド付きのものが手間を省ける。それ以外で迷うなら、レビュー数と評価が積み上がっているものにしておくほうが後悔しにくい。</p>
+<hr>
+<div class="disclosure">
+<p><strong>広告について</strong></p>
+<p>当サイトは楽天アフィリエイトのリンクを掲載しており、当サイト経由で商品が購入された場合、運営者に紹介料が支払われることがあります。紹介料の有無は、掲載する商品の選定や記載内容に影響していません。</p>
+<p>掲載している価格・レビュー件数・評価は、楽天ウェブサービスを通じて 2026-08-22 に取得した時点のものです。実際の価格・在庫・ポイント倍率は変動しますので、購入前に必ず各商品ページでご確認ください。</p>
+</div>
+</main>
+<footer><div class="wrap">
+<p>当サイトは楽天アフィリエイトによる広告を掲載しています。掲載している価格・在庫・ポイント倍率は取得時点のもので、変動します。最新の情報は各商品ページでご確認ください。</p>
+<p>商品情報・画像は<a href="https://webservice.rakuten.co.jp/" target="_blank" rel="nofollow noopener">楽天ウェブサービス</a>より取得しています（Supported by Rakuten Developers）。</p>
+<p>映像編集の機材ノート ／ sho　<a href="https://shota-dokusha.github.io/rakuten-site/privacy.html">運営者情報・免責事項</a></p>
+</div></footer>
+</body>
+</html>
