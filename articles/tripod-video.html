@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ビデオ三脚を選ぶとき、スペック表のどこを実際に確認するか｜映像編集の機材ノート</title>
+<meta name="description" content="動画撮影に使う三脚を探している人向けに、スペック表のどこを読めばいいかを映像編集者の視点でまとめた。ビデオ用と写真用では雲台の構造が根本的に違う。耐荷重・最大高・収納サイズと重量、この4点を現場の判断基準として整理した。">
+<link rel="canonical" href="https://shota-dokusha.github.io/rakuten-site/articles/tripod-video.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ビデオ三脚を選ぶとき、スペック表のどこを実際に確認するか｜映像編集の機材ノート">
+<meta property="og:description" content="動画撮影に使う三脚を探している人向けに、スペック表のどこを読めばいいかを映像編集者の視点でまとめた。ビデオ用と写真用では雲台の構造が根本的に違う。耐荷重・最大高・収納サイズと重量、この4点を現場の判断基準として整理した。">
+<meta property="og:image" content="https://shota-dokusha.github.io/rakuten-site/images/undefined">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{
+  --bg:#ffffff; --fg:#1a1a1a; --muted:#666; --line:#e8e8e8;
+  --accent:#c8102e; --accent-weak:#fdeef0; --accent-line:#f0c4cb;
+  --card:#fafafa; --notice:#fff8e1; --notice-line:#f0d9a0;
+}
+@media (prefers-color-scheme:dark){
+  :root{ --bg:#141414; --fg:#e8e8e8; --muted:#9a9a9a; --line:#2e2e2e;
+         --accent:#ff6b7a; --accent-weak:#2a1a1d; --accent-line:#4d2b31;
+         --card:#1d1d1d; --notice:#2a2417; --notice-line:#4a3f28; }
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);
+  font-family:system-ui,-apple-system,"Hiragino Sans","Noto Sans JP",sans-serif;
+  line-height:1.85;font-size:16px;}
+.wrap{max-width:720px;margin:0 auto;padding:0 20px 80px}
+header{border-bottom:1px solid var(--line);border-top:3px solid var(--accent);margin-bottom:40px}
+header .wrap{padding-top:18px;padding-bottom:16px}
+header a{color:var(--fg);text-decoration:none;font-weight:700;font-size:17px}
+header a:hover{color:var(--accent)}
+h1{font-size:27px;line-height:1.45;margin:34px 0 10px;letter-spacing:.01em}
+h2{position:relative;font-size:21px;margin:56px 0 16px;padding:0 0 10px 15px;
+  border-bottom:1px solid var(--line)}
+h2::before{content:"";position:absolute;left:0;top:.2em;bottom:12px;width:4px;
+  border-radius:2px;background:var(--accent)}
+h3{font-size:17px;margin:36px 0 10px;padding-left:12px;
+  border-left:3px solid var(--accent-line)}
+p{margin:16px 0}
+a{color:var(--accent);text-underline-offset:3px;text-decoration-thickness:1px}
+strong{color:var(--accent);font-weight:700}
+blockquote{margin:22px 0;padding:13px 16px;background:var(--notice);
+  border:1px solid var(--notice-line);border-left:4px solid var(--notice-line);
+  border-radius:6px;font-size:14px;color:var(--fg)}
+blockquote strong{color:inherit}
+.meta{color:var(--muted);font-size:13px;margin:0 0 20px}
+/* 広告表記（ステマ規制対応）。控えめだが読み取れる大きさを保つこと */
+.pr-note{margin:0 0 18px;font-size:12px;color:var(--muted);letter-spacing:.02em}
+.disclosure{margin:32px 0 0;padding:16px 18px;background:var(--card);
+  border:1px solid var(--line);border-radius:8px;font-size:13px;color:var(--muted)}
+.disclosure p{margin:0 0 10px;line-height:1.75}
+.disclosure p:last-child{margin-bottom:0}
+.disclosure strong{color:var(--fg)}
+ul,ol{padding-left:1.3em}
+li{margin:8px 0}
+ul li::marker{color:var(--accent)}
+ol li::marker{color:var(--accent);font-weight:700}
+hr{border:0;border-top:1px solid var(--line);margin:40px 0}
+code{background:var(--card);padding:2px 5px;border-radius:4px;font-size:.9em}
+.toplink{margin:-8px 0 28px;text-align:center;font-size:15px}
+.toplink a{display:inline-block;color:var(--accent);font-weight:700;text-decoration:none;
+  padding:10px 16px;border-radius:8px;background:var(--accent-weak);
+  border:1px solid var(--accent-line);line-height:1.5}
+.toplink a::before{content:"🔗 ";font-weight:400}
+.toplink a:hover{text-decoration:underline}
+.hero{margin:0 0 22px;padding:0}
+.hero img{width:100%;height:auto;aspect-ratio:1200/627;object-fit:cover;border-radius:10px;display:block}
+/* 楽天の商品画像は「切り取り禁止」なので、余白付きで全体を収める */
+.hero.product img{object-fit:contain;background:#fff;border:1px solid var(--line);padding:14px}
+.hero.product figcaption{text-align:right}
+.hero figcaption{margin-top:7px;font-size:11px;color:var(--muted);text-align:right}
+.hero figcaption a{color:var(--muted)}
+.thumb{flex:0 0 128px}
+.thumb img{width:128px;height:80px;object-fit:cover;border-radius:6px;display:block}
+.thumb.product img{object-fit:contain;background:#fff;border:1px solid var(--line)}
+.card{display:flex;gap:16px;margin:30px 0;padding:18px;background:var(--card);
+  border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:10px;
+  transition:box-shadow .15s ease,transform .15s ease}
+.card:hover{box-shadow:0 4px 18px rgba(0,0,0,.09);transform:translateY(-1px)}
+.card-img{flex:0 0 120px}
+.card-img img{width:120px;height:120px;object-fit:contain;border-radius:6px;background:#fff}
+.card-body{flex:1;min-width:0}
+.card-name{margin:0 0 8px;font-weight:700;font-size:15px;line-height:1.5}
+.card-meta{margin:0 0 4px}
+.price{color:var(--accent);font-weight:700;font-size:19px}
+.asof{color:var(--muted);font-size:12px}
+.card-review{margin:0 0 2px;font-size:13px;color:var(--muted)}
+.stars{color:#f0a000}
+.card-shop{margin:0 0 12px;font-size:12px;color:var(--muted)}
+.btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;
+  padding:12px 20px;border-radius:6px;font-weight:700;font-size:14px;
+  box-shadow:0 2px 8px rgba(200,16,46,.28)}
+.btn:hover{opacity:.9;transform:translateY(-1px)}
+.card-name strong,.card strong{color:inherit}
+.list{list-style:none;padding:0}
+.list li{display:flex;gap:16px;align-items:flex-start;
+  border-bottom:1px solid var(--line);padding:22px 0 22px 16px;margin:0;
+  border-left:3px solid transparent;transition:border-color .15s ease,background .15s ease}
+.list .body{flex:1;min-width:0}
+.list li:hover{border-left-color:var(--accent);background:var(--accent-weak)}
+.list a{font-size:17px;font-weight:700;text-decoration:none;color:var(--fg);line-height:1.5}
+.list a:hover{color:var(--accent)}
+.list p{margin:6px 0 0;font-size:14px;color:var(--muted)}
+.list time{display:inline-block;margin-top:8px;font-size:12px;color:var(--muted)}
+.list li strong{color:inherit}
+footer{border-top:1px solid var(--line);margin-top:64px;padding:24px 0;
+  font-size:13px;color:var(--muted)}
+footer a{color:var(--muted)}
+@media(max-width:560px){
+  .card{flex-direction:column}
+  .card-img,.card-img img{width:100%;flex:none;height:auto;max-height:220px}
+  .list li{flex-direction:column;gap:10px}
+  .thumb,.thumb img{width:100%;flex:none;height:auto;aspect-ratio:1200/627}
+  h1{font-size:22px}
+}
+</style>
+</head>
+<body>
+<header><div class="wrap"><a href="https://shota-dokusha.github.io/rakuten-site/">映像編集の機材ノート</a></div></header>
+<main class="wrap">
+<h1>ビデオ三脚を選ぶとき、スペック表のどこを実際に確認するか</h1>
+<p class="meta">更新: 2026-08-24　／　sho</p>
+<p class="pr-note">本ページはプロモーションを含みます</p>
+<figure class="hero product">
+  <img src="https://thumbnail.image.rakuten.co.jp/@0_mall/neewer-store/cabinet/10390549/10390551/10398433/90097698.jpg?_ex=400x400" alt="【★楽天1位獲得！お買い得2本セット】NEEWER 調光可能な二色480 LEDビデオライト照明キット 190cm三脚ス" loading="lazy">
+  <figcaption>画像: 楽天市場（neewer-store）</figcaption>
+</figure>
+<p class="toplink">
+  <a href="https://hb.afl.rakuten.co.jp/hgc/g00txduo.1jrvp2cd.g00txduo.1jrvqa02/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fneewer-store%2Fb08c7cz6h9%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fneewer-store%2Fi%2F10000058%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">
+    楽天市場でいま一番売れている「動画撮影向けビデオ三脚選び」を見る
+  </a>
+</p>
+<p>動画で三脚を探すと、写真用と混在していてどれを選べばいいかわからなくなる。価格帯もバラバラで、同じ「三脚」と書いてあっても用途が全然違うものが並んでいる。映像編集を本業にしながら撮影現場にも出る立場で、スペック表のどこを見ているかを整理しておく。</p>
+<h2>迷ってるならこれ</h2>
+<p>動画撮影に使うなら、まずビデオ雲台がついているかどうかを確認したい。写真用のボール雲台はカメラをどこにでも向けられるが、横方向に滑らかにパンしながら撮る動きには向いていない。動画対応の雲台はパンとチルトが独立して動くので、フォローショットや横移動の撮影がやりやすくなる。</p>
+<p>SLIKのGX-m7500 VIDEOは動画対応雲台とスマホ対応クイックシューが最初からついていて、全高1,760mmと高さも十分ある。アウトレットの新古品で店舗保証3ヶ月付き。20件のレビューで平均4.55。コスパで動画三脚を探しているなら、ここから検討してみる価値がある。</p>
+<div class="card">
+  <a class="card-img" href="https://hb.afl.rakuten.co.jp/hgc/g00q63lo.1jrvp341.g00q63lo.1jrvqf2f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fkenko-k%2Fno-4906752217313%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fkenko-k%2Fi%2F10032479%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">
+    <img src="https://thumbnail.image.rakuten.co.jp/@0_mall/kenko-k/cabinet/00259640/4906752217313_0.jpg?_ex=400x400" alt="【アウトレット(新古品)[店舗保証3ヵ月]】【即配】(KT)【5段】GX-m7500 VIDEO スマホ対応 三脚 SL" loading="lazy" width="160" height="160">
+  </a>
+  <div class="card-body">
+    <p class="card-name">【アウトレット(新古品)[店舗保証3ヵ月]】【即配】(KT)【5段】GX-m7500 VIDEO スマホ対応 三脚 SLIK スリック 【送料無料】GXシリーズ上位機種 全高1,7</p>
+    <p class="card-meta">
+      <span class="price">8,800円</span>
+      <span class="asof">（2026-08-24時点・変動します）</span>
+    </p>
+    <p class="card-review"><span class="stars">★★★★★</span> 4.55 ／ レビュー20件</p>
+    <p class="card-shop">ケンコー・トキナー 楽天市場店</p>
+    <a class="btn" href="https://hb.afl.rakuten.co.jp/hgc/g00q63lo.1jrvp341.g00q63lo.1jrvqf2f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fkenko-k%2Fno-4906752217313%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fkenko-k%2Fi%2F10032479%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">楽天市場で最新価格・レビューを見る</a>
+  </div>
+</div>
+<h2>それぞれどう違うか</h2>
+<h3>マンフロット Element Travel</h3>
+<p>マンフロットのアウトレット品で、全高143cm・耐荷重6kg・縮長32cm。ボール雲台でアルカスイス互換のクイックリリース付き。72件のレビューで平均4.31、8,980円。コンパクトに折りたためるので旅行・日帰り撮影向きという説明になっている。</p>
+<p>弱点はビデオ撮影には特化していないこと。ボール雲台でのパン撮影は滑らかさに限界があるので、横移動やフォローのある撮影が主な用途なら別の選択肢を考えた方がいい。カメラを固定して動かさない撮影なら十分に機能する。</p>
+<div class="card">
+  <a class="card-img" href="https://hb.afl.rakuten.co.jp/hgc/g00s4pho.1jrvpaf8.g00s4pho.1jrvq882/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmd-kk%2F8024221667912-56e-ol%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fmd-kk%2Fi%2F10007041%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">
+    <img src="https://thumbnail.image.rakuten.co.jp/@0_mall/md-kk/cabinet/07240831/11316011/12051832/imgrc0100717168.jpg?_ex=400x400" alt="【OUTLET】Manfrotto マンフロット Elementトラベル三脚 スモール レッド MKELES5RD-BH" loading="lazy" width="160" height="160">
+  </a>
+  <div class="card-body">
+    <p class="card-name">【OUTLET】Manfrotto マンフロット Elementトラベル三脚 スモール レッド MKELES5RD-BH 一眼レフ用 コンパクト ビデオカメラ カメラ 全伸高143</p>
+    <p class="card-meta">
+      <span class="price">8,980円</span>
+      <span class="asof">（2026-08-24時点・変動します）</span>
+    </p>
+    <p class="card-review"><span class="stars">★★★★☆</span> 4.31 ／ レビュー72件</p>
+    <p class="card-shop">Manfrotto Outlet Store</p>
+    <a class="btn" href="https://hb.afl.rakuten.co.jp/hgc/g00s4pho.1jrvpaf8.g00s4pho.1jrvq882/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmd-kk%2F8024221667912-56e-ol%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fmd-kk%2Fi%2F10007041%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">楽天市場で最新価格・レビューを見る</a>
+  </div>
+</div>
+<h3>K&amp;F CONCEPTのカーボン三脚</h3>
+<p>カーボン素材で超軽量、耐荷重8kg、5段伸縮で46〜153cmの範囲。一脚に変形できてナットロック式、専用ケース付き。15,000円で40件のレビュー・平均4.35、メーカー1年保証あり。</p>
+<p>こちらも自由雲台（ボール雲台）なのでビデオ特化ではないが、耐荷重8kgは余裕がある。重めのレンズをつけた組み合わせでも安定して使いやすい。一脚に変換できるのは動き回る現場では便利なポイントで、カーボンで軽くなっているぶん持ち運びが多い人に向いている。</p>
+<div class="card">
+  <a class="card-img" href="https://hb.afl.rakuten.co.jp/hgc/g00txg3o.1jrvp7d8.g00txg3o.1jrvq96a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fkentfaith%2Fkf09-077v1%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fkentfaith%2Fi%2F10000096%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">
+    <img src="https://thumbnail.image.rakuten.co.jp/@0_mall/kentfaith/cabinet/top/ranking/imgrc0088446724.jpg?_ex=400x400" alt="限定10%OFFxP5倍!! 【楽天1位★ 46~153cm】 カメラ 三脚 カーボン 超軽量 初心者向け コンパクト " loading="lazy" width="160" height="160">
+  </a>
+  <div class="card-body">
+    <p class="card-name">限定10%OFFxP5倍!! 【楽天1位★ 46~153cm】 カメラ 三脚 カーボン 超軽量 初心者向け コンパクト 耐荷重 8kg 5段伸縮 安定感 一脚可変式 3脚 自由雲台</p>
+    <p class="card-meta">
+      <span class="price">15,000円</span>
+      <span class="asof">（2026-08-24時点・変動します）</span>
+    </p>
+    <p class="card-review"><span class="stars">★★★★☆</span> 4.35 ／ レビュー40件</p>
+    <p class="card-shop">K&amp;F CONCEPT</p>
+    <a class="btn" href="https://hb.afl.rakuten.co.jp/hgc/g00txg3o.1jrvp7d8.g00txg3o.1jrvq96a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fkentfaith%2Fkf09-077v1%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fkentfaith%2Fi%2F10000096%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">楽天市場で最新価格・レビューを見る</a>
+  </div>
+</div>
+<h3>キリン三脚 3m</h3>
+<p>最大3mまで伸びるタイプで、俯瞰・高所撮影に特化した製品。スマホホルダー対応で360度回転できる設計。9,800円、45件のレビューで平均4.58。</p>
+<p>通常の動画撮影に使う高さではないので、「高い位置から固定で撮りたい」という特定の用途がある人向け。折りたためるとの説明はあるが、3mの製品なので収納時もある程度の大きさになることは想定しておいた方がいい。</p>
+<div class="card">
+  <a class="card-img" href="https://hb.afl.rakuten.co.jp/hgc/g00tv5jo.1jrvp4f9.g00tv5jo.1jrvq930/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Flapset%2Fcompass1695175915%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Flapset%2Fi%2F10000103%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">
+    <img src="https://thumbnail.image.rakuten.co.jp/@0_mall/lapset/cabinet/imgrc0140986252.jpg?_ex=400x400" alt="【楽天1位】キリン三脚 三脚 3m 長い 高い スマホ ビデオカメラ スマホ三脚 三脚スタンド スマホスタンド 伸縮 俯" loading="lazy" width="160" height="160">
+  </a>
+  <div class="card-body">
+    <p class="card-name">【楽天1位】キリン三脚 三脚 3m 長い 高い スマホ ビデオカメラ スマホ三脚 三脚スタンド スマホスタンド 伸縮 俯瞰 撮影 動画撮影 iphone Android スマートフ</p>
+    <p class="card-meta">
+      <span class="price">9,800円</span>
+      <span class="asof">（2026-08-24時点・変動します）</span>
+    </p>
+    <p class="card-review"><span class="stars">★★★★★</span> 4.58 ／ レビュー45件</p>
+    <p class="card-shop">三脚スマホスタンド専門店 lapset</p>
+    <a class="btn" href="https://hb.afl.rakuten.co.jp/hgc/g00tv5jo.1jrvp4f9.g00tv5jo.1jrvq930/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Flapset%2Fcompass1695175915%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Flapset%2Fi%2F10000103%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">楽天市場で最新価格・レビューを見る</a>
+  </div>
+</div>
+<h3>キリン三脚 5m</h3>
+<p>同じlapsetの5mモデル。地上5mの高さから撮れる製品で、運動会・発表会・イベント・集合写真・定点観測が主な用途として説明されている。14,800円、18件のレビューで平均4.56。</p>
+<p>これは完全に特殊用途向けで、通常の動画撮影で5mの高さが必要になるシーンは多くない。ただ、会場全体を俯瞰で定点撮影したいときには選択肢に入る。スマホ・iPhone・Android・ビデオカメラ対応との説明あり。</p>
+<div class="card">
+  <a class="card-img" href="https://hb.afl.rakuten.co.jp/hgc/g00tv5jo.1jrvp4f9.g00tv5jo.1jrvq930/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Flapset%2Fcompass1762667587%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Flapset%2Fi%2F10000140%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">
+    <img src="https://thumbnail.image.rakuten.co.jp/@0_mall/lapset/cabinet/compass1763096726.jpg?_ex=400x400" alt="【楽天ランキング1位獲得】【圧倒的な高さ5m！】 キリン三脚 lapset 三脚 スマホ 5m 超ロング 俯瞰撮影 スマ" loading="lazy" width="160" height="160">
+  </a>
+  <div class="card-body">
+    <p class="card-name">【楽天ランキング1位獲得】【圧倒的な高さ5m！】 キリン三脚 lapset 三脚 スマホ 5m 超ロング 俯瞰撮影 スマホスタンド 高所撮影 iphone Android ビデオカ</p>
+    <p class="card-meta">
+      <span class="price">14,800円</span>
+      <span class="asof">（2026-08-24時点・変動します）</span>
+    </p>
+    <p class="card-review"><span class="stars">★★★★★</span> 4.56 ／ レビュー18件</p>
+    <p class="card-shop">三脚スマホスタンド専門店 lapset</p>
+    <a class="btn" href="https://hb.afl.rakuten.co.jp/hgc/g00tv5jo.1jrvp4f9.g00tv5jo.1jrvq930/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Flapset%2Fcompass1762667587%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Flapset%2Fi%2F10000140%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">楽天市場で最新価格・レビューを見る</a>
+  </div>
+</div>
+<h3>NEEWERのLEDライトキット（190cmスタンド付き）</h3>
+<p>厳密には三脚ではなく、LEDパネル・ソフトボックス・190cmのライトスタンドがセットになった照明キット。13,180円で95件のレビュー・平均4.59と、今回挙げた中では最もレビューが集まっている。YouTube撮影・スタジオ撮影・ビデオ撮影向けと商品説明に記載がある。</p>
+<p>カメラを乗せる三脚としては使えないので注意。ただ、動画を撮るなら照明は欠かせない要素で、「三脚はあるけどライトがない」という状況でまとめて揃えたいときの選択肢になる。</p>
+<div class="card">
+  <a class="card-img" href="https://hb.afl.rakuten.co.jp/hgc/g00txduo.1jrvp2cd.g00txduo.1jrvqa02/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fneewer-store%2Fb08c7cz6h9%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fneewer-store%2Fi%2F10000058%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">
+    <img src="https://thumbnail.image.rakuten.co.jp/@0_mall/neewer-store/cabinet/10390549/10390551/10398433/90097698.jpg?_ex=400x400" alt="【★楽天1位獲得！お買い得2本セット】NEEWER 調光可能な二色480 LEDビデオライト照明キット 190cm三脚ス" loading="lazy" width="160" height="160">
+  </a>
+  <div class="card-body">
+    <p class="card-name">【★楽天1位獲得！お買い得2本セット】NEEWER 調光可能な二色480 LEDビデオライト照明キット 190cm三脚スタンド/ソフトボックス/付きオプション Uブラケット付き 3</p>
+    <p class="card-meta">
+      <span class="price">13,180円</span>
+      <span class="asof">（2026-08-24時点・変動します）</span>
+    </p>
+    <p class="card-review"><span class="stars">★★★★★</span> 4.59 ／ レビュー95件</p>
+    <p class="card-shop">neewer-store</p>
+    <a class="btn" href="https://hb.afl.rakuten.co.jp/hgc/g00txduo.1jrvp2cd.g00txduo.1jrvqa02/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fneewer-store%2Fb08c7cz6h9%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fneewer-store%2Fi%2F10000058%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">楽天市場で最新価格・レビューを見る</a>
+  </div>
+</div>
+<h2>選ぶときに実際どこを見るか</h2>
+<p>まず雲台の種類。動画でパンやチルトを使うなら動画対応雲台かどうかを確認する。ボール雲台は固定撮影なら問題ないが、カメラをゆっくり横に動かしながら撮りたいときには使いにくい。</p>
+<p>次に耐荷重。カメラ本体とレンズを合わせた重量より、耐荷重に余裕がある製品を選ぶ。ギリギリの重量だと三脚を目一杯伸ばしたときに安定感が落ちる。僕は使う機材の重さより耐荷重が大きく上回るものを基準にして選んでいる。</p>
+<p>最大高は、撮影するシーンで必要な高さを先に決めておく。立って撮るなら140〜180cm程度が基準になるが、撮影場所によって変わってくる。</p>
+<p>収納サイズと重量は持ち運びの頻度次第。スタジオや室内固定なら重くてもいいが、ロケが多いなら軽さとコンパクトさが優先される。</p>
+<h2>実際どう使ってるか</h2>
+<p>撮影現場では、急いでセットアップしなければいけない場面がよくある。段の開け閉めはナットロック式とレバーロック式で速さが変わるので、どちらに慣れているかも選ぶ基準になってくる。</p>
+<p>あと、全高を目一杯伸ばすと揺れやすくなる製品がある。外での撮影で少し風があるだけでフレームがブレることがあって、それを経験すると次からは剛性を優先するようになる。スペック表だけでは分からない部分なので、レビューの具体的なコメントを読んでおくのがいい。</p>
+<h2>まとめ</h2>
+<p>動画で使う三脚を選ぶなら、まずビデオ雲台の有無を確認する。次に耐荷重と最大高が用途に合っているか。旅行やロケが多ければ収納サイズと重量も重要になってくる。高所撮影は専用の製品が必要で、通常の三脚では高さが足りない。目的を先に決めれば、選択肢は自然と絞られてくる。</p>
+<hr>
+<div class="disclosure">
+<p><strong>広告について</strong></p>
+<p>当サイトは楽天アフィリエイトのリンクを掲載しており、当サイト経由で商品が購入された場合、運営者に紹介料が支払われることがあります。紹介料の有無は、掲載する商品の選定や記載内容に影響していません。</p>
+<p>掲載している価格・レビュー件数・評価は、楽天ウェブサービスを通じて 2026-08-24 に取得した時点のものです。実際の価格・在庫・ポイント倍率は変動しますので、購入前に必ず各商品ページでご確認ください。</p>
+</div>
+</main>
+<footer><div class="wrap">
+<p>当サイトは楽天アフィリエイトによる広告を掲載しています。掲載している価格・在庫・ポイント倍率は取得時点のもので、変動します。最新の情報は各商品ページでご確認ください。</p>
+<p>商品情報・画像は<a href="https://webservice.rakuten.co.jp/" target="_blank" rel="nofollow noopener">楽天ウェブサービス</a>より取得しています（Supported by Rakuten Developers）。</p>
+<p>映像編集の機材ノート ／ sho　<a href="https://shota-dokusha.github.io/rakuten-site/privacy.html">運営者情報・免責事項</a></p>
+</div></footer>
+</body>
+</html>
