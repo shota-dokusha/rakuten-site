@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>一脚をビデオ撮影で選ぶとき、スペックのどこを実際に見るか｜映像編集の機材ノート</title>
+<meta name="description" content="ロケや現場で一脚を探し始めると、スペック表の数字が多すぎて何を基準に選べばいいか迷いやすい。耐荷重・素材・ロック方式・収納サイズなど、動画撮影の実務で判断基準になるポイントと、スマホ用とカメラ用の違いも含めて整理した。">
+<link rel="canonical" href="https://shota-dokusha.github.io/rakuten-site/articles/monopod-video.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="一脚をビデオ撮影で選ぶとき、スペックのどこを実際に見るか｜映像編集の機材ノート">
+<meta property="og:description" content="ロケや現場で一脚を探し始めると、スペック表の数字が多すぎて何を基準に選べばいいか迷いやすい。耐荷重・素材・ロック方式・収納サイズなど、動画撮影の実務で判断基準になるポイントと、スマホ用とカメラ用の違いも含めて整理した。">
+<meta property="og:image" content="https://shota-dokusha.github.io/rakuten-site/images/undefined">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{
+  --bg:#ffffff; --fg:#1a1a1a; --muted:#666; --line:#e8e8e8;
+  --accent:#c8102e; --accent-weak:#fdeef0; --accent-line:#f0c4cb;
+  --card:#fafafa; --notice:#fff8e1; --notice-line:#f0d9a0;
+}
+@media (prefers-color-scheme:dark){
+  :root{ --bg:#141414; --fg:#e8e8e8; --muted:#9a9a9a; --line:#2e2e2e;
+         --accent:#ff6b7a; --accent-weak:#2a1a1d; --accent-line:#4d2b31;
+         --card:#1d1d1d; --notice:#2a2417; --notice-line:#4a3f28; }
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);
+  font-family:system-ui,-apple-system,"Hiragino Sans","Noto Sans JP",sans-serif;
+  line-height:1.85;font-size:16px;}
+.wrap{max-width:720px;margin:0 auto;padding:0 20px 80px}
+header{border-bottom:1px solid var(--line);border-top:3px solid var(--accent);margin-bottom:40px}
+header .wrap{padding-top:18px;padding-bottom:16px}
+header a{color:var(--fg);text-decoration:none;font-weight:700;font-size:17px}
+header a:hover{color:var(--accent)}
+h1{font-size:27px;line-height:1.45;margin:34px 0 10px;letter-spacing:.01em}
+h2{position:relative;font-size:21px;margin:56px 0 16px;padding:0 0 10px 15px;
+  border-bottom:1px solid var(--line)}
+h2::before{content:"";position:absolute;left:0;top:.2em;bottom:12px;width:4px;
+  border-radius:2px;background:var(--accent)}
+h3{font-size:17px;margin:36px 0 10px;padding-left:12px;
+  border-left:3px solid var(--accent-line)}
+p{margin:16px 0}
+a{color:var(--accent);text-underline-offset:3px;text-decoration-thickness:1px}
+strong{color:var(--accent);font-weight:700}
+blockquote{margin:22px 0;padding:13px 16px;background:var(--notice);
+  border:1px solid var(--notice-line);border-left:4px solid var(--notice-line);
+  border-radius:6px;font-size:14px;color:var(--fg)}
+blockquote strong{color:inherit}
+.meta{color:var(--muted);font-size:13px;margin:0 0 20px}
+/* 広告表記（ステマ規制対応）。控えめだが読み取れる大きさを保つこと */
+.pr-note{margin:0 0 18px;font-size:12px;color:var(--muted);letter-spacing:.02em}
+.disclosure{margin:32px 0 0;padding:16px 18px;background:var(--card);
+  border:1px solid var(--line);border-radius:8px;font-size:13px;color:var(--muted)}
+.disclosure p{margin:0 0 10px;line-height:1.75}
+.disclosure p:last-child{margin-bottom:0}
+.disclosure strong{color:var(--fg)}
+ul,ol{padding-left:1.3em}
+li{margin:8px 0}
+ul li::marker{color:var(--accent)}
+ol li::marker{color:var(--accent);font-weight:700}
+hr{border:0;border-top:1px solid var(--line);margin:40px 0}
+code{background:var(--card);padding:2px 5px;border-radius:4px;font-size:.9em}
+.toplink{margin:-8px 0 28px;text-align:center;font-size:15px}
+.toplink a{display:inline-block;color:var(--accent);font-weight:700;text-decoration:none;
+  padding:10px 16px;border-radius:8px;background:var(--accent-weak);
+  border:1px solid var(--accent-line);line-height:1.5}
+.toplink a::before{content:"🔗 ";font-weight:400}
+.toplink a:hover{text-decoration:underline}
+.hero{margin:0 0 22px;padding:0}
+.hero img{width:100%;height:auto;aspect-ratio:1200/627;object-fit:cover;border-radius:10px;display:block}
+/* 楽天の商品画像は「切り取り禁止」なので、余白付きで全体を収める */
+.hero.product img{object-fit:contain;background:#fff;border:1px solid var(--line);padding:14px}
+.hero.product figcaption{text-align:right}
+.hero figcaption{margin-top:7px;font-size:11px;color:var(--muted);text-align:right}
+.hero figcaption a{color:var(--muted)}
+.thumb{flex:0 0 128px}
+.thumb img{width:128px;height:80px;object-fit:cover;border-radius:6px;display:block}
+.thumb.product img{object-fit:contain;background:#fff;border:1px solid var(--line)}
+.card{display:flex;gap:16px;margin:30px 0;padding:18px;background:var(--card);
+  border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:10px;
+  transition:box-shadow .15s ease,transform .15s ease}
+.card:hover{box-shadow:0 4px 18px rgba(0,0,0,.09);transform:translateY(-1px)}
+.card-img{flex:0 0 120px}
+.card-img img{width:120px;height:120px;object-fit:contain;border-radius:6px;background:#fff}
+.card-body{flex:1;min-width:0}
+.card-name{margin:0 0 8px;font-weight:700;font-size:15px;line-height:1.5}
+.card-meta{margin:0 0 4px}
+.price{color:var(--accent);font-weight:700;font-size:19px}
+.asof{color:var(--muted);font-size:12px}
+.card-review{margin:0 0 2px;font-size:13px;color:var(--muted)}
+.stars{color:#f0a000}
+.card-shop{margin:0 0 12px;font-size:12px;color:var(--muted)}
+.btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;
+  padding:12px 20px;border-radius:6px;font-weight:700;font-size:14px;
+  box-shadow:0 2px 8px rgba(200,16,46,.28)}
+.btn:hover{opacity:.9;transform:translateY(-1px)}
+.card-name strong,.card strong{color:inherit}
+.list{list-style:none;padding:0}
+.list li{display:flex;gap:16px;align-items:flex-start;
+  border-bottom:1px solid var(--line);padding:22px 0 22px 16px;margin:0;
+  border-left:3px solid transparent;transition:border-color .15s ease,background .15s ease}
+.list .body{flex:1;min-width:0}
+.list li:hover{border-left-color:var(--accent);background:var(--accent-weak)}
+.list a{font-size:17px;font-weight:700;text-decoration:none;color:var(--fg);line-height:1.5}
+.list a:hover{color:var(--accent)}
+.list p{margin:6px 0 0;font-size:14px;color:var(--muted)}
+.list time{display:inline-block;margin-top:8px;font-size:12px;color:var(--muted)}
+.list li strong{color:inherit}
+footer{border-top:1px solid var(--line);margin-top:64px;padding:24px 0;
+  font-size:13px;color:var(--muted)}
+footer a{color:var(--muted)}
+@media(max-width:560px){
+  .card{flex-direction:column}
+  .card-img,.card-img img{width:100%;flex:none;height:auto;max-height:220px}
+  .list li{flex-direction:column;gap:10px}
+  .thumb,.thumb img{width:100%;flex:none;height:auto;aspect-ratio:1200/627}
+  h1{font-size:22px}
+}
+</style>
+</head>
+<body>
+<header><div class="wrap"><a href="https://shota-dokusha.github.io/rakuten-site/">映像編集の機材ノート</a></div></header>
+<main class="wrap">
+<h1>一脚をビデオ撮影で選ぶとき、スペックのどこを実際に見るか</h1>
+<p class="meta">更新: 2026-09-02　／　sho</p>
+<p class="pr-note">本ページはプロモーションを含みます</p>
+<figure class="hero product">
+  <img src="https://thumbnail.image.rakuten.co.jp/@0_mall/lapset/cabinet/compass1747963796.jpg?_ex=400x400" alt="【楽天ランキング1位獲得】プレミアムマグハンドル三脚2 三脚 スマホ ビデオカメラ カメラ タブレット 冈用 マグネット" loading="lazy">
+  <figcaption>画像: 楽天市場（三脚スマホスタンド専門店 lapset）</figcaption>
+</figure>
+<p class="toplink">
+  <a href="https://hb.afl.rakuten.co.jp/hgc/g00tv5jo.1jrvp4f9.g00tv5jo.1jrvq930/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Flapset%2Fcompass1747962931%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Flapset%2Fi%2F10000132%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">
+    楽天市場でいま一番売れている「動画撮影向け一脚の選び方」を見る
+  </a>
+</p>
+<p>ロケで一脚を探し始めると、スペック表の項目が多すぎてどこを見ればいいかわからなくなる。耐荷重は何kgあれば十分なのか、アルミとカーボンで何が変わるのか、ロック方式の違いは実際の撮影でどう影響するのか。価格帯も5,000円台から15,000円近いものまで幅があって、判断軸が見えにくい。ここでは動画撮影で一脚・三脚を選ぶときに、実際どこを見ているかを整理する。</p>
+<h2>迷ってるならこれ</h2>
+<p>カメラにレンズや外部マイクを付けた構成で使うなら、耐荷重と素材のバランスを先に見ておきたい。その観点でコスパが高いと感じるのがK&amp;F CONCEPTのカーボン三脚（一脚可変式）。耐荷重8kgはビデオカメラにアクセサリーを足した構成でも余裕が出やすく、カーボン製で軽量なので長時間のロケでも負担が少ない。三脚として立てることも、脚を束ねて一脚として使うこともできる可変式なのが、動画撮影の現場では選ばれやすい理由だと思う。40件のレビューでこの評価は、同価格帯では信頼できる水準。</p>
+<div class="card">
+  <a class="card-img" href="https://hb.afl.rakuten.co.jp/hgc/g00txg3o.1jrvp7d8.g00txg3o.1jrvq96a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fkentfaith%2Fkf09-077v1%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fkentfaith%2Fi%2F10000096%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">
+    <img src="https://thumbnail.image.rakuten.co.jp/@0_mall/kentfaith/cabinet/top/ranking/imgrc0088446724.jpg?_ex=400x400" alt="限定10%OFFxP5倍!! 【楽天1位★ 46~153cm】 カメラ 三脚 カーボン 超軽量 初心者向け コンパクト " loading="lazy" width="160" height="160">
+  </a>
+  <div class="card-body">
+    <p class="card-name">限定10%OFFxP5倍!! 【楽天1位★ 46~153cm】 カメラ 三脚 カーボン 超軽量 初心者向け コンパクト 耐荷重 8kg 5段伸縮 安定感 一脚可変式 3脚 自由雲台</p>
+    <p class="card-meta">
+      <span class="price">13,498円</span>
+      <span class="asof">（2026-09-02時点・変動します）</span>
+    </p>
+    <p class="card-review"><span class="stars">★★★★☆</span> 4.35 ／ レビュー40件</p>
+    <p class="card-shop">K&amp;F CONCEPT</p>
+    <a class="btn" href="https://hb.afl.rakuten.co.jp/hgc/g00txg3o.1jrvp7d8.g00txg3o.1jrvq96a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fkentfaith%2Fkf09-077v1%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fkentfaith%2Fi%2F10000096%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">楽天市場で最新価格・レビューを見る</a>
+  </div>
+</div>
+<h2>それぞれどう違うか</h2>
+<h3>ハンドル付きスマホ三脚（マグハンドル三脚2）</h3>
+<p>スマホでの動画撮影がメインで、動きのある被写体を追いかけたい場面に向いている。MagSafeのマグネットでスマホを瞬時に固定できる仕組みで、ハンドルが付いているのでカメラポジションを変えながら撮影しやすい。高さ170cmまで伸びるので、頭上からのアングルや縦構図のポジション確保にも対応できる。59件のレビューで平均4.76というのはこのカテゴリでは高い数字で、実際に使った人の評価は高め。ただしスマホ専用の設計なので、一眼やビデオカメラを載せる用途には対応していない。</p>
+<div class="card">
+  <a class="card-img" href="https://hb.afl.rakuten.co.jp/hgc/g00tv5jo.1jrvp4f9.g00tv5jo.1jrvq930/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Flapset%2Fcompass1747962931%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Flapset%2Fi%2F10000132%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">
+    <img src="https://thumbnail.image.rakuten.co.jp/@0_mall/lapset/cabinet/compass1747963796.jpg?_ex=400x400" alt="【楽天ランキング1位獲得】プレミアムマグハンドル三脚2 三脚 スマホ ビデオカメラ カメラ タブレット 冈用 マグネット" loading="lazy" width="160" height="160">
+  </a>
+  <div class="card-body">
+    <p class="card-name">【楽天ランキング1位獲得】プレミアムマグハンドル三脚2 三脚 スマホ ビデオカメラ カメラ タブレット 冈用 マグネット Magsafe 長い 高い スマホスタンド スマホ三脚 三</p>
+    <p class="card-meta">
+      <span class="price">7,980円</span>
+      <span class="asof">（2026-09-02時点・変動します）</span>
+    </p>
+    <p class="card-review"><span class="stars">★★★★★</span> 4.76 ／ レビュー59件</p>
+    <p class="card-shop">三脚スマホスタンド専門店 lapset</p>
+    <a class="btn" href="https://hb.afl.rakuten.co.jp/hgc/g00tv5jo.1jrvp4f9.g00tv5jo.1jrvq930/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Flapset%2Fcompass1747962931%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Flapset%2Fi%2F10000132%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">楽天市場で最新価格・レビューを見る</a>
+  </div>
+</div>
+<h3>最長3mのスマホ三脚（キリン三脚）</h3>
+<p>最長3mまで伸びるのがそのまま最大の特徴で、俯瞰撮影や高いポジションからのアングルが必要なときに使いやすい。スマホ向けで、イベント撮影やスポーツ撮影など、高い位置からの画角が欲しい場面での選択肢になる。45件/4.58の評価。高くまで伸ばした状態での安定性については、風が強い環境では注意が必要というレビューがある。高さを優先した設計である以上、安定性と高さはトレードオフになりやすい。</p>
+<div class="card">
+  <a class="card-img" href="https://hb.afl.rakuten.co.jp/hgc/g00tv5jo.1jrvp4f9.g00tv5jo.1jrvq930/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Flapset%2Fcompass1695175915%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Flapset%2Fi%2F10000103%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">
+    <img src="https://thumbnail.image.rakuten.co.jp/@0_mall/lapset/cabinet/imgrc0140986252.jpg?_ex=400x400" alt="【楽天1位】キリン三脚 三脚 3m 長い 高い スマホ ビデオカメラ スマホ三脚 三脚スタンド スマホスタンド 伸縮 俯" loading="lazy" width="160" height="160">
+  </a>
+  <div class="card-body">
+    <p class="card-name">【楽天1位】キリン三脚 三脚 3m 長い 高い スマホ ビデオカメラ スマホ三脚 三脚スタンド スマホスタンド 伸縮 俯瞰 撮影 動画撮影 iphone Android スマートフ</p>
+    <p class="card-meta">
+      <span class="price">9,800円</span>
+      <span class="asof">（2026-09-02時点・変動します）</span>
+    </p>
+    <p class="card-review"><span class="stars">★★★★★</span> 4.58 ／ レビュー45件</p>
+    <p class="card-shop">三脚スマホスタンド専門店 lapset</p>
+    <a class="btn" href="https://hb.afl.rakuten.co.jp/hgc/g00tv5jo.1jrvp4f9.g00tv5jo.1jrvq930/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Flapset%2Fcompass1695175915%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Flapset%2Fi%2F10000103%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">楽天市場で最新価格・レビューを見る</a>
+  </div>
+</div>
+<h3>カメラ対応の三脚・一脚兼用（NEEWER 177cm）</h3>
+<p>カメラ用として設計されていて、耐荷重4kg・3ウェイ雲台付き。一眼レフやミラーレス、DVビデオカムコーダに対応した作りで、三脚としても一脚としても使える。価格6,580円と44件/4.57の評価を合わせると、入門〜ミドルクラスのカメラ機材向けのコスパは高い選択肢。弱点は耐荷重4kgという点で、重いビデオカメラに外部マイクやモニターを足すと上限に近づきやすい。軽量な一眼やコンパクトなビデオカメラであれば問題ない範囲で使える。</p>
+<div class="card">
+  <a class="card-img" href="https://hb.afl.rakuten.co.jp/hgc/g00txduo.1jrvp2cd.g00txduo.1jrvqa02/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fneewer-store%2Fb083pz7n4x%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fneewer-store%2Fi%2F10000321%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">
+    <img src="https://thumbnail.image.rakuten.co.jp/@0_mall/neewer-store/cabinet/neewer6/10089015_8.jpg?_ex=400x400" alt="NEEWER 177cm三脚一脚 ポータブル 三脚 軽量 コンパクト 4段階調整 アルミ合金製 3ウエイ回転雲台/収納ケ" loading="lazy" width="160" height="160">
+  </a>
+  <div class="card-body">
+    <p class="card-name">NEEWER 177cm三脚一脚 ポータブル 三脚 軽量 コンパクト 4段階調整 アルミ合金製 3ウエイ回転雲台/収納ケース付 耐荷重4kg DSLRカメラ、DVビデオカムコーダ、</p>
+    <p class="card-meta">
+      <span class="price">6,580円</span>
+      <span class="asof">（2026-09-02時点・変動します）</span>
+    </p>
+    <p class="card-review"><span class="stars">★★★★★</span> 4.57 ／ レビュー44件</p>
+    <p class="card-shop">neewer-store</p>
+    <a class="btn" href="https://hb.afl.rakuten.co.jp/hgc/g00txduo.1jrvp2cd.g00txduo.1jrvqa02/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fneewer-store%2Fb083pz7n4x%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fneewer-store%2Fi%2F10000321%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">楽天市場で最新価格・レビューを見る</a>
+  </div>
+</div>
+<h3>K&amp;F CONCEPT カーボン三脚（一脚可変式・46〜153cm）</h3>
+<p>「迷ってるならこれ」でも取り上げたK&amp;F CONCEPTのカーボン一脚可変式モデル。耐荷重8kg・5段伸縮で、最小46cmの低いポジションから最大153cmまで対応する。ナットロック式でしっかり固定できる設計。注意点は153cmが最大高なので、170cm以上のポジションが必要な場面には対応できないこと。価格はこのラインアップの中で最も高い帯にある。</p>
+<h3>MagSafe対応自撮り棒・スマホスタンド（Ulanzi M006）</h3>
+<p>Ulanziはカメラアクセサリーで実績のあるブランドで、このモデルはMagSafe対応の自撮り棒・スマホスタンドとして設計されている。Bluetoothリモコンが付属していて、一人での自撮り撮影に使いやすい。7段階伸縮でコンパクトに収納できる。18件/4.5の評価。動画撮影というよりビデオ通話・会議・自撮り動画の用途に向いていて、ロケでカメラを安定させる目的には向かない設計。</p>
+<div class="card">
+  <a class="card-img" href="https://hb.afl.rakuten.co.jp/hgc/g00unmzo.1jrvp5d1.g00unmzo.1jrvq480/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fulanzidirect%2Fm006-lt1%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fulanzidirect%2Fi%2F10000060%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">
+    <img src="https://thumbnail.image.rakuten.co.jp/@0_mall/ulanzidirect/cabinet/biiino/item/main-image/20260817195111_1.jpg?_ex=400x400" alt="【5%オフ+5倍ポイント】Ulanzi MagSafe用 自撮り棒 スマホ三脚 磁気マグネット式 セルカ棒 軽量 折りた" loading="lazy" width="160" height="160">
+  </a>
+  <div class="card-body">
+    <p class="card-name">【5%オフ+5倍ポイント】Ulanzi MagSafe用 自撮り棒 スマホ三脚 磁気マグネット式 セルカ棒 軽量 折りたたみ式 コンパクト 7段階伸縮 角度調整可能 遠隔操作 Bl</p>
+    <p class="card-meta">
+      <span class="price">5,580円</span>
+      <span class="asof">（2026-09-02時点・変動します）</span>
+    </p>
+    <p class="card-review"><span class="stars">★★★★★</span> 4.5 ／ レビュー18件</p>
+    <p class="card-shop">ULANZI DIRECT楽天市場店</p>
+    <a class="btn" href="https://hb.afl.rakuten.co.jp/hgc/g00unmzo.1jrvp5d1.g00unmzo.1jrvq480/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fulanzidirect%2Fm006-lt1%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fulanzidirect%2Fi%2F10000060%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">楽天市場で最新価格・レビューを見る</a>
+  </div>
+</div>
+<h3>K&amp;F CONCEPT アルミ三脚（一脚可変式・50cm〜2m）</h3>
+<p>同じK&amp;F CONCEPTのアルミ製一脚可変式。50cmから2mまでの伸縮範囲はラインアップ中で広く、レバーロック式のクイックシューが付いていて素早いカメラの付け替えができる。耐荷重8kgで、価格はカーボンモデルより抑えた8,890円。素材がアルミなのでカーボンより重くなるが、その分コストが下がる。レビューは18件と少なく、長期の使用実績をレビューから読み取りにくい段階にある点は気になる。</p>
+<div class="card">
+  <a class="card-img" href="https://hb.afl.rakuten.co.jp/hgc/g00txg3o.1jrvp7d8.g00txg3o.1jrvq96a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fkentfaith%2Fkf09-087%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fkentfaith%2Fi%2F10000019%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">
+    <img src="https://thumbnail.image.rakuten.co.jp/@0_mall/kentfaith/cabinet/top/ranking/imgrc0088591031.jpg?_ex=400x400" alt="CPで8892円xP2倍!!【楽天1位★ 50cm~2m】 カメラ 三脚 一脚 可変式 軽量 コンパクト アルミ合金製 " loading="lazy" width="160" height="160">
+  </a>
+  <div class="card-body">
+    <p class="card-name">CPで8892円xP2倍!!【楽天1位★ 50cm~2m】 カメラ 三脚 一脚 可変式 軽量 コンパクト アルミ合金製 高品質 安定感 一眼レフ デジカメ ビデオカメラ 対応 4段</p>
+    <p class="card-meta">
+      <span class="price">8,890円</span>
+      <span class="asof">（2026-09-02時点・変動します）</span>
+    </p>
+    <p class="card-review"><span class="stars">★★★★☆</span> 4.44 ／ レビュー18件</p>
+    <p class="card-shop">K&amp;F CONCEPT</p>
+    <a class="btn" href="https://hb.afl.rakuten.co.jp/hgc/g00txg3o.1jrvp7d8.g00txg3o.1jrvq96a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fkentfaith%2Fkf09-087%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fkentfaith%2Fi%2F10000019%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">楽天市場で最新価格・レビューを見る</a>
+  </div>
+</div>
+<h2>選ぶときに実際どこを見るか</h2>
+<h3>耐荷重</h3>
+<p>まず見るのは耐荷重。カメラ本体だけの重量ではなく、レンズ・外部マイク・モニターなどを合わせたトータルの重量で考える。余裕のある耐荷重の方が、長時間使用での歪みや緩みが出にくい傾向がある。上限ギリギリで使い続けると、ロック部が傷みやすくなることが多い。</p>
+<h3>素材（アルミ vs カーボン）</h3>
+<p>アルミはコストが低く耐久性も十分。カーボンは同じ強度でアルミより軽くなるが価格が上がる。長距離移動や長時間の手持ちロケが多い場合は、カーボンにする意味が出てくる。スタジオ内や車移動がメインであればアルミで十分なことが多い。</p>
+<h3>ロック方式</h3>
+<p>ナットロック式とレバーロック式の2種類がある。ナットロック式はしっかり固定できる反面、高さを変えるのに時間がかかる。レバーロック式は素早く高さを変えられるが、強い衝撃を受けたとき緩みやすいことがある。動画撮影では被写体に合わせてポジションを頻繁に変える場面が出やすいので、レバーロック式の方が動きやすい場面は多い。</p>
+<h3>収納サイズ</h3>
+<p>最大伸長より収納時のサイズを確認しておくといい。移動の多い現場では、収納サイズが小さいかどうかで持ち運びの負担が変わってくる。</p>
+<h2>実際どう使ってるか</h2>
+<p>映像編集の仕事をしていると、クライアントの撮影現場に立ち会う機会が定期的にある。そのとき一脚を使っている撮影者を見ていると、三脚で固定できない狭い場所や、カメラを手持ちで追いながら安定を出したいシーンで活躍しているのがわかる。</p>
+<p>一脚は三脚ほど安定しないが、手持ちよりはブレが出にくい。移動しながら被写体を追う撮影では、三脚の安定性と手持ちの機動性の中間が欲しくなる場面がある。特に室内でスペースが限られているとき、三脚の脚を開くとそれだけで空間を取るので、一脚やスリムなスタンドに価値が出てくる印象がある。</p>
+<h2>まとめ</h2>
+<p>ビデオ撮影向けの一脚を選ぶときは、耐荷重・素材・ロック方式の3点を先に整理すると選びやすくなる。スマホ主体の撮影と一眼・ビデオカメラを使う撮影では求めるスペックが大きく変わるので、自分の機材構成に合っているかをまず確認する。実際にどこで何を撮るかをイメージしてから選ぶと、「なぜこれにしたんだっけ」という後悔が出にくい。</p>
+<hr>
+<div class="disclosure">
+<p><strong>広告について</strong></p>
+<p>当サイトは楽天アフィリエイトのリンクを掲載しており、当サイト経由で商品が購入された場合、運営者に紹介料が支払われることがあります。紹介料の有無は、掲載する商品の選定や記載内容に影響していません。</p>
+<p>掲載している価格・レビュー件数・評価は、楽天ウェブサービスを通じて 2026-09-02 に取得した時点のものです。実際の価格・在庫・ポイント倍率は変動しますので、購入前に必ず各商品ページでご確認ください。</p>
+</div>
+</main>
+<footer><div class="wrap">
+<p>当サイトは楽天アフィリエイトによる広告を掲載しています。掲載している価格・在庫・ポイント倍率は取得時点のもので、変動します。最新の情報は各商品ページでご確認ください。</p>
+<p>商品情報・画像は<a href="https://webservice.rakuten.co.jp/" target="_blank" rel="nofollow noopener">楽天ウェブサービス</a>より取得しています（Supported by Rakuten Developers）。</p>
+<p>映像編集の機材ノート ／ sho　<a href="https://shota-dokusha.github.io/rakuten-site/privacy.html">運営者情報・免責事項</a></p>
+</div></footer>
+</body>
+</html>
