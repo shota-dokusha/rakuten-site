@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>USB-Cカードリーダー選び、動画編集の現場から見た基準｜映像編集の機材ノート</title>
+<meta name="description" content="SDカードの取り込み、現場で何度も繰り返す作業だからこそ道具選びを雑にしたくない。USB-Cハブ一体型か専用機か、転送速度はどう読むか。毎日編集をやっている視点から、カードリーダー選びで実際に見ているところを整理する。">
+<link rel="canonical" href="https://shota-dokusha.github.io/rakuten-site/articles/card-reader-usbc.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="USB-Cカードリーダー選び、動画編集の現場から見た基準｜映像編集の機材ノート">
+<meta property="og:description" content="SDカードの取り込み、現場で何度も繰り返す作業だからこそ道具選びを雑にしたくない。USB-Cハブ一体型か専用機か、転送速度はどう読むか。毎日編集をやっている視点から、カードリーダー選びで実際に見ているところを整理する。">
+<meta property="og:image" content="https://thumbnail.image.rakuten.co.jp/@0_mall/starfocus/cabinet/03546269/7in1hub/hub_slide-01-02.jpg?_ex=400x400">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"USB-Cカードリーダー選び、動画編集の現場から見た基準","description":"SDカードの取り込み、現場で何度も繰り返す作業だからこそ道具選びを雑にしたくない。USB-Cハブ一体型か専用機か、転送速度はどう読むか。毎日編集をやっている視点から、カードリーダー選びで実際に見ているところを整理する。","datePublished":"2026-10-19","dateModified":"2026-10-19","author":{"@type":"Person","name":"sho"},"publisher":{"@type":"Organization","name":"映像編集の機材ノート"},"mainEntityOfPage":"https://shota-dokusha.github.io/rakuten-site/articles/card-reader-usbc.html","image":"https://thumbnail.image.rakuten.co.jp/@0_mall/starfocus/cabinet/03546269/7in1hub/hub_slide-01-02.jpg?_ex=400x400"}</script>
+<style>
+:root{
+  --bg:#ffffff; --fg:#1a1a1a; --muted:#666; --line:#e8e8e8;
+  --accent:#c8102e; --accent-weak:#fdeef0; --accent-line:#f0c4cb;
+  --card:#fafafa; --notice:#fff8e1; --notice-line:#f0d9a0;
+}
+@media (prefers-color-scheme:dark){
+  :root{ --bg:#141414; --fg:#e8e8e8; --muted:#9a9a9a; --line:#2e2e2e;
+         --accent:#ff6b7a; --accent-weak:#2a1a1d; --accent-line:#4d2b31;
+         --card:#1d1d1d; --notice:#2a2417; --notice-line:#4a3f28; }
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);
+  font-family:system-ui,-apple-system,"Hiragino Sans","Noto Sans JP",sans-serif;
+  line-height:1.85;font-size:16px;}
+.wrap{max-width:720px;margin:0 auto;padding:0 20px 80px}
+header{border-bottom:1px solid var(--line);border-top:3px solid var(--accent);margin-bottom:40px}
+header .wrap{padding-top:18px;padding-bottom:16px}
+header a{color:var(--fg);text-decoration:none;font-weight:700;font-size:17px}
+header a:hover{color:var(--accent)}
+h1{font-size:27px;line-height:1.45;margin:34px 0 10px;letter-spacing:.01em}
+h2{position:relative;font-size:21px;margin:56px 0 16px;padding:0 0 10px 15px;
+  border-bottom:1px solid var(--line)}
+h2::before{content:"";position:absolute;left:0;top:.2em;bottom:12px;width:4px;
+  border-radius:2px;background:var(--accent)}
+h3{font-size:17px;margin:36px 0 10px;padding-left:12px;
+  border-left:3px solid var(--accent-line)}
+p{margin:16px 0}
+a{color:var(--accent);text-underline-offset:3px;text-decoration-thickness:1px}
+strong{color:var(--accent);font-weight:700}
+blockquote{margin:22px 0;padding:13px 16px;background:var(--notice);
+  border:1px solid var(--notice-line);border-left:4px solid var(--notice-line);
+  border-radius:6px;font-size:14px;color:var(--fg)}
+blockquote strong{color:inherit}
+.meta{color:var(--muted);font-size:13px;margin:0 0 20px}
+/* 広告表記（ステマ規制対応）。控えめだが読み取れる大きさを保つこと */
+.pr-note{margin:0 0 18px;font-size:12px;color:var(--muted);letter-spacing:.02em}
+.related{margin:48px 0 0;padding:20px 22px;background:var(--card);
+  border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:10px}
+.related h2{margin:0 0 12px;padding:0;border:0;font-size:16px}
+.related ul{margin:0;padding-left:1.2em}
+.related li{margin:9px 0}
+.related a{font-weight:700;text-decoration:none}
+.related a:hover{text-decoration:underline}
+.backlink{margin:24px 0 0;font-size:14px}
+.disclosure{margin:32px 0 0;padding:16px 18px;background:var(--card);
+  border:1px solid var(--line);border-radius:8px;font-size:13px;color:var(--muted)}
+.disclosure p{margin:0 0 10px;line-height:1.75}
+.disclosure p:last-child{margin-bottom:0}
+.disclosure strong{color:var(--fg)}
+ul,ol{padding-left:1.3em}
+li{margin:8px 0}
+ul li::marker{color:var(--accent)}
+ol li::marker{color:var(--accent);font-weight:700}
+hr{border:0;border-top:1px solid var(--line);margin:40px 0}
+code{background:var(--card);padding:2px 5px;border-radius:4px;font-size:.9em}
+.toplink{margin:-8px 0 28px;text-align:center;font-size:15px}
+.toplink a{display:inline-block;color:var(--accent);font-weight:700;text-decoration:none;
+  padding:10px 16px;border-radius:8px;background:var(--accent-weak);
+  border:1px solid var(--accent-line);line-height:1.5}
+.toplink a::before{content:"🔗 ";font-weight:400}
+.toplink a:hover{text-decoration:underline}
+.hero{margin:0 0 22px;padding:0}
+.hero img{width:100%;height:auto;aspect-ratio:1200/627;object-fit:cover;border-radius:10px;display:block}
+/* 楽天の商品画像は「切り取り禁止」なので、余白付きで全体を収める */
+.hero.product img{object-fit:contain;background:#fff;border:1px solid var(--line);padding:14px}
+.hero.product figcaption{text-align:right}
+.hero figcaption{margin-top:7px;font-size:11px;color:var(--muted);text-align:right}
+.hero figcaption a{color:var(--muted)}
+.thumb{flex:0 0 128px}
+.thumb img{width:128px;height:80px;object-fit:cover;border-radius:6px;display:block}
+.thumb.product img{object-fit:contain;background:#fff;border:1px solid var(--line)}
+.card{display:flex;gap:16px;margin:30px 0;padding:18px;background:var(--card);
+  border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:10px;
+  transition:box-shadow .15s ease,transform .15s ease}
+.card:hover{box-shadow:0 4px 18px rgba(0,0,0,.09);transform:translateY(-1px)}
+.card-img{flex:0 0 120px}
+.card-img img{width:120px;height:120px;object-fit:contain;border-radius:6px;background:#fff}
+.card-body{flex:1;min-width:0}
+.card-name{margin:0 0 8px;font-weight:700;font-size:15px;line-height:1.5}
+.card-meta{margin:0 0 4px}
+.price{color:var(--accent);font-weight:700;font-size:19px}
+.asof{color:var(--muted);font-size:12px}
+.card-review{margin:0 0 2px;font-size:13px;color:var(--muted)}
+.stars{color:#f0a000}
+.card-shop{margin:0 0 12px;font-size:12px;color:var(--muted)}
+.btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;
+  padding:12px 20px;border-radius:6px;font-weight:700;font-size:14px;
+  box-shadow:0 2px 8px rgba(200,16,46,.28)}
+.btn:hover{opacity:.9;transform:translateY(-1px)}
+.card-name strong,.card strong{color:inherit}
+.list{list-style:none;padding:0}
+.list li{display:flex;gap:16px;align-items:flex-start;
+  border-bottom:1px solid var(--line);padding:22px 0 22px 16px;margin:0;
+  border-left:3px solid transparent;transition:border-color .15s ease,background .15s ease}
+.list .body{flex:1;min-width:0}
+.list li:hover{border-left-color:var(--accent);background:var(--accent-weak)}
+.list a{font-size:17px;font-weight:700;text-decoration:none;color:var(--fg);line-height:1.5}
+.list a:hover{color:var(--accent)}
+.list p{margin:6px 0 0;font-size:14px;color:var(--muted)}
+.list time{display:inline-block;margin-top:8px;font-size:12px;color:var(--muted)}
+.list li strong{color:inherit}
+footer{border-top:1px solid var(--line);margin-top:64px;padding:24px 0;
+  font-size:13px;color:var(--muted)}
+footer a{color:var(--muted)}
+@media(max-width:560px){
+  .card{flex-direction:column}
+  .card-img,.card-img img{width:100%;flex:none;height:auto;max-height:220px}
+  .list li{flex-direction:column;gap:10px}
+  .thumb,.thumb img{width:100%;flex:none;height:auto;aspect-ratio:1200/627}
+  h1{font-size:22px}
+}
+</style>
+</head>
+<body>
+<header><div class="wrap"><a href="https://shota-dokusha.github.io/rakuten-site/">映像編集の機材ノート</a></div></header>
+<main class="wrap">
+<h1>USB-Cカードリーダー選び、動画編集の現場から見た基準</h1>
+<p class="meta">更新: 2026-10-19　／　sho</p>
+<p class="pr-note">本ページはプロモーションを含みます</p>
+<figure class="hero product">
+  <img src="https://thumbnail.image.rakuten.co.jp/@0_mall/starfocus/cabinet/03546269/7in1hub/hub_slide-01-02.jpg?_ex=400x400" alt="【10/18 ポイント最大7倍】【楽天1位 10冠】USB Type-C ハブ 7in1 USB変換アダプタ HDMI " loading="lazy">
+  <figcaption>画像: 楽天市場（スマホメモリ専門スターフォーカス）</figcaption>
+</figure>
+<p class="toplink">
+  <a href="https://hb.afl.rakuten.co.jp/hgc/g00ruz0o.1jrvpaee.g00ruz0o.1jrvq3cc/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fstarfocus%2Fsf-7in1%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fstarfocus%2Fi%2F10003068%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">
+    楽天市場でいま一番売れている「動画素材取り込みカードリーダー」を見る
+  </a>
+</p>
+<p>撮影から帰ってきて最初にやるのが、カードの取り込みだ。カメラから抜いたSDカードをPCに繋いで、外付けドライブにバックアップを取る。この作業、一日に何度もやる日もある。そのたびに道具の悪さが気になりはじめると地味にストレスになる。</p>
+<p>USB-Cポートしかないノートパソコンが増えてから、カードリーダーの形も変わってきた。「SDカードが読めるだけ」の専用機より、ハブ機能と組み合わせた一体型の方が選択肢として多くなっている。ここで紹介するものも、そういった構成が中心だ。</p>
+<h2>迷ってるならこれ</h2>
+<p>これを先に出した理由は、レビュー1305件・評価4.46というデータが素直に信頼できたから。4,000円以下でHDMI 4K・PD急速充電・USB 3.0・SDカードリーダーが一本にまとまっていて、ノートPC一台で編集している人にはこれ一個でポートの問題がかなり解決する。</p>
+<p>不具合が多い商品はレビューに出てくる。それだけの件数があって4点台を維持しているのは、実際に使った人の評価が積み重なった結果だ。1年保証・送料無料あり。</p>
+<div class="card">
+  <a class="card-img" href="https://hb.afl.rakuten.co.jp/hgc/g00ruz0o.1jrvpaee.g00ruz0o.1jrvq3cc/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fstarfocus%2Fsf-7in1%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fstarfocus%2Fi%2F10003068%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">
+    <img src="https://thumbnail.image.rakuten.co.jp/@0_mall/starfocus/cabinet/03546269/7in1hub/hub_slide-01-02.jpg?_ex=400x400" alt="【10/18 ポイント最大7倍】【楽天1位 10冠】USB Type-C ハブ 7in1 USB変換アダプタ HDMI " loading="lazy" width="160" height="160">
+  </a>
+  <div class="card-body">
+    <p class="card-name">【10/18 ポイント最大7倍】【楽天1位 10冠】USB Type-C ハブ 7in1 USB変換アダプタ HDMI 4K USB3.0 ポート PD急速充電 SDカードリーダー</p>
+    <p class="card-meta">
+      <span class="price">3,980円</span>
+      <span class="asof">（2026-10-19時点・変動します）</span>
+    </p>
+    <p class="card-review"><span class="stars">★★★★☆</span> 4.46 ／ レビュー1305件</p>
+    <p class="card-shop">スマホメモリ専門スターフォーカス</p>
+    <a class="btn" href="https://hb.afl.rakuten.co.jp/hgc/g00ruz0o.1jrvpaee.g00ruz0o.1jrvq3cc/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fstarfocus%2Fsf-7in1%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fstarfocus%2Fi%2F10003068%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">楽天市場で最新価格・レビューを見る</a>
+  </div>
+</div>
+<h2>それぞれどう違うか</h2>
+<h3>スターフォーカス 7in1ハブ</h3>
+<p>上で紹介した商品。レビューの規模と価格帯のバランスが選んだ理由。気になる点は、ブランドとしての知名度がUGREENほどは高くないこと。ブランドで選びたい人には、次のUGREENを見てほしい。</p>
+<h3>UGREEN Revodok 1071</h3>
+<p>今回のラインナップで評価が最も高い（4.64）。UGREENはPC周辺機器で実績のあるメーカーで、品質の安定感が評価されやすい傾向にある。LAN端子が付いているのは他のハブにない特徴で、有線ネットワーク経由でNASに転送する作業が多い人には実用的。PD 100W対応・5Gbps転送対応。価格は3,899円でレビュー221件。件数は少ないが評価の高さがある。</p>
+<div class="card">
+  <a class="card-img" href="https://hb.afl.rakuten.co.jp/hgc/g00u0fbo.1jrvpccc.g00u0fbo.1jrvq0d9/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fugreen-gear%2F15214%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fugreen-gear%2Fi%2F10000401%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">
+    <img src="https://thumbnail.image.rakuten.co.jp/@0_mall/ugreen-gear/cabinet/10470932/10482044/15214.jpg?_ex=400x400" alt="UGREEN Revodok 1071 USB Cハブ 7-IN-1USB ハブ Type-C PD100W 急速充電 " loading="lazy" width="160" height="160">
+  </a>
+  <div class="card-body">
+    <p class="card-name">UGREEN Revodok 1071 USB Cハブ 7-IN-1USB ハブ Type-C PD100W 急速充電 USB Type-C ハブ USB-C 5Gbps高速転送 </p>
+    <p class="card-meta">
+      <span class="price">3,899円</span>
+      <span class="asof">（2026-10-19時点・変動します）</span>
+    </p>
+    <p class="card-review"><span class="stars">★★★★★</span> 4.64 ／ レビュー221件</p>
+    <p class="card-shop">UGREEN公式楽天市場店</p>
+    <a class="btn" href="https://hb.afl.rakuten.co.jp/hgc/g00u0fbo.1jrvpccc.g00u0fbo.1jrvq0d9/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fugreen-gear%2F15214%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fugreen-gear%2Fi%2F10000401%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">楽天市場で最新価格・レビューを見る</a>
+  </div>
+</div>
+<h3>8in1 sincoハブ</h3>
+<p>今回の中で価格が最も低い3,280円。SD・microSD・LAN・HDMI・USB 3.0 x2と、よく使うポートが一通り揃っている。アルミ素材・薄型・軽量という構造は、持ち運びを重視する場面で評価されやすい。レビュー110件で平均4.36。発売が浅いかもしれないのでレビュー数は少ない方だが、価格優先で必要なポートを揃えたい人向け。</p>
+<div class="card">
+  <a class="card-img" href="https://hb.afl.rakuten.co.jp/hgc/g00uggoo.1jrvpdcb.g00uggoo.1jrvq3b5/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsinkoss%2Fhub8i1%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fsinkoss%2Fi%2F10000011%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">
+    <img src="https://thumbnail.image.rakuten.co.jp/@0_mall/sinkoss/cabinet/09921460/111.jpg?_ex=400x400" alt="【★楽天1位★】8in1 Type-Cハブ USB-Cハブ 8IN1ドッキングステーション PDポート付き power " loading="lazy" width="160" height="160">
+  </a>
+  <div class="card-body">
+    <p class="card-name">【★楽天1位★】8in1 Type-Cハブ USB-Cハブ 8IN1ドッキングステーション PDポート付き power delivery pd 4K HDMI 電源 直挿し PC </p>
+    <p class="card-meta">
+      <span class="price">3,280円</span>
+      <span class="asof">（2026-10-19時点・変動します）</span>
+    </p>
+    <p class="card-review"><span class="stars">★★★★☆</span> 4.36 ／ レビュー110件</p>
+    <p class="card-shop">sinco楽天市場店</p>
+    <a class="btn" href="https://hb.afl.rakuten.co.jp/hgc/g00uggoo.1jrvpdcb.g00uggoo.1jrvq3b5/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsinkoss%2Fhub8i1%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fsinkoss%2Fi%2F10000011%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">楽天市場で最新価格・レビューを見る</a>
+  </div>
+</div>
+<h3>外付けBDドライブ兼カードリーダー</h3>
+<p>主な用途はBlu-rayディスクの読み書きで、SDカードリーダーとハブ機能はおまけ的についている構成だ。USB-A / USB-Cどちらでも使えるケーブルが内蔵されていて、USB-Cポートのないパソコンでも使えるのは地味に便利。8,950円という価格は、カードリーダー単体の用途としては高い。ディスク納品が発生する案件があって、ついでにカードも読みたいという人向け。レビュー420件で平均4.09。</p>
+<div class="card">
+  <a class="card-img" href="https://hb.afl.rakuten.co.jp/hgc/g00u40so.1jrvpd22.g00u40so.1jrvq071/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Faosasi-store%2Fapbdg01r13%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Faosasi-store%2Fi%2F10000038%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">
+    <img src="https://thumbnail.image.rakuten.co.jp/@0_mall/aosasi-store/cabinet/11664892/11691035/main-1.jpg?_ex=400x400" alt="＼楽天1位★日本正規品・1年保証あり／ ブルーレイドライブ 外付け ポータブル Blu-ray ディスクドライブ USB" loading="lazy" width="160" height="160">
+  </a>
+  <div class="card-body">
+    <p class="card-name">＼楽天1位★日本正規品・1年保証あり／ ブルーレイドライブ 外付け ポータブル Blu-ray ディスクドライブ USB-A / USB-C ケーブル Windows Mac対応 </p>
+    <p class="card-meta">
+      <span class="price">8,950円</span>
+      <span class="asof">（2026-10-19時点・変動します）</span>
+    </p>
+    <p class="card-review"><span class="stars">★★★★☆</span> 4.09 ／ レビュー420件</p>
+    <p class="card-shop">Goodwin Store</p>
+    <a class="btn" href="https://hb.afl.rakuten.co.jp/hgc/g00u40so.1jrvpd22.g00u40so.1jrvq071/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Faosasi-store%2Fapbdg01r13%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Faosasi-store%2Fi%2F10000038%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">楽天市場で最新価格・レビューを見る</a>
+  </div>
+</div>
+<h3>Maktar Qubii Duo USB-Cタイプ</h3>
+<p>スマートフォンへの充電中に、iPhoneやAndroidの写真・動画を自動でmicroSDにバックアップするデバイス。名前にカードリーダーと入っているが、使い方はカメラ素材の取り込みとはかなり異なる。スマホで撮った素材のバックアップや機種変更のデータ移行に向いている。10年保証あり。microSDは別売。レビュー367件で平均4.19。</p>
+<div class="card">
+  <a class="card-img" href="https://hb.afl.rakuten.co.jp/hgc/g00u4p0o.1jrvp1c8.g00u4p0o.1jrvqbbf/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmaktar-japan%2Fmkpqc%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fmaktar-japan%2Fi%2F10000001%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">
+    <img src="https://thumbnail.image.rakuten.co.jp/@0_mall/maktar-japan/cabinet/qubii_cart/imgrc0139772451.jpg?_ex=400x400" alt="Maktar Qubii Duo USB-Cタイプ【充電しながら自動バックアップ】iPhone Android バックア" loading="lazy" width="160" height="160">
+  </a>
+  <div class="card-body">
+    <p class="card-name">Maktar Qubii Duo USB-Cタイプ【充電しながら自動バックアップ】iPhone Android バックアップ 容量不足解消 SDカードリーダー データ移行 保存 写</p>
+    <p class="card-meta">
+      <span class="price">8,980円</span>
+      <span class="asof">（2026-10-19時点・変動します）</span>
+    </p>
+    <p class="card-review"><span class="stars">★★★★☆</span> 4.19 ／ レビュー367件</p>
+    <p class="card-shop">Maktar</p>
+    <a class="btn" href="https://hb.afl.rakuten.co.jp/hgc/g00u4p0o.1jrvp1c8.g00u4p0o.1jrvqbbf/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmaktar-japan%2Fmkpqc%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fmaktar-japan%2Fi%2F10000001%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">楽天市場で最新価格・レビューを見る</a>
+  </div>
+</div>
+<h3>Maktar Qubii Duo microSDセット</h3>
+<p>上の商品にmicroSDカードが付属したセット。本体だけ買ってもmicroSDがないと機能しないので、一緒に揃えたい人向けの構成。価格は13,980円と今回の中では最も高い。レビュー214件で平均4.01。Maktar公式ショップからの販売。</p>
+<div class="card">
+  <a class="card-img" href="https://hb.afl.rakuten.co.jp/hgc/g00u4p0o.1jrvp1c8.g00u4p0o.1jrvqbbf/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmaktar-japan%2Fmkpqc-128g%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fmaktar-japan%2Fi%2F10000003%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">
+    <img src="https://thumbnail.image.rakuten.co.jp/@0_mall/maktar-japan/cabinet/qubii_cart/imgrc0139772452.jpg?_ex=400x400" alt="◆楽天ランキング1位受賞◇【microSDセット】Maktar Qubii Duo USB-Cタイプ【充電しながら自動バ" loading="lazy" width="160" height="160">
+  </a>
+  <div class="card-body">
+    <p class="card-name">◆楽天ランキング1位受賞◇【microSDセット】Maktar Qubii Duo USB-Cタイプ【充電しながら自動バックアップ】iPhone Android バックアップ 容量</p>
+    <p class="card-meta">
+      <span class="price">13,980円</span>
+      <span class="asof">（2026-10-19時点・変動します）</span>
+    </p>
+    <p class="card-review"><span class="stars">★★★★☆</span> 4.01 ／ レビュー214件</p>
+    <p class="card-shop">Maktar</p>
+    <a class="btn" href="https://hb.afl.rakuten.co.jp/hgc/g00u4p0o.1jrvp1c8.g00u4p0o.1jrvqbbf/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmaktar-japan%2Fmkpqc-128g%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fmaktar-japan%2Fi%2F10000003%2F&amp;rafcid=wsc_i_is_547d7ce1-fb6a-4fcc-900a-c9d8cb411298" target="_blank" rel="sponsored nofollow noopener">楽天市場で最新価格・レビューを見る</a>
+  </div>
+</div>
+<h2>選ぶときに実際どこを見るか</h2>
+<p>まず確認するのは、対応するカードの種類。SDカード専用なのか、microSD（TFカード）も読めるのか。SDとmicroSDを同時に刺せるスロットが2つあるかどうかも見ておきたい。カメラが複数台ある場合、同時に読めるかどうかで作業の手間が変わってくる。</p>
+<p>次に転送速度の表記。USB 3.0（5Gbps）と書いてある機器と、USB 2.0ベースのものとでは体感が違う。4K素材やRAWデータを扱う頻度が高いなら、速度の表記は見ておいた方がいい。</p>
+<p>ハブ一体型を選ぶなら、PD充電の対応ワット数も気にする。ノートPCを繋いだまま充電したい場合、ハブのPD出力が不十分だとバッテリーが減り続ける状況になる。PD対応のワット数は事前に確認したい。</p>
+<p>物理的なサイズと重さも判断材料になる。現場に持ち運ぶなら軽さが優先されるし、デスクに固定して使うなら安定感の方が重要になる。</p>
+<h2>実際どう使ってるか</h2>
+<p>撮影が終わったあと、現場でそのまま素材のバックアップを取ることが多い。ノートPCにハブを繋いで、SDカードを刺して外付けSSDに転送する。このとき転送に時間がかかると次の段取りが詰まる。速度が遅いと感じる瞬間が一度あると、そこから気になりはじめる。</p>
+<p>デスクでの編集中は、USB-Cハブ一個にHDMI・外付けストレージ・電源をまとめている。カードリーダーが一体化していると、そこにSDカードを刺すだけで済む。ケーブルの本数を減らしたいという理由で、ハブ一体型を選んでいる。</p>
+<h2>まとめ</h2>
+<p>用途がスマホのバックアップなのか、カメラ素材の取り込みなのかで、向いているデバイスがまるで変わる。そこを最初に整理しておくと、選択肢がかなり絞れる。</p>
+<p>ハブ一体型を選ぶなら、カード対応種類・転送速度の表記・PD対応ワット数の3点を押さえておくと、選ぶときに迷いにくい。</p>
+<nav class="related">
+<h2>あわせて読みたい</h2>
+<ul>
+  <li><a href="dock-station.html">USB-Cドッキングステーション、価格帯と用途で何が変わるか</a></li>
+  <li><a href="mini-tripod-desk.html">卓上ミニ三脚を探していて、レビューの多い順に並べると定番が見えてきた</a></li>
+  <li><a href="wireless-mic-video.html">動画撮影向けワイヤレスマイク、価格帯ごとに何が違うか整理した</a></li>
+</ul>
+</nav>
+<p class="backlink"><a href="../">記事一覧に戻る</a></p>
+<hr>
+<div class="disclosure">
+<p><strong>広告について</strong></p>
+<p>当サイトは楽天アフィリエイトのリンクを掲載しており、当サイト経由で商品が購入された場合、運営者に紹介料が支払われることがあります。紹介料の有無は、掲載する商品の選定や記載内容に影響していません。</p>
+<p>掲載している価格・レビュー件数・評価は、楽天ウェブサービスを通じて 2026-10-19 に取得した時点のものです。実際の価格・在庫・ポイント倍率は変動しますので、購入前に必ず各商品ページでご確認ください。</p>
+</div>
+</main>
+<footer><div class="wrap">
+<p>当サイトは楽天アフィリエイトによる広告を掲載しています。掲載している価格・在庫・ポイント倍率は取得時点のもので、変動します。最新の情報は各商品ページでご確認ください。</p>
+<p>商品情報・画像は<a href="https://webservice.rakuten.co.jp/" target="_blank" rel="nofollow noopener">楽天ウェブサービス</a>より取得しています（Supported by Rakuten Developers）。</p>
+<p>映像編集の機材ノート ／ sho　<a href="https://shota-dokusha.github.io/rakuten-site/privacy.html">運営者情報・免責事項</a></p>
+</div></footer>
+</body>
+</html>
